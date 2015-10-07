@@ -1,5 +1,27 @@
 #!/usr/bin/env python 3
 #-*- coding:utf-8 -*-
 
-number = 100
-print(bin(number)) #±N 2 Áı¤J bin(n) ¨ç¦¡¤¤¡A¨Ã§â bin(n) ¦^¶Çªºµ²ªG¡A±µµÛÁıµ¹ print() ¿é¥X¦b¿Ã¹õµe­±¤W¡C
+def int2bin(N):
+    '''
+    æœ¬å‡½å¼å°‡ int æ•´æ•¸è½‰ç‚º bin äºŒé€²ä½åˆ¶è¡¨ç¤º
+    '''
+    tmpLIST = []
+    while N > 0:
+        remainder = int(N % 2)
+        tmpLIST.append(remainder)
+        N = (N - remainder) / 2
+    tmpLIST.append(0)
+
+    ans = ""
+    for j in tmpLIST[::-1]: #å°‡ tmpLIST ä¸­çš„æ•¸å­—å¾å°¾è‡³é ­å‚³å…¥ j
+        ans = ans + str(j)
+    print("{0} çš„äºŒé€²ä½è¡¨ç¤ºç‚º {1}.".format(intNumber, ans))
+    return None
+
+if __name__ == '__main__':
+    intNumber = 100
+    
+    int2bin(intNumber)
+
+    binNumber = "01100101"
+    #bin2int(number)
