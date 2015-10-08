@@ -1,25 +1,39 @@
 #!/usr/bin/env python 3
 #-*- coding:utf-8 -*-
-    
-def bin2int(N):
-    '''
-    本函式將 bin 二進位制表示數轉為 int 整數
-    '''
-    mod = 0
-    x = 0
-    i = 0
-    a = 0
-    while N > 0: 
-        mod = int(N % 10)
-        b = 2 ** i
-        a =  a + mod*b
-        i = i + 1
-        N = (N - mod) / 10 
 
-    print("{0} 的十進位表示為 {1}.".format(binNumber, a))
-if __name__ == '__main__':
-    binNumber = 1100100 #"01100100"
+def int2bin(N):
+    '''
+    本函式將 int 整數轉為 bin 二進位制表示
+    '''
+    tmplist = list(binNumber)
+    tmplist = [int(i) for i in tmplist]
+    print (tmplist)
+    a = len (tmplist) - 1
+    b = 0
+    s = 0
+    if tmplist[0] == 0:
+        while a >= 0:
         
-    bin2int(binNumber)    
+            x = tmplist[a]
+            s = s + (x*(2**b))
+            a -= 1
+            b += 1             
+        print("{0} 的十進位表示為 {1}.".format(binNumber, s))
+    else:
+        while a >= 0:
+            
+            x = (tmplist[a] + 1) % 2
+            s = s + (x*(2**b))
+            a -= 1
+            b += 1             
+        print("{0} 的十進位表示為 {1}.".format(binNumber, -s-1))            
+        
+
+    return None
+
+if __name__ == '__main__':
+    binNumber = "01100100"
+    
+    int2bin(binNumber)
     
 
