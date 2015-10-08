@@ -15,9 +15,10 @@ def bin2int(N):
         a =  a + mod*b
         i = i + 1
         N = (N - mod) / 10 
+
     print("{0} 的十進位表示為 {1}.".format(binNumber, a))
 if __name__ == '__main__':
-    binNumber = 1100100
+    binNumber = 1100100 #"01100100"
         
     bin2int(binNumber)    
     
