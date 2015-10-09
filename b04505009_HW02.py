@@ -18,12 +18,13 @@ def bin2int(N):
             a -= 1
             b *= 2             
         print("{0} 的十進位表示為 {1}.".format(binNumber, s))
+    
     else:
         while a >= 0: 
             x = (binNumberlist[a] + 1) % 2 
             s = s + (x * b)
             a -= 1
-            b *= 1             
+            b *= 2             
         print("{0} 的十進位表示為 {1}.".format(binNumber, -s-1))           
         
     return None
