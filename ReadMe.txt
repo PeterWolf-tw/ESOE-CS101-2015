@@ -25,4 +25,4 @@ The assignment will be given as:
 Assignment_HW01.py
 
 Use "git pull" command often to keep yourself updated with the class.
-常使用 "git pull" 指令保持和全班同學同步。
+常使用 "git pull" 指令保持和全班同學同步。 ^.^ 晚來風疾
