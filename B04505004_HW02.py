@@ -12,14 +12,27 @@ k = 10
 
 binary = int(input("Enter Binary Number:"))
 
-while(binary > 0):
-    remainder = (binary % k) 
-    if(remainder > 0):
-        decimal += value
-    k *= 10
-    binary -= remainder
-    value *= 2 
-print (decimal)
+if(binary > 0):
+    x =  binary
+    while(x > 0):        
+         remainder = (x % k) 
+         if(remainder > 0):
+              decimal += value
+         k *= 10
+         x -= remainder
+         value *= 2 
+    print (decimal)
+
+else: 
+       x = - binary
+       while(x > 0):
+        remainder = (x % k) 
+        if(remainder > 0):
+              decimal += value
+        k *= 10
+        x -= remainder
+        value *= 2
+       print (0 - decimal) 
 
 
 
