@@ -30,7 +30,7 @@ def bin2int(N):
     return None
 
 if __name__ == '__main__':
-    binNumber = "01100100"
+    binNumber = "01100101"
     
     bin2int(binNumber)
     
