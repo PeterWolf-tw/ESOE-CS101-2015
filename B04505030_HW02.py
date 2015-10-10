@@ -15,24 +15,23 @@ def bin2int(N):
     
     x = 0
 
-    if strN[0] == 0:
-        while i <= lengthN:
+    while i <= lengthN:
             expo -= 1                        #宣告變數expo=lengthN - 1
             a = strN[k]                      #宣告變數a=strN的右邊數來第k位數值
             x += int(a)*pow(2,expo)
             k += 1
 
             i += 1
-        print("{0} 的十進位表示為 {1}.".format(binNumber, x))
+    print("{0} 的十進位表示為 {1}.".format(binNumber, x))
     
     
        
     return None
 
 if __name__ == '__main__':
-    binNumber = "01100101"
+     binNumber = "01100101"
     
-    bin2int(binNumber)
+     bin2int(binNumber)
     
     
     
