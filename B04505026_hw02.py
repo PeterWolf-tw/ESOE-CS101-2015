@@ -1,3 +1,5 @@
+#!/usr/bin/env python 3
+#-*- coding:utf-8 -*-
 def bin2int(N):
     idx,k,s=0,0,0
     while N>0:
