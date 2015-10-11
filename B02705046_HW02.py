@@ -27,8 +27,8 @@ def bin2int(N):
 #b. 682
 #c. 741
 #d. 756
-#P3-29
-#a. -500 ~ 499
-#b. If the first digit is greater than 4, it's negative, otherwise, positive.
-#c. No
-#d. 000
+#P3-30
+#a. 234
+#b. 560
+#c. 875
+#d. 889
