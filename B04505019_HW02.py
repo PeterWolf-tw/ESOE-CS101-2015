@@ -1,7 +1,7 @@
 a = ("please input a number:")
 x = input(a)
 print(int(x,2))
-return a
+
 
 # p2-19 a=10
 # p2-19 b=17
