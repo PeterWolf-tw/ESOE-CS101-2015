@@ -9,21 +9,87 @@
 def bin2int(N):    
     Sum = 0
     L = len(str(N))
-    STR = str(N)    
+    STR = str(N) 
     a=0
+    while a < L :
+        if STR[a] == '0' or STR[a] == '1' or STR[a] == '.':
+            a = a + 1
+        else :
+            a = -1            
+            break
+    if a != -1:
+        a = 0
+        if int(N) == N:
+            b = 0
+            while b < L:
+                               
+                if  STR[b] == '.':
+                    break
+                b = b + 1
+                           
+            c = L - b - 1   
+                           
+            while b > 0:        
+                    n = int(STR[a])*(2**int(b-1))
+                    b = b - 1
+                    a = a + 1
+                    Sum = Sum + n                
+            
+#            while L > 0:        
+#               n = int(STR[a])*(2**int(L-1))
+#              L = L - 1
+#             a = a + 1
+#            Sum = Sum + n
+            return Sum
+        else:
+            b = 0
+            while b < L:
+                    
+                if  STR[b] == '.':
+                    break
+                b = b + 1
+                
+            c = L - b - 1   
+                
+            while b > 0:        
+                    n = int(STR[a])*(2**int(b-1))
+                    b = b - 1
+                    a = a + 1
+                    Sum = Sum + n                
+                
+            a = a + 1        
+            d = -1
+                
+            while c > 0:        
+                    n = int(STR[a])*(2**int(d))
+                    d = d - 1
+                    a = a + 1
+                    c = c - 1
+                    Sum = Sum + n        
+                       
+            return Sum                    
     
-    while L > 0:        
-        n = int(STR[a])*(2**int(L-1))
-        L = L - 1
-        a = a + 1
-        Sum = Sum + n
-    return Sum
-
+    else  :
+        return -1
+    
+            
+        
+    
 if __name__ == '__main__':
-    x = 111000
-    ans = bin2int(x)
+    x = -1111.003
     
-    print("{0} 的十進位表示為 {1}.".format(x, ans))
+    if x >= 0:
+        ans = bin2int(x)
+        if ans >= 0:
+            print("{0} 的十進位表示為 {1}.".format(x, ans))
+        else :
+            print("輸入錯誤")
+    elif x < 0 :
+        ans = bin2int(-x)
+        if ans >= 0:
+            print("{0} 的十進位表示為 {1}.".format(x, -ans))
+        else :
+            print("輸入錯誤")        
     
 ###########################################
 #作業 2. 課本 Ch2. P2.19 a.=10
