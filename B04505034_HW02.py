@@ -2,20 +2,39 @@
 # -*- coding:utf-8 -*-
 
 
-    #作業 1.
-    # 請參考上例，自己寫一個將二進位表示數轉為十進位制的函式：
-   
-    
-        int a=1 
-        int b=0
-        input(int2bin(x))
-        while (x>0):
-            b+=(x%10)*a
-            a*=2
-            x/=10
-            
-        print b    
+#作業 1.
+# 請參考上例，自己寫一個將二進位表示數轉為十進位制的函式：
+#   def bin2int(N):
+#        '''
+#        本函式將 bin 二進位制表示數轉為 int 整數
+#        '''
+a = 1
+decimal = 0
 
+
+binary = int(input("Enter Binary Number:"))
+
+if(binary > 0):
+        N =  binary
+        while(N > 0):
+                remainder = (N % 10)
+                if(remainder > 0):
+                        decimal += a
+                a *= 2
+                N=( N- remainder ) / 10
+
+        print (decimal)
+
+else:
+        N =  -binary
+        while(N > 0):
+                remainder = (N % 10)
+                if(remainder > 0):
+                        decimal += a
+                a *= 2
+                N=( N- remainder ) / 10
+
+        print (0-decimal)
 #作業 2. 課本 Ch2. P2.19
 #a.= 10
 #b.= 17
