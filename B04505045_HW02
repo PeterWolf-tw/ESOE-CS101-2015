@@ -14,18 +14,57 @@ def bin2int(N):
             break     
     if a != -1:
         a = 0
-        while L > 0:        
-            n = int(STR[a])*(2**int(L-1))
-            L = L - 1
-            a = a + 1
-            Sum = Sum + n  
-        return Sum
+        if int(N) == N:
+            b = 0
+            while b < L:
+
+                if  STR[b] == '.':
+                    break
+                b = b + 1
+
+            c = L - b - 1   
+
+            while b > 0:        
+                    n = int(STR[a])*(2**int(b-1))
+                    b = b - 1
+                    a = a + 1
+                    Sum = Sum + n
+            return Sum
+            
+        else:
+                b = 0
+                while b < L:
+            
+                    if  STR[b] == '.':
+                        break
+                    b = b + 1
+            
+                c = L - b - 1   
+            
+                while b > 0:        
+                        n = int(STR[a])*(2**int(b-1))
+                        b = b - 1
+                        a = a + 1
+                        Sum = Sum + n                
+            
+                a = a + 1        
+                d = -1
+            
+                while c > 0:        
+                        n = int(STR[a])*(2**int(d))
+                        d = d - 1
+                        a = a + 1
+                        c = c - 1
+                        Sum = Sum + n        
+            
+                return Sum          
+        
     else:
         return -1 
     
 
 if __name__ == '__main__':
-    x = int(input("輸入一個二進位數:"))
+    x = float(input("輸入一個二進位數:"))
     
     if x >= 0:
         ans = bin2int(x)     
