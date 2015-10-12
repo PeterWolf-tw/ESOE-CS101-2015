@@ -1,4 +1,27 @@
 1. 
+#!/usr/bin/env python3
+# -*- coding:utf-8 -*-
+
+def bin2int(N): 
+    L = len(str(N))
+    STR = str(N)
+    Sum = 0 
+    a = 0 
+    
+    while 0 < L :
+        n = int(STR[a])*(2**int(L-1))
+        L = L - 1 
+        a = a + 1
+        Sum = Sum + n 
+    return Sum 
+        
+if __name__ == '__main__':
+      
+   
+    x = input(" 輸入一個二進位數 ")
+    ans = bin2int(x)
+    print( x , "的十進位數為", ans )
+    
 
 
 
