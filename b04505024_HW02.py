@@ -53,19 +53,20 @@ def int2bin(N):
 #作業 1.
 # 請參考上例，自己寫一個將二進位表示數轉為十進位制的函式：
 def bin2int(N):
-    '''
-    本函式將 bin 二進位制表示數轉為 int 整數
-    '''
-
+    idx,k,s=0,0,0
+    while N>0:
+    	k=N%10
+    	s+=k*pow(2,idx)
+    	N=int(N/10)
+    	idx+=1
+    print(s)
     return None
 
 
 if __name__ == '__main__':
-    print("Input a number ")
-    bin2in(int(input()))
-
-   
-
+    print('Input a binary ')    
+    bin2int(int(input()))
+    
 #作業 2. 課本 Ch2. P2.19
      a.10  b.17  c.6  d.8
 #作業 3. 課本 Ch2. P2.20
