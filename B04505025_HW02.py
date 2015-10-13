@@ -24,7 +24,7 @@ n=0
 m = input("以二進位表示法為:")
 m = int (m)
      
-if(a>=0):
+if(m>=0):
     print ("以十進位表示法為:",f(m) ,"\n") 
     
 else: 
