@@ -1,28 +1,34 @@
 #第一題
-#輸入一二進位表示法的整數數值a
-#本函數將把a表示為十進位表示法x
+#輸入一二進位表示法的整數數值m
+#函數f(a)將會把m表示為十進位表示法n
 
+
+def f(a):
 
 if (a>=0): a=b
 else: a=-b    #進入迴圈前先把數值變為正，最後顯示在補回正負
 i=0    #(i+1) 為目前進行的迴圈次數
-x=0
+n=0
 
     while (b>=1):
-    m=b%10
-    if(m<=1):
-        k=m*(2**i)
+    c=b%10
+    if(c<=1):
+        k=c*(2**i)
         i+=1
         b=b//10
-        x+=k
+        n+=c
+    return n
     else:
-        print(“Failed Input”)
+        print("Failed Input \n")
 
+m = input("以二進位表示法為:")
+m = int (m)
+     
 if(a>=0):
-    print (“x”)
-else: 
-    print (“-x”)
+    print ("以十進位表示法為:",f(m) ,"\n") 
     
+else: 
+    print (“以十進位表示法為:-”,f(m) "\n")
     
 
 #第二題
