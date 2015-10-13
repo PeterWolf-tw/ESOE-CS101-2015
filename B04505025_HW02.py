@@ -19,7 +19,7 @@ n=0
         n+=c
     return n
     else:
-        print(“Failed Input \n”)
+        print("Failed Input \n")
 
 m = input("以二進位表示法為:")
 m = int (m)
