@@ -3,33 +3,41 @@
 #函數f(a)將會把m表示為十進位表示法n
 
 
-def f(a):
-
-    if (a>=0): a = b
-    else: a=-b    #進入迴圈前先把數值變為正，最後顯示在補回正負
-    i=0    #(i+1) 為目前進行的迴圈次數
-    n=0
-
-    while (b>=1):
-        c=b%10
-        if(c<=1):
-            k=c*(2**i)
-            i+=1
-            b=b//10
-            n+=c
-        else:
-            print("Failed Input \n")
-    return n
+p=0
+print("若輸入負的非二位數表示法則可停止運算")
+while(p==0):
     
-
-m = input("以二進位表示法為:")
-m = int (m)
-     
-if(m>=0):
-    print ("以十進位表示法為:",f(m) ,"\n" ) 
+    def f(a):
     
-else: 
-    print ("以十進位表示法為:-",f(m) ,"\n" )
+        if (a>=0): a*=1
+        else: a*=-1    #進入迴圈前先把數值變為正，最後顯示在補回正負
+        i=0    #(i+1) 為目前進行的迴圈次數
+        n=0
+
+
+        while (a>=1):
+            x=a%10
+            if(x<=1):
+                k=x*(2**i)
+                i+=1
+                a=a//10
+                n+=k
+            else:
+                print("Failed Input")
+                return
+               
+        return n
+
+    m = input("\n以二進位表示法為: ")
+    m = int (m)
+
+    if(m>=0):
+        print ("以十進位表示法為:"),f(m),("\n")
+    
+    else: 
+        print ("以十進位表示法為:"),-f(m),("\n")
+        
+    p=input("如需再做計算請輸入0 \n")
     
 
 #第二題
