@@ -24,12 +24,11 @@ while(p==0):
                 n+=k
             else:
                 print("Failed Input")
-                return
+                return("")
                
         return n
 
-    m = input("\n以二進位表示法為: ")
-    m = int (m)
+    m = int(input("\n以二進位表示法為: "))
 
     if(m>=0):
         print ("以十進位表示法為:"),f(m),("\n")
