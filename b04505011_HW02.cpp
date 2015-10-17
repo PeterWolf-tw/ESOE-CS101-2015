@@ -1,8 +1,8 @@
 #include <cstdlib>
-#include <iostream> 
+#include <iostream>
 #include <math.h>
 using namespace std;
-
+//Please be careful with encoding. I can't read your Non-ASCII code.
 int main(int argc, char *argv[])
 {
     string str1;
@@ -11,10 +11,10 @@ int main(int argc, char *argv[])
 	cout<<"輸入二進位的數!\n";
 	cin>>str1;
 	i=str1.size();
-	
+
 	//cout<<"i="<<i<<"\n";
 	for(j=0;j<i;j++)
-	{	
+	{
 		if(str1[j]>49||str1[j]<48)
 		{
 		 cout<<"格式錯誤!\n";
@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 		}
 		else
 		{
-		 //cout<<str1[j]<<"\n";	
+		 //cout<<str1[j]<<"\n";
 		 sum+=(str1[j]-48)*pow(2,i-1-j);
 		}
 	}
@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 	{
 	 cout<<"它的十進位表示法為"<<sum<<"\n";
     }
-	
+
 	/*  p2-19.
 			  a.2^9=512<1000<2^10=1024 故答案取9+1=10
 			  b.答案取16+1=17
@@ -47,19 +47,19 @@ int main(int argc, char *argv[])
 			  b.00001110 00111000 11101010 00111000
 			  c.01101110 00001110 00111000 01001110
 			  d.00011000 00111000 00001101 00001011
-		p3-28. 
+		p3-28.
 			  a.765
 			  b.439
 			  c.125
 			  d.111
 		p3-30.
 			  a.766
-			  b.440			  
+			  b.440
 			  c.125
 	          d.111*/
-	
-	
-	
+
+
+
 	system("PAUSE");
     return EXIT_SUCCESS;
 }
