@@ -1,5 +1,8 @@
 # !/usr/bin/env python3
 #  -*- coding:utf-8 -*-
+
+
+#Python 的縮排都是空四個空格。下次請注意。
 def GG(N):
  x=0
  if (N>=0):
@@ -26,9 +29,12 @@ def bin2int(N):
   while(N>0):
           z+=(N/10-GG(N/10))*10*y
           N=GG(N/10)
-          y*=2    
+          y*=2
  return z
 
+#你的程式沒有進入點 (如下), 以後請改進。
+if __name__ == "__main__":
+ print(bin2int(100))
 
 #p2_19a=10
 #p2_19b=17

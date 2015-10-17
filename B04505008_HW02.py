@@ -18,14 +18,15 @@ binary = int(input("Enter Binary Number:"))
 if(binary > 0):
     N =  binary
     while(N > 0):
+        #Python 的縮排固定縮四格空格。
          remainder = (N % 10)
          if(remainder > 0):
             decimal += a
          a *= 2
          N=( N- remainder ) / 10
-     
+
     print (decimal)
-    
+
 else:
     N =  -binary
     while(N > 0):
@@ -34,11 +35,11 @@ else:
                decimal += a
             a *= 2
             N=( N- remainder ) / 10
-        
-    print (0-decimal)    
-    
-        
-         
+
+    print (0-decimal)
+
+
+
 
 
 

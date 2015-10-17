@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-2
-10
+10 #這個 10 在這裡是什麼意思？
 def bin2int(N):
     Sum = 0
     L = len(str(N))
@@ -10,8 +10,8 @@ def bin2int(N):
         if STR[a] == '0' or STR[a] == '1' or STR[a] == '.':
             a = a + 1
         else :
-            a = -1            
-            break     
+            a = -1
+            break
     if a != -1:
         a = 0
         if int(N) == N:
@@ -22,90 +22,90 @@ def bin2int(N):
                     break
                 b = b + 1
 
-            c = L - b - 1   
+            c = L - b - 1
 
-            while b > 0:        
+            while b > 0:
                     n = int(STR[a])*(2**int(b-1))
                     b = b - 1
                     a = a + 1
                     Sum = Sum + n
             return Sum
-            
+
         else:
                 b = 0
                 while b < L:
-            
+
                     if  STR[b] == '.':
                         break
                     b = b + 1
-            
-                c = L - b - 1   
-            
-                while b > 0:        
+
+                c = L - b - 1
+
+                while b > 0:
                         n = int(STR[a])*(2**int(b-1))
                         b = b - 1
                         a = a + 1
-                        Sum = Sum + n                
-            
-                a = a + 1        
+                        Sum = Sum + n
+
+                a = a + 1
                 d = -1
-            
-                while c > 0:        
+
+                while c > 0:
                         n = int(STR[a])*(2**int(d))
                         d = d - 1
                         a = a + 1
                         c = c - 1
-                        Sum = Sum + n        
-            
-                return Sum          
-        
+                        Sum = Sum + n
+
+                return Sum
+
     else:
-        return -1 
-    
+        return -1
+
 
 if __name__ == '__main__':
     x = float(input("輸入一個二進位數:"))
-    
+
     if x >= 0:
-        ans = bin2int(x)     
-        if ans >= 0:        
+        ans = bin2int(x)
+        if ans >= 0:
             print(x ," 的十進位表示為 ", ans)
         else:
             print("輸入錯誤")
-           
+
     else  :
         ans = bin2int(-x)
         if ans >= 0:
             print(x ," 的十進位表示為 ", -ans)
         else:
-            print("輸入錯誤")                
-    
+            print("輸入錯誤")
+
 #########################################
-#作業 2. 課本 Ch2. P2.19 
+#作業 2. 課本 Ch2. P2.19
 #a.=10
 #b.=17
 #c.=6
 #d.=8
 ##########################################
-#作業 3. 課本 Ch2. P2.20  
+#作業 3. 課本 Ch2. P2.20
 #a.=14
 #b.=8
 #c.=13
 #d.=4
 ############################################
-#作業 4. 課本 Ch2. P2.22 
+#作業 4. 課本 Ch2. P2.22
 #a.=00010001 11101010 00100010 00001110
-#b.=00001110 00111000 11101010 00111000 
+#b.=00001110 00111000 11101010 00111000
 #c.=01101110 00001110 00111000 01001110
 #d.=00011000 00111000 00001101 00001011
 ############################################
-#作業 5. 課本 Ch3. P3.28 
+#作業 5. 課本 Ch3. P3.28
 #a.=234
 #b.=560
 #c.=874
 #d.=888
 ##############################################
-#作業 6. 課本 Ch3. P3.30 
+#作業 6. 課本 Ch3. P3.30
 #a.=234
 #b.=560
 #c.=875

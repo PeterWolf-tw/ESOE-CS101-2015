@@ -1,3 +1,8 @@
+#!/usr/bin/env python3
+# -*- coding:utf-8 -*-
+
+#Python 程式的前兩行是固定的，請牢記。
+
 def bin2int(N):
     '''
     本函式將 bin 二進位制表示數轉為 int 整數
@@ -10,15 +15,16 @@ binary = int(input("Enter Binary Number:"))
 
 if(binary > 0):
     N =  binary
+    #Python 的縮排固定縮四格空格。
     while(N > 0):
          remainder = (N % 10)
          if(remainder > 0):
             decimal += a
          a *= 2
          N=( N- remainder ) / 10
-     
+
     print (decimal)
-    
+
 else:
     N =  -binary
     while(N > 0):
@@ -27,11 +33,11 @@ else:
                decimal += a
             a *= 2
             N=( N- remainder ) / 10
-        
-    print (0-decimal)    
-    
-        
-         
+
+    print (0-decimal)
+
+
+
 
 
 

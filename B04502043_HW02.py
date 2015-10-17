@@ -1,7 +1,15 @@
+#!/usr/bin/env python3
+# -*- coding:utf-8 -*-
+
+#Python 程式的前兩行是固定的，請牢記。
+
 '''
 1.Binary-to-Decimal Transfer Function
 '''
 #Check if the input is valid
+#Python 的縮排是空四格。下次請採用空四格的方式做縮排。
+#Python 也不需在行尾加分號做為終結。
+
 def check_input(s):
 	if(s == "."):
 		return False;
@@ -35,7 +43,9 @@ def btd(s):
 #Main function
 print("Welcome to the Binary-to-Decimal transfer system. Enter -1 if you want to end.");
 while True :
-	binary = raw_input("Please enter a binary number: ");
+	#binary = raw_input("Please enter a binary number: ");
+	binary = input("Please enter a binary number: ");
+	#raw_input() 是 Python2 的寫法。在 Python3 裡已經全部改為 input() 了。
 	if(binary == "-1"):
 		print("Thanks for using. Good bye!");
 		break;

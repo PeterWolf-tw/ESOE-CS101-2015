@@ -1,3 +1,8 @@
+#!/usr/bin/env python3
+# -*- coding:utf-8 -*-
+
+#Python 程式的前兩行是固定的，請牢記。
+
 a = ("please input a number:")
 x = input(a)
 print(int(x,2))

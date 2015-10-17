@@ -17,10 +17,11 @@ def b2d(n):
             reminder += int(n[-1]) * i
             n = n[:-1]
             i *= 2
-        print (-reminder)          
+        print (-reminder)
 
 if __name__ == '__main__':
     binNumber = "01100101"
+
     b2d(binNumber)
 #作業 2. 課本 Ch2. P2.19 a=10,b=17,c=6,d=8
 #作業 3. 課本 Ch2. P2.20 a=14,b=8,c=13,d=4

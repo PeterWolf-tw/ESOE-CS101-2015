@@ -1,6 +1,8 @@
 # !/usr/bin/env python3
 #  -*- coding:utf-8 -*-
 
+#第一題呢？
+
 
 #第二題
 # p2-19 a=  10

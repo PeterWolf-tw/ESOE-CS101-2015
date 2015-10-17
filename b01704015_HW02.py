@@ -1,6 +1,12 @@
+#!/usr/bin/env python3
+# -*- coding:utf-8 -*-
+
+# Python 程式的第一、第二行有其固定的寫法，請牢記。
+
 #作業 1.
 binary = input('enter a number: ')
-enter a number:
+#enter a number:
+#第8行沒有作用
 int(binary, 2)
 
 

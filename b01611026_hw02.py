@@ -3,16 +3,17 @@
 
 def bin2int(N):
 	#本函式將bin轉換成int十進制
-
+    #Python 的縮排以「空四個空格」為主。請避免使用 TAB 做為縮排用。
 	tmpList=[N]
 	leng=len(N)
 	tmpList.reverse(N)
 	ans=0
 	while leng>0
+        #while, for, if...等需要縮排的語法，要在後面加 : 冒號。
 		x=tempList.pop()
 		ans=ans+x*2**leng
 		leng=leng-1
-	
+
 	print binum"的二進位表示為"
 	print ans
     return None

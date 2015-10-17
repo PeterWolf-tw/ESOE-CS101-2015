@@ -11,23 +11,24 @@ binary = int(input("Please enter a binary number:"))
 
 if(binary > 0):
     x =  binary
-    while(x > 0):        
-         remainder = (x % 10) 
+    #Python 的縮排固定縮四格空格。每縮一層，就是四個空格。你的 16 行開始，縮排的空格數量就有點奇怪。
+    while(x > 0):
+         remainder = (x % 10)
          if(1 >= remainder >= 0):
               decimal += remainder * value
          else:
              print("Oh,no!God is sad to say this is not a binary number.")
              import sys
-             sys.exit() 
+             sys.exit()
          x = x // 10
-         value *= 2 
+         value *= 2
     print ("The value of the input is:",decimal)
-         
 
-else: 
+
+else:
     x = - binary
     while(x > 0):
-        remainder = (x % 10) 
+        remainder = (x % 10)
         if(1 >= remainder >= 0):
               decimal += remainder * value
         else:
@@ -36,7 +37,7 @@ else:
             sys.exit()
         x = x // 10
         value *= 2
-    print ("The value of the input is:",-decimal) 
+    print ("The value of the input is:",-decimal)
 
 
 

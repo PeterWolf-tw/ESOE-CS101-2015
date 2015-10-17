@@ -63,9 +63,11 @@ def bin2int(N):
         c = c+1
         number = int(char)
         result += number * 2**(len(N)-c)
-    
-    print result
-    
+
+#    print result
+# #######################################################################
+# #Python3 開始，print() 是一個 function，所以要用括號把要印出的內容包起來。像這樣：
+    print(result)
     return None
 
 
@@ -74,7 +76,9 @@ if __name__ == '__main__':
     int2bin(intNumber)
 
     binNumber = "01100101"
-    bin2int(number)
+    #bin2int(number)
+    bin2int(binNumber)
+    # 你設定的是 binNumber，自然應該用 binNumber 傳到 bin2int() 裡，而不是用 number。
 
 #作業 2. 課本 Ch2. P2.19
 # a=  10

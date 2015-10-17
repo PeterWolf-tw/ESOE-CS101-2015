@@ -1,5 +1,11 @@
-#1設計一可將二進位制表示式轉為十進位制表示式的函式
+#!/usr/bin/env python3
+# -*- coding:utf-8 -*-
 
+#Python 程式的前兩行是固定的，請牢記。
+
+
+#1設計一可將二進位制表示式轉為十進位制表示式的函式
+#A beautiful solution!
 tmp = input()
 sum = 0
 for i in range(len(tmp)):

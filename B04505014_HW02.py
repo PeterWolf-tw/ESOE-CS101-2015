@@ -1,10 +1,20 @@
-#�Ĥ@�D�O���O�o�˥����A�|���H�Ф@�U�Aby jeffntu
+#!/usr/bin/env python3
+# -*- coding:utf-8 -*-
+
+#Python 程式的前兩行是固定的，請牢記。
+#另，建議你使用一個 IDE。你的中文字符在我這裡看起來都像是亂碼。
+
+#�Ĥ@�D�O���O�o�˥����A�|���H�Ф@�U�Aby jeffntu
 if __name__ == '__main__':
     n = 0
-    p = raw_input('input a bin number:\n')
+    #p = raw_input('input a bin number:\n')
+    p = input('input a bin number:\n')
+    #raw_input() 是 Python2 的函式。從 Python3 開始都用 input()
     for i in range(len(p)):
         n = n * 2 + ord(p[i]) - ord('0')
-    print n
+    #print n
+    print(n)
+    #print n 是 Python2 的語法。從 Python3 開始都用 print(n)
 
 
 
