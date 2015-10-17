@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python 3
+#!/usr/bin/env python 3
 #-*- coding:utf-8 -*-
 
 def bin2int(N):
@@ -12,7 +12,7 @@ def bin2int(N):
     expo = lengthN                           #宣告變數expo=lengthN位數
     k = (-1) * lengthN                       #宣告變數k=-lengthN
     i = 1
-    
+
     x = 0
 
     while i <= lengthN:
@@ -23,18 +23,20 @@ def bin2int(N):
 
             i += 1
     print("{0} 的十進位表示為 {1}.".format(binNumber, x))
-    
-    
-       
+
+
+
     return None
 
 if __name__ == '__main__':
+    #Python 程式每次縮排是四個空格。以後請注意一下！
      binNumber = "01100101"
-    
+
      bin2int(binNumber)
-    
-    
-    
+
+#謝謝你的註解，寫得非常清楚。:)
+
+
 
 
 
