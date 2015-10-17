@@ -2,30 +2,30 @@
 # -*- coding:utf-8 -*
 
 def bin2int(N):
-    
+
     N = str(binN)
     L = len(N)
     k = 0
-    t = L-1    
+    t = L-1
     i = 1
     x = 0
-    
+
     while i <= L :
         a = N[k]
         x += pow(2,t)*int(a)
         k += 1
         i += 1
         t -= 1
-    print(str(N) + " 的十進位為 " + str(x) )   
-    
+    print(str(N) + " 的十進位為 " + str(x) )
+
     return None
 
 if __name__ == '__main__':
     binN = input("請輸入一個二進位數: ")
 
     bin2int(binN)
-    
 
+#Good job.
 
 #2-19
 #a. 10
@@ -57,8 +57,7 @@ if __name__ == '__main__':
 #b. 560
 #c. 875
 #d. 889
-        
-        
-        
-        
-    
+
+
+
+
