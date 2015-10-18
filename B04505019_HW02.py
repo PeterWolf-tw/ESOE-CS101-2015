@@ -1,7 +1,29 @@
-a = ("please input a number:")
-x = input(a)
-print(int(x,2))
-
+#!/usr/bin/env python3
+# -*- coding:utf-8 -*-
+def bin2int(N):
+    x = 0
+    a = 0
+    b = -1
+    while N>= 1:
+        r = N%10
+        x = r*(pow(2,a)) + x
+        a += 1
+        N = N//10
+    return x
+#你在第 12 行就做了 return。一個 function() 一旦走到 return 這一步，以下的就不會做囉！
+#也就是說，你從 15 行開始到 20 行之間的程式都白寫了呢。
+    while 1>N>=0:
+        r = N*10
+        x = r*(pow(2,b)) + x
+        b -= 1
+        N = N*10 - int(N*10)    
+    return x
+c = ("please input a number:")
+N = input(c)
+N = int(N)
+x = bin2int(N)
+print(x)
+    
 
 # p2-19 a=10
 # p2-19 b=17

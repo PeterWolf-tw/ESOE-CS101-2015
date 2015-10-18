@@ -14,7 +14,7 @@ x = input(a)
 x = int(x)
 e = bit_dex(x)
 print(e)
-
+#Good job
 '''
 
 2-19

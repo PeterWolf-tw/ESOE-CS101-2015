@@ -1,4 +1,7 @@
-# coding:utf-8 
+#!/usr/bin/env python3
+# -*- coding:utf-8 -*-
+
+#Python 程式的前兩行是固定的，不能有其它的東西佔到這兩行，請牢記。
 
 def int2bin(N):
     '''
@@ -36,7 +39,7 @@ if __name__ == '__main__':
     print("please input another binary number:")
     num=input()
     bin2int(num)
-    
+
 #2-19:a. 10位 b. 17位 c. 6位  d. 8位
 #2-20:a. 14位 b. 8位  c. 13位 d. 4位
 #2-22:a. 00010001 11101010 00100010 00001110

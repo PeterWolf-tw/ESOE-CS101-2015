@@ -35,6 +35,10 @@ else:
                 N=( N- remainder ) / 10
 
         print (0-decimal)
+
+#Good job.
+#可以參考一下同學們的作法，把你的程式寫成一個 function。以後才能重覆利用。
+
 #作業 2. 課本 Ch2. P2.19
 #a.= 10
 #b.= 17
