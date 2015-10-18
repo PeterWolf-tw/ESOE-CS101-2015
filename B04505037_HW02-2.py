@@ -1,3 +1,9 @@
+# !/usr/bin/env python3
+#  -*- coding:utf-8 -*-
+
+
+#第一題
+
 def bin2int(x):
    
     y = int(x)
