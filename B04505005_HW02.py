@@ -1,6 +1,25 @@
 # !/usr/bin/env python3
 #  -*- coding:utf-8 -*-
 
+print ("test")
+
+def bin2int(N):
+    L=len(str(N))
+    a=str(N)
+    s=0
+    
+    for i in range(0,L):
+        n= int (a[i])*(2**(L-1))
+        L = L-1
+        s=s+n
+       
+    return s    
+        
+if __name__ == '__main__':
+    x= 11100101
+    ans=bin2int(x)
+    print(ans)
+
 
 #第二題
 # p2-19 a=  10
