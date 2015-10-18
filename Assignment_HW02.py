@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# -*- coding:utf-8 -*-
+ #-*- coding:utf-8 -*-
 
 # 以 "#" 字符號開頭的內容將被 Python 視為「註解」。不會執行。
 
@@ -36,12 +36,12 @@ def int2bin(N):
     '''
     本函式將 int 整數轉為 bin 二進位制表示
     '''
-    tmpLIST = []
+    tmpLIST = []  #建置一個空的陣列
     while N > 0:
         remainder = int(N % 2)
-        tmpLIST.append(remainder)
-        N = (N - remainder) / 2
-    tmpLIST.append(0)
+        tmpLIST.append(remainder)    #將餘除之結果丟進tmpLIST
+        N = (N - remainder) / 2      #將N代替成除法之商
+    tmpLIST.append(0) #直到N<=0,在tmpLIST中再加入一個0(最尾端)
 
     ans = ""
     for j in tmpLIST[::-1]: #將 tmpLIST 中的數字從尾至頭傳入 j
@@ -56,7 +56,19 @@ def bin2int(N):
     '''
     本函式將 bin 二進位制表示數轉為 int 整數
     '''
-
+    tmpLISTbin = []
+    while N > 0:
+            remainder = int(N % 10)      #計算二進位之短除法
+            tmpLISTbin.append(remainder)    #將餘除之結果丟進tmpLIST
+            N = (N - remainder) / 10      #將N代替成短除法之商
+        tmpLISTbin.append(0) #直到N<=0,在tmpLIST中再加入一個0(最尾端)
+    
+        ans = 0
+        for j in tmpLISTbin[::-1]: #將 tmpLIST 中的數字從尾至頭傳入 j
+            ans = ans + 2^j
+        print("輸入之二進位轉為十進位結果為"ans)      
+    
+    
     return None
 
 
@@ -75,3 +87,17 @@ if __name__ == '__main__':
 
 
 
+def bin2int(N):
+    
+    tmpLISTbin = []
+    while N > 0:
+        remainder = int(N % 10)      #計算二進位之短除法
+        tmpLISTbin.append(remainder)    #將餘除之結果丟進tmpLIST
+        N = (N - remainder) / 10      #將N代替成短除法之商
+    tmpLISTbin.append(0) #直到N<=0,在tmpLIST中再加入一個0(最尾端)
+    
+    ans = 0
+    for j in tmpLISTbin[::-1]: #將 tmpLIST 中的數字從尾至頭傳入 j
+        ans = ans + 2^j
+    print ans            
+    return None
