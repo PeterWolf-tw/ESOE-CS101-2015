@@ -54,6 +54,7 @@ def int2bin(N):
 # 請參考上例，自己寫一個將二進位表示數轉為十進位制的函式：
 def bin2int(N):
     idx,k,s=0,0,0
+    #Python 的縮排都是用「四個空格」，以後請注意。
     while N>0:
     	k=N%10
     	s+=k*pow(2,idx)
@@ -64,9 +65,9 @@ def bin2int(N):
 
 
 if __name__ == '__main__':
-    print('Input a binary ')    
+    print('Input a binary ')
     bin2int(int(input()))
-    
+
 #作業 2. 課本 Ch2. P2.19
      a.10  b.17  c.6  d.8
 #作業 3. 課本 Ch2. P2.20

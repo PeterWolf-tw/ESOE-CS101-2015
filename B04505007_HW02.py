@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
 
+#Python 程式的前兩行是固定的，請牢記。
 
-
-#作業 1.
-# 請參考上例，自己寫一個將二進位表示數轉為十進位制的函式：
 def bin2int(N):
     '''
     本函式將 bin 二進位制表示數轉為 int 整數
@@ -17,8 +15,8 @@ binary = int(input("Enter Binary Number:"))
 
 if(binary > 0):
     N =  binary
+    #Python 的縮排固定縮四格空格。
     while(N > 0):
-        #Python 的縮排固定縮四格空格。
          remainder = (N % 10)
          if(remainder > 0):
             decimal += a

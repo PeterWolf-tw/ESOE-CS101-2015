@@ -1,6 +1,7 @@
 # !/usr/bin/env python3
 #  -*- coding:utf-8 -*-
 
+<<<<<<< HEAD
 print ("test")
 
 def bin2int(N):
@@ -19,6 +20,9 @@ if __name__ == '__main__':
     x= 11100101
     ans=bin2int(x)
     print(ans)
+=======
+#第一題呢？
+>>>>>>> 828b1fb01d6f3d0653f3175597200464227c977e
 
 
 #第二題

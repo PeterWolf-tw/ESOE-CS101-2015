@@ -1,13 +1,18 @@
+#!/usr/bin/env python3
+# -*- coding:utf-8 -*-
+
+#Python 程式的前兩行是固定的，請牢記。
+
 def b2i(c):
    if c>=0:
       g=c
-   else: 
+   else:
       g=-c
-   
+
    a = 0
    i = 0
    while g>= 1:
-        
+
       s = g%10
       a = s*(2**i) +a
       i = i+1
@@ -17,6 +22,7 @@ def b2i(c):
 d = ("Please enter a binary number:")
 c = input(d)
 c = int(c)
+#Python 的縮排固定縮四格空格。
 if c>=0:
  u = b2i(c)
 else:
@@ -44,12 +50,12 @@ print("The decimal number of" ,c,"is",u)
 # c 01101110 00001110 00111000 01001110
 # d 00011000 00111000 00001101 00001011
 #3-28
-# a 765
-# b 439
-# c-874
-# d-888
+# a 765 #錯
+# b 439 #錯
+# c-874 #錯
+# d-888 #錯
 #3-30
-# a 766
-# b 440
-# c-875
-# d-889
+# a 766 #錯
+# b 440 #錯
+# c-875 #錯
+# d-889 #錯
