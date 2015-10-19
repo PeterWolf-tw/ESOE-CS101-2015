@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
 
+
+# 繳交日期：2015.11.26
+
 # 作業內容：
 # 1. 請參閱 Wikipedia 維基百科 IEEE754 條目 (https://zh.wikipedia.org/wiki/IEEE_754)
 # 此題不用繳交，期中/期未考試自然見真章。
