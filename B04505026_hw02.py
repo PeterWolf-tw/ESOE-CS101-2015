@@ -1,5 +1,7 @@
 #!/usr/bin/env python 3
 #-*- coding:utf-8 -*-
+
+#Python 用空四個空格做為縮排。請避免使用 TAB 或其它數量的空格做縮排。
 def bin2int(N):
     idx,k,s=0,0,0
     while N>0:
@@ -12,10 +14,10 @@ def bin2int(N):
 
 
 if __name__ == '__main__':
-    print('Input a binary ')    
+    print('Input a binary ')
     bin2int(int(input()))
 
-  
+
 #2. a.= 10  b.= 17  c.= 6  d.= 8
 
 #3. a.= 14  b.= 8   c.= 13 d.= 4
@@ -29,5 +31,5 @@ if __name__ == '__main__':
 
 #5. a.= 234  b.= 560  c.= 874 d.= 888
 
-#6. a.= 234  b.= 560  c.= 875  d.= 889    
-    
+#6. a.= 234  b.= 560  c.= 875  d.= 889
+

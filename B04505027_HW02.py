@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
+
+#你的程式好像無法運作。我的每次測試，都是 "This is Not a Binary"
 def bin2int(N):
     aa,k,s=0,0,0
     while N>0:

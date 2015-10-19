@@ -1,3 +1,8 @@
+#!/usr/bin/env python3
+# -*- coding:utf-8 -*-
+
+#Python 程式的前兩行是固定的，請牢記。
+#A beautiful solution!
 tmp = input()
 
 sum = 0
@@ -17,4 +22,4 @@ print(sum)
 
 #5. a.= 234  b.= 560  c.= 874 d.= 888
 
-#6. a.= 234  b.= 560  c.= 875  d.= 889    
+#6. a.= 234  b.= 560  c.= 875  d.= 889

@@ -12,13 +12,16 @@ def bin2int(n):
         n=(n-r)/10
     return an
 if __name__ == '__main__':
-    
+
     n = 1111
     bin2int(n)
     print(bin2int(n))
-    
-    
-    
+    #你可以用一個變數承接 bin2int() 的回傳值，然後再印出那個變數即可。這麼一來，可以避免讓電腦把同一件事「算兩次」。像這樣：
+    #x = bin2int(n)
+    #print(x)
+
+
+
 
 #P2-19a=10
 #P2-19b=17
@@ -40,8 +43,8 @@ if __name__ == '__main__':
 #P3-30b=560
 #P3-30c=875
 #P3-30d=889
-            
-            
-        
-        
+
+
+
+
 

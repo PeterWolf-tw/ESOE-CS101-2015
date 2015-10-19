@@ -32,16 +32,17 @@ def bin2int(x):
         else:
             print ("輸入的數不為2進制數")
             return "none"
-        value = -value1    
+        value = -value1
     return value
-                   
 
-while (j==1):
-    a = input("請輸入一2進制數:")
-    a = int (a)
-    print ("此數以十進制表示為:",bin2int(a),"\n")  
-    
-    
+if __name__ == "__main__":
+#請加上程式進入點。
+    while (j==1):
+        a = input("請輸入一2進制數:")
+        a = int (a)
+        print ("此數以十進制表示為:",bin2int(a),"\n")
+        #若能配合某個退出設定會更好。e.g., 「按下 Q 鍵中止程式」。
+
 
 #第二題 P2-19
 #a. 10

@@ -1,9 +1,15 @@
+#!/usr/bin/env python3
+# -*- coding:utf-8 -*-
+
+#Python 程式的前兩行是固定的，請牢記。
+
+
 def bin2int(N):
     a=1
     ans=0
     while (N > 0):
-        
-        remainder = N % 10 
+
+        remainder = N % 10
         if (remainder>0):
             ans+=a
         a*=2
@@ -11,11 +17,11 @@ def bin2int(N):
     return ans
 
 if __name__ == '__main__':
-    
+
     binNumber = 1010
     bin2int(binNumber)
     print(bin2int(binNumber))
-    
+
 
 #2. a.= 10
 #   b.= 17
@@ -41,5 +47,5 @@ if __name__ == '__main__':
 #6. a.= 234
 #   b.= 560
 #   c.= 875
-#   d.= 889    
-    
+#   d.= 889
+
