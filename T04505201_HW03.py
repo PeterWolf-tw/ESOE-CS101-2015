@@ -15,6 +15,13 @@ def charFreqLister(inputSTR):
     for i in range(len(str)):
         resultLIST[i][0]=round(inputSTR.count(str[i])/sum,2)
         resultLIST[i][1]=str[i]
+    temp=[0.1,'b']
+    for i in range(len(str)):
+        for j in range(len(str)-i-1):
+            if(resultLIST[j][1]>resultLIST[j+1][1]):
+                temp=resultLIST[j]
+                resultLIST[j]=resultLIST[j+1]
+                resultLIST[j+1]=temp
     return resultLIST
 if __name__ == '__main__': 
     print("Please input a string:")
