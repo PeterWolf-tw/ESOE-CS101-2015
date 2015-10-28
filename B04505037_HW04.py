@@ -60,3 +60,46 @@ def conXOR(inputSTR_X, inputSTR_Y):
         i += 1
         j += 1
     return outputSTR
+
+
+def hex2Bin(hexSTR):
+    '''
+    16 進位表示式轉為 2 進位表示式
+    '''
+    return bin(int(hexSTR, 16))[2:]
+
+
+
+inputSTR_X = input("Please insert something: ")
+inputSTR_Y = input("Insert again: ")
+String = condOR(inputSTR_X, inputSTR_Y)
+print(String)
+
+
+
+
+
+#Ch4P4_3a = "10011001"
+#Ch4P4_3b = "00000000"
+#Ch4P4_3c = "10011001"
+#Ch4P4_3d = "11111111"
+print("========")
+#Ch4P4_4a = "01100110"
+#Ch4P4_4b = "11111111"
+#Ch4P4_4c = "00010001"
+#Ch4P4_4d = "10111011"
+print("========")
+#Ch4P4_13a = "0000010010100000 = 1184"
+#Ch4P4_13b = "1111110010100010 = -862"
+#Ch4P4_13c = "0000001101011110 = 862"
+#Ch4P4_13d = "1111101101100000 = -1184"
+print("========")
+#Ch4P4_15a = "10001001 = -119"
+#Ch4P4_15b = "10110111 = -73"
+#Ch4P4_15c = "01001001 = 73"
+#Ch4P4_15d = "01110111 = 119"
+print("========")
+#Ch4P4_16a = "0F51"
+#Ch4P4_16b = "0F2A"
+#Ch4P4_16c = "8012"
+#Ch4P4_16d = "7F51"    
