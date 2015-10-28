@@ -40,7 +40,7 @@ if __name__== "__main__":
     condition00Y = "010000110001011100101001"
 
     condition01 = condNOT(condition00X)
-    #print(condition01)
+    print(condition01)
 
     #可利用 hex2Bin() 函式計算十六進位表示式 "99" 的二進位表式：(範例如下)
     b = hex2Bin("99")
