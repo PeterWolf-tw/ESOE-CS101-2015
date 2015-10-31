@@ -56,7 +56,7 @@ if __name__== "__main__":
     condition03 = condOR(condition00X, condition00Y)
     condition04 = conXOR(condition00X, condition00Y)
     print (condition01,"\n",condition02,"\n",condition03,"\n",condition04)
-    
+    """
     print("Ans:")
     Ch4P4_3a = "10011001"
     Ch4P4_3b = "10011001"
@@ -81,6 +81,7 @@ if __name__== "__main__":
     Ch4P4_16a = "0F51"
     Ch4P4_16b = "0F2A"
     Ch4P4_16c = "8012"
-    Ch4P4_16d = "7F51"    
+    Ch4P4_16d = "7F51"
+    """
         
     
