@@ -70,15 +70,23 @@ elif a==2 or 3 or 4 :
 else:
     print ("Failed Input")
 
-
+#=======================================================#
+print(condOR(hex2Bin("99"),hex2Bin("99")))
 Ch4P4_3a = "10011001"
+print(condOR(hex2Bin("99"),hex2Bin("FF")))
 Ch4P4_3b = "11111111"
+print(condOR(hex2Bin("99"),hex2Bin("00")))
 Ch4P4_3c = "10011001"
+print(condOR(hex2Bin("FF"),hex2Bin("FF")))
 Ch4P4_3d = "11111111"
-       
+
+print(condNOT(condOR(hex2Bin("99"),hex2Bin("99"))))
 Ch4P4_4a = "01100110"
+print(condOR((hex2Bin("99")),condNOT(hex2Bin("00"))))
 Ch4P4_4b = "11111111"
+print(condOR(condAND(hex2Bin("99"),hex2Bin("33")),(condAND(hex2Bin("00"),hex2Bin("FF")))))
 Ch4P4_4c = "10001"
+print(condAND(condOR(hex2Bin("99"),hex2Bin("33")),condOR(hex2Bin("00"),hex2Bin("FF"))))
 Ch4P4_4d = "10111011"
 
 Ch4P4_13a = "0000010010100000 = 1184"
@@ -94,4 +102,4 @@ Ch4P4_15d = "01110111 = 119 (overflow)"
 Ch4P4_16a = "0F51"
 Ch4P4_16b = "0F2A"
 Ch4P4_16c = "8012"
-Ch4P4_16d = "7F51"   
+Ch4P4_16d = "7F51"
