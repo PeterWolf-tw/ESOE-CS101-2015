@@ -50,7 +50,17 @@ def hex2Bin(hexSTR):
     '''
     16 進位表示式轉為 2 進位表示式
     '''
-    return bin(int(hexSTR, 16))[2:]
+    outputSTR = ""
+    x = bin(int(hexSTR, 16))[2:]
+    y = int(len(hexSTR))*4 - int(len(x))
+    if y != 0:                
+        while y > 0:                         #將不足四倍十六進位長度者前補零
+            outputSTR = outputSTR + "0"           
+            y = y - 1
+        outputSTR = outputSTR + str(x)
+    else:
+        outputSTR = outputSTR + str(x)
+    return outputSTR
 
 
 if __name__== "__main__":
@@ -80,7 +90,7 @@ if __name__== "__main__":
     print("Ans:")
     Ch4P4_3a = condOR(b, b)
     print(Ch4P4_3a)
-    Ch4P4_3b = "10011001" #condOR(b, c)
+    Ch4P4_3b = condOR(b, c)
     print(Ch4P4_3b)
     Ch4P4_3c = condOR(b, d)
     print(Ch4P4_3c)
@@ -89,15 +99,16 @@ if __name__== "__main__":
     print("========")
     Ch4P4_4a = condNOT(condOR(b ,b))
     print(Ch4P4_4a)
-    Ch4P4_4b = "11111111"     #condOR(b, condNOT(c))
+    Ch4P4_4b = condOR(b, condNOT(c))
     print(Ch4P4_4b)
-    Ch4P4_4c = "00010001"     #condOR(condAND(b, e), condAND(c, d))
+    Ch4P4_4c = condOR(condAND(b, e), condAND(c, d))
     print(Ch4P4_4c)
-    Ch4P4_4d = "10111011"     #condAND(condOR(b, e), condOR(c, d))
+    Ch4P4_4d = condAND(condOR(b, e), condOR(c, d))
+    print(Ch4P4_4d)
     print("========")
     Ch4P4_13a = "1184"
     print(Ch4P4_13a)
-    Ch4P4_13b = "-62"
+    Ch4P4_13b = "-862"
     print(Ch4P4_13b)
     Ch4P4_13c = "862"
     print(Ch4P4_13c)
