@@ -2,22 +2,25 @@
 # -*- coding:utf-8 -*-
 
 #你的程式好像無法運作。我的每次測試，都是 "This is Not a Binary"
+#這是修改後的版本
 def bin2int(N):
     aa,k,s=0,0,0
     while N>0:
         k=N%10
-        if k!=0 or k!=1:
+        if k==0 or k==1:
+            s+=k*(2**aa)
+            N=N//10
+            aa+=1
+        else:
             print ('This is Not a Binary')
             return None
-        s+=k*(2**aa)
-        N=N//10
-        aa+=1
     print(s)
     return None
 
 if __name__ == '__main__':
     print('input a binary')
     bin2int(int(input()))
+
 
 
 #2. a.= 10  b.= 17  c.= 6  d.= 8

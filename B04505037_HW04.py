@@ -70,8 +70,8 @@ def hex2Bin(hexSTR):
 
 
 
-inputSTR_X = input("Please insert something: ")
-inputSTR_Y = input("Insert again: ")
+inputSTR_X = hex2Bin(input("Please insert something: "))
+inputSTR_Y = hex2Bin(input("Insert again: "))
 String = condOR(inputSTR_X, inputSTR_Y)
 print(String)
 
@@ -80,8 +80,8 @@ print(String)
 
 
 #Ch4P4_3a = "10011001"
-#Ch4P4_3b = "00000000"
-#Ch4P4_3c = "10011001"
+#Ch4P4_3b = "10011001"
+#Ch4P4_3c = "11111111"
 #Ch4P4_3d = "11111111"
 print("========")
 #Ch4P4_4a = "01100110"
@@ -94,10 +94,10 @@ print("========")
 #Ch4P4_13c = "0000001101011110 = 862"
 #Ch4P4_13d = "1111101101100000 = -1184"
 print("========")
-#Ch4P4_15a = "10001001 = -119"
+#Ch4P4_15a = "10001001 = -119 => overflow"
 #Ch4P4_15b = "10110111 = -73"
 #Ch4P4_15c = "01001001 = 73"
-#Ch4P4_15d = "01110111 = 119"
+#Ch4P4_15d = "01110111 = 119 => overflow"
 print("========")
 #Ch4P4_16a = "0F51"
 #Ch4P4_16b = "0F2A"
