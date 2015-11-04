@@ -52,6 +52,7 @@ def hex2Bin(hexSTR):
     '''
     return bin(int(hexSTR, 16))[2:]
 
+if __name__ == '__main__':
 a = int(input ("Choose one operation in NUMBER (1.Not/2.And/3.Or/4.Xor)\n"))
 
 if a==1:
@@ -71,6 +72,7 @@ else:
     print ("Failed Input")
 
 #=======================================================#
+print("Answer:")
 print(condOR(hex2Bin("99"),hex2Bin("99")))
 Ch4P4_3a = "10011001"
 print(condOR(hex2Bin("99"),hex2Bin("FF")))
