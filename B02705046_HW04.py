@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
-
+#請參考以下 condNOT() 的例子，設計四個 func() 依以下條件，能算出 condition02 ~ 04 的值
 #condition00 not condition01
 def condNOT(inputSTR_X):
     outputSTR = ""
@@ -10,39 +10,31 @@ def condNOT(inputSTR_X):
         else:
             outputSTR = outputSTR + "0"
     return outputSTR
-
-
 #condition00 and condition02
 def condAND(inputSTR_X, inputSTR_Y):
     outputSTR = ""
-    for a,b in zip(inputSTR_X, inputSTR_Y):
-        if a and b =="1":
-             outputSTR = outputSTR + "1"
+    for i in range(0, len(inputSTR_X)):
+        if inputSTR_X[i] == "1" and inputSTR_Y[i] == "1":
+            outputSTR += "1"
         else:
-             outputSTR = outputSTR + "0"     
-        
+            outputSTR += "0"
     return outputSTR
-
-#condition00 or condition03
 def condOR(inputSTR_X, inputSTR_Y):
-    for a,b in zip(inputSTR_X, inputSTR_Y):
-        if a and b =="0":
-             outputSTR = outputSTR + "0"
+    outputSTR = ""
+    for i in range(0, len(inputSTR_X)):
+        if inputSTR_X[i] == "1" or inputSTR_Y[i] == "1":
+            outputSTR += "1"
         else:
-             outputSTR = outputSTR + "1"
+            outputSTR += "0"
     return outputSTR
-
-#condition00 xor condition04
 def conXOR(inputSTR_X, inputSTR_Y):
-    for a,b in zip(inputSTR_X, inputSTR_Y):
-        if a == b:
-             outputSTR = outputSTR + "0"
+    outputSTR = ""
+    for i in range(0, len(inputSTR_X)):
+        if inputSTR_X[i] == inputSTR_Y[i]:
+            outputSTR += "0"
         else:
-             outputSTR = outputSTR + "1"
-    return  outputSTR
-
-
-
+            outputSTR += "1"
+    return outputSTR
 def hex2Bin(hexSTR):
     '''
     16 進位表示式轉為 2 進位表示式
@@ -50,20 +42,16 @@ def hex2Bin(hexSTR):
     return bin(int(hexSTR, 16))[2:]
 
 
-if __name__== "__main__":
+if __name__ == '__main__':
     condition00X = "010111001010100001100011"
     condition00Y = "010000110001011100101001"
 
     condition01 = condNOT(condition00X)
     print(condition01)
-    condition02=conAND(condition00X,condition00Y)
-    print(condition02)
-    condition03=conOR(condition00X,condition00Y)
-    print(condition03)
-    condition04=conXOR(condition00X,condition00Y)
-    print(condition03)
 
-   
+    #可利用 hex2Bin() 函式計算十六進位表示式 "99" 的二進位表式：(範例如下)
+    b = hex2Bin("99")
+    print(b)
 
 
     print("Ans:")
@@ -83,8 +71,8 @@ if __name__== "__main__":
     Ch4P4_13d = "-1184"
     print("========")
     Ch4P4_15a = "overflow"
-    Ch4P4_15b = "not overflow"
-    Ch4P4_15c = "not overflow"
+    Ch4P4_15b = "won't overflow"
+    Ch4P4_15c = "won't overflow"
     Ch4P4_15d = "overflow"
     print("========")
     Ch4P4_16a = "0F51"
