@@ -16,16 +16,31 @@ def condNOT(inputSTR_X):
 
 #condition00 and condition02
 def condAND(inputSTR_X, inputSTR_Y):
-    return
+	outputSTR = ""
+	for i in inputSTR_X and j in inputSTR_Y:
+		if i==j=="1":
+			outputSTR="1"
+		else:
+			outputSTR="0"	
+    return outputSTR
 
 #condition00 or condition03
 def condOR(inputSTR_X, inputSTR_Y):
-    return
-
+	outputSTR = ""
+    for i in inputSTR_X and j in inputSTR_Y:
+		if i|j=="1":
+			outputSTR="1"
+		else:
+			outputSTR="0"
 #condition00 xor condition04
 def conXOR(inputSTR_X, inputSTR_Y):
+	outputSTR = ""
+    for i in inputSTR_X and j in inputSTR_Y:
+		if i^j=="1":
+			outputSTR="1"
+		else:
+			outputSTR="0"
     return
-
 
 
 def hex2Bin(hexSTR):
@@ -47,28 +62,28 @@ if __name__== "__main__":
     print(b)
 
 
-    print("Ans:")
-    Ch4P4_3a = ""
-    Ch4P4_3b = ""
-    Ch4P4_3c = ""
-    Ch4P4_3d = ""
+ print("Ans:")
+    Ch4P4_3a = "10011001"
+    Ch4P4_3b = "11111111"
+    Ch4P4_3c = "10011001"
+    Ch4P4_3d = "11111111"
     print("========")
-    Ch4P4_4a = ""
-    Ch4P4_4b = ""
-    Ch4P4_4c = ""
-    Ch4P4_4d = ""
+    Ch4P4_4a = "01100110"
+    Ch4P4_4b = "11111111"
+    Ch4P4_4c = "00010001"
+    Ch4P4_4d = "10111011"
     print("========")
-    Ch4P4_13a = ""
-    Ch4P4_13b = ""
-    Ch4P4_13c = ""
-    Ch4P4_13d = ""
+    Ch4P4_13a = "1184"
+    Ch4P4_13b = "-862"
+    Ch4P4_13c = "862"
+    Ch4P4_13d = "-1184"
     print("========")
-    Ch4P4_15a = ""
-    Ch4P4_15b = ""
-    Ch4P4_15c = ""
-    Ch4P4_15d = ""
+    Ch4P4_15a = "overflow"
+    Ch4P4_15b = "-73"
+    Ch4P4_15c = "73"
+    Ch4P4_15d = "overflow"
     print("========")
-    Ch4P4_16a = ""
-    Ch4P4_16b = ""
-    Ch4P4_16c = ""
-    Ch4P4_16d = ""
+    Ch4P4_16a = "0F51"
+    Ch4P4_16b = "0F2A"
+    Ch4P4_16c = "8012"
+    Ch4P4_16d = "7F51"
