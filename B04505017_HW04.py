@@ -87,13 +87,13 @@ print("========")
     Ch4P4_13c = "862"
     Ch4P4_13d = "-1184"
 print("========")
-    Ch4P4_15a = "no"
+    Ch4P4_15a = "overflow"
     Ch4P4_15b = "no"
     Ch4P4_15c = "no"
     Ch4P4_15d = "overflow"
 print("========")
-    Ch4P4_16a = "0F59"
-    Ch4P4_16b = "overflow?,-70D6"
+    Ch4P4_16a = "0F51"
+    Ch4P4_16b = "overflow?,0F2A"
     Ch4P4_16c = "overflow!!,-7FEE"
     Ch4P4_16d = "overflow...,7F51"
 

@@ -17,30 +17,31 @@ def condNOT(inputSTR_X):
 #condition00 and condition02
 def condAND(inputSTR_X, inputSTR_Y):
     outputSTR = ""
-    for x , y in zip(inputSTR_X , inputSTR_Y):
-        if x == y == "1":
+    for i,j in zip(inputSTR_X,inputSTR_Y):
+        if i == "1" and j == "1":
             outputSTR = outputSTR + "1"
         else:
             outputSTR = outputSTR + "0"
+        
     return outputSTR
 
 #condition00 or condition03
 def condOR(inputSTR_X, inputSTR_Y):
     outputSTR = ""
-    for x, y in zip(inputSTR_X, inputSTR_Y):   
-        if x == y == "0" :
+    for i,j in zip(inputSTR_X,inputSTR_Y):
+        if i == "0" and j =="0":
             outputSTR = outputSTR + "0"
         else:
-            outputSTR = outputSTR + "1"
+            outputSTR = outputSTR + "0"
     return outputSTR
 
 #condition00 xor condition04
-def conXOR(inputSTR_X, inputSTR_Y):
-    outputSTR = ""
-    for x, y in zip(inputSTR_X, inputSTR_Y):  
-        if x == y :
+def condXOR(inputSTR_X, inputSTR_Y):
+    outputSTR =""
+    for i,j in zip(inputSTR_X,inputSTR_Y):
+        if i == j:
             outputSTR = outputSTR + "0"
-        else :
+        else:
             outputSTR = outputSTR + "1"
     return outputSTR
 
@@ -50,17 +51,8 @@ def hex2Bin(hexSTR):
     '''
     16 進位表示式轉為 2 進位表示式
     '''
-    outputSTR = ""
-    x = bin(int(hexSTR, 16))[2:]
-    y = int(len(hexSTR))*4 - int(len(x))
-    if y != 0:                
-        while y > 0:                         #將不足四倍十六進位長度者前補零
-            outputSTR = outputSTR + "0"           
-            y = y - 1
-        outputSTR = outputSTR + str(x)
-    else:
-        outputSTR = outputSTR + str(x)
-    return outputSTR
+    
+    return bin(int(hexSTR, 16))[2:]
 
 
 if __name__== "__main__":
@@ -73,55 +65,50 @@ if __name__== "__main__":
     print(condition02)
     condition03 = condOR(condition00X, condition00Y)
     print(condition03)
-    condition04 = conXOR(condition00X, condition00Y)
+    condition04 = condXOR(condition00X, condition00Y)
     print(condition04)
+
 
     #可利用 hex2Bin() 函式計算十六進位表示式 "99" 的二進位表式：(範例如下)
     b = hex2Bin("99")
     print(b)
-    c = hex2Bin("00")
-    print(c)
-    d = hex2Bin("FF")
-    print(d)
-    e = hex2Bin("33")
-    print(e)
 
 
     print("Ans:")
-    Ch4P4_3a = condOR(b, b)
+    Ch4P4_3a = "10011001"
     print(Ch4P4_3a)
-    Ch4P4_3b = condOR(b, c)
+    Ch4P4_3b = "10011001"
     print(Ch4P4_3b)
-    Ch4P4_3c = condOR(b, d)
+    Ch4P4_3c = "11111111"
     print(Ch4P4_3c)
-    Ch4P4_3d = condOR(d, d)
+    Ch4P4_3d = "11111111"
     print(Ch4P4_3d)
     print("========")
-    Ch4P4_4a = condNOT(condOR(b ,b))
+    Ch4P4_4a = "01100110"
     print(Ch4P4_4a)
-    Ch4P4_4b = condOR(b, condNOT(c))
+    Ch4P4_4b = "11111111"
     print(Ch4P4_4b)
-    Ch4P4_4c = condOR(condAND(b, e), condAND(c, d))
+    Ch4P4_4c = "00010001"
     print(Ch4P4_4c)
-    Ch4P4_4d = condAND(condOR(b, e), condOR(c, d))
+    Ch4P4_4d = "10111011"
     print(Ch4P4_4d)
     print("========")
-    Ch4P4_13a = "1184"
+    Ch4P4_13a = "0000010010100000 = 1184"
     print(Ch4P4_13a)
-    Ch4P4_13b = "-862"
+    Ch4P4_13b = "1111110010100010 = -862"
     print(Ch4P4_13b)
-    Ch4P4_13c = "862"
+    Ch4P4_13c = "0000001101011110 = 862"
     print(Ch4P4_13c)
-    Ch4P4_13d = "-1184"
+    Ch4P4_13d = "1111101101100000 = -1184"
     print(Ch4P4_13d)
     print("========")
-    Ch4P4_15a = "-119 =>overflow"
+    Ch4P4_15a = "10001001(overflow) = -119"
     print(Ch4P4_15a)
-    Ch4P4_15b = "-73"
+    Ch4P4_15b = "10110111 = -73"
     print(Ch4P4_15b)
-    Ch4P4_15c = "73"
+    Ch4P4_15c = "01001001 = 73"
     print(Ch4P4_15c)
-    Ch4P4_15d = "119 =>overflow"
+    Ch4P4_15d = "01110111(overflow) = 119"
     print(Ch4P4_15d)
     print("========")
     Ch4P4_16a = "0F51"
