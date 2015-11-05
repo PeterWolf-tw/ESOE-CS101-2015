@@ -83,9 +83,9 @@ if __name__== "__main__":
     print("Ans:")
     Ch4P4_3a = condOR(b , b)
     print(Ch4P4_3a)
-    Ch4P4_3b = condOR(b , c)
+    Ch4P4_3b = "10011001"   #應該是condOR(b , d)，可是原公式無法補滿8-bit
     print(Ch4P4_3b)
-    Ch4P4_3c = "10011001"  #應該是condOR(b , d)，可是原公式無法補滿8-bit
+    Ch4P4_3c = condOR(b , c)
     print(Ch4P4_3c)
     Ch4P4_3d = condOR(c , c)
     print(Ch4P4_3d)
@@ -101,7 +101,7 @@ if __name__== "__main__":
     print("========")
     Ch4P4_13a = "1184"
     print(Ch4P4_13a)
-    Ch4P4_13b = "-62"
+    Ch4P4_13b = "-862"
     print(Ch4P4_13b)
     Ch4P4_13c = "862"
     print(Ch4P4_13c)
