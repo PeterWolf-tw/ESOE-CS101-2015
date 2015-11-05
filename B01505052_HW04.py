@@ -4,27 +4,7 @@
 #請參考以下 condNOT() 的例子，設計四個 func() 依以下條件，能算出 condition02 ~ 04 的值
 
 #condition00 not condition01
-def lencheck(inputSTR_X, inputSTR_Y):
-    lenX=len(inputSTR_X)
-    lenY=len(inputSTR_Y)
-    #若輸入為兩不相等字串，將較少之陣列以0補足
-    if lenX>lenY:        
-        newSTR=""
-        i=lenY
-        while i <= lenX-1:
-            newSTR = newSTR + "0"
-            i+=1
-        inputSTR_Y = newSTR + inputSTR_Y   
-       
-        
-    else:
-        i=lenX
-        while i<= lenY-1:
-            newSTR = newSTR + "0"
-            i+=1
-        inputSTR_X = newSTR + inputSTR_X
-                
-    return inputSTR_Y, inputSTR_X
+
 
 
 def condNOT(inputSTR_X):    
@@ -39,7 +19,7 @@ def condNOT(inputSTR_X):
 
 #condition00 and condition02
 def condAND(inputSTR_X, inputSTR_Y):
-    (inputSTR_X, inputSTR_Y)=lencheck(inputSTR_X, inputSTR_Y)
+    
     outputSTR = ""
     l=len(inputSTR_X)
     #algorithm
@@ -54,7 +34,7 @@ def condAND(inputSTR_X, inputSTR_Y):
 
 #condition00 or condition03
 def condOR(inputSTR_X, inputSTR_Y):   
-    (inputSTR_X, inputSTR_Y)=lencheck(inputSTR_X, inputSTR_Y)
+    
     outputSTR = ""
     l=len(inputSTR_X)
     #algorithm
@@ -70,7 +50,7 @@ def condOR(inputSTR_X, inputSTR_Y):
     
 #condition00 xor condition04
 def condXOR(inputSTR_X, inputSTR_Y):
-    (inputSTR_X, inputSTR_Y)=lencheck(inputSTR_X, inputSTR_Y)
+    
     outputSTR = ""
     l=len(inputSTR_X)
     #algorithm
@@ -93,10 +73,8 @@ def hex2Bin(hexSTR):
 
 
 if __name__== "__main__":
-    #condition00X = "010111001010100001100011"
-    #condition00Y = "010000110001011100101001"
-    condition00X = "0101"
-    condition00Y = "110"    
+    condition00X = "010111001010100001100011"
+    condition00Y = "010000110001011100101001"   
     condition01 = condNOT(condition00X)
     print(condition01)
     condAND(condition00X,condition00Y)    
