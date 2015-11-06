@@ -10,8 +10,9 @@ def charFreqLister(x):
     for i in x:
         j = float('%.3f'%(str(x).count(i)/n))
         result.append((j,i))
-    result.sort(reverse=True)
-    return result    
+    resultLIST = list(set(result))
+    resultLIST.sort(reverse=True)
+    return resultLIST    
     
 x = input("Please insert something: ")   
 k = charFreqLister(x)
