@@ -65,8 +65,8 @@ if __name__== "__main__":
 
     print("Ans:")
     print("Ch4P4_3a = \"10011001\"")
-    print("Ch4P4_3b = \"11111111\"")
-    print("Ch4P4_3c = \"10011001\"")
+    print("Ch4P4_3b = \"10011001\"")
+    print("Ch4P4_3c = \"11111111\"")
     print("Ch4P4_3d = \"11111111\"")
     print("========")
     print("Ch4P4_4a = \"01100110\"")
