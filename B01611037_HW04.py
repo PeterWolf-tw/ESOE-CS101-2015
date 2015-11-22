@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
 
+#請參考以下 condNOT() 的例子，設計四個 func() 依以下條件，能算出 condition02 ~ 04 的值
+
 #condition00 not condition01
 def condNOT(inputSTR_X):
     outputSTR = ""
@@ -14,33 +16,34 @@ def condNOT(inputSTR_X):
 
 #condition00 and condition02
 def condAND(inputSTR_X, inputSTR_Y):
-    outputSTR = ""
-    for a,b in zip(inputSTR_X, inputSTR_Y):
-        if a and b =="1":
-             outputSTR = outputSTR + "1"
-        else:
-             outputSTR = outputSTR + "0"     
-        
+	outputSTR = ""
+	for i in inputSTR_X and j in inputSTR_Y:
+		if i==j=="1":
+			outputSTR="1"
+		else:
+			outputSTR="0"	
     return outputSTR
 
 #condition00 or condition03
 def condOR(inputSTR_X, inputSTR_Y):
-    for a,b in zip(inputSTR_X, inputSTR_Y):
-        if a and b =="0":
-             outputSTR = outputSTR + "0"
-        else:
-             outputSTR = outputSTR + "1"
+	outputSTR = ""
+    for i in inputSTR_X and j in inputSTR_Y:
+		if i|j=="1":
+			outputSTR="1"
+		else:
+			outputSTR="0"
     return outputSTR
-
 #condition00 xor condition04
 def conXOR(inputSTR_X, inputSTR_Y):
-    for a,b in zip(inputSTR_X, inputSTR_Y):
-        if a == b:
-             outputSTR = outputSTR + "0"
-        else:
-             outputSTR = outputSTR + "1"
-    return  outputSTR
-
+	outputSTR = ""
+    for i in inputSTR_X and j in inputSTR_Y:
+		if i==j=="1":
+			outputSTR="0"
+			elif i==j=="0":
+                            outputSTR="0"
+		            else:
+			         outputSTR="1"
+    return outputSTR
 
 
 def hex2Bin(hexSTR):
@@ -56,17 +59,13 @@ if __name__== "__main__":
 
     condition01 = condNOT(condition00X)
     print(condition01)
-    condition02=conAND(condition00X,condition00Y)
-    print(condition02)
-    condition03=conOR(condition00X,condition00Y)
-    print(condition03)
-    condition04=conXOR(condition00X,condition00Y)
-    print(condition03)
 
-   
+    #可利用 hex2Bin() 函式計算十六進位表示式 "99" 的二進位表式：(範例如下)
+    b = hex2Bin("99")
+    print(b)
 
 
-    print("Ans:")
+ print("Ans:")
     Ch4P4_3a = "10011001"
     Ch4P4_3b = "11111111"
     Ch4P4_3c = "10011001"
@@ -83,8 +82,8 @@ if __name__== "__main__":
     Ch4P4_13d = "-1184"
     print("========")
     Ch4P4_15a = "overflow"
-    Ch4P4_15b = "not overflow"
-    Ch4P4_15c = "not overflow"
+    Ch4P4_15b = "-73"
+    Ch4P4_15c = "73"
     Ch4P4_15d = "overflow"
     print("========")
     Ch4P4_16a = "0F51"
