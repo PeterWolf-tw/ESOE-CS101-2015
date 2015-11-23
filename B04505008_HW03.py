@@ -173,7 +173,7 @@ def charFreqLister(inputSTR):
 if __name__ == '__main__': 
     
     while True:
-        outputLIST=charFreqLister(raw_input("please enter something:"))
+        outputLIST=charFreqLister(input("please enter something:"))
        
         
     print (outputLIST)
