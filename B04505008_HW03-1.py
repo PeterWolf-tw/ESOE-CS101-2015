@@ -18,6 +18,7 @@ def order(shit):
     
     n=len(shit)
     resultLIST=[]
+    huffmanLIST=[]
     
     for a in shit:
         A = shit.count(a)/n
@@ -33,17 +34,26 @@ def order(shit):
                     K=A+B
                     codea.append("0")
                     codeb.append("1")
-                    (A,a,codea)=(a,codea)
-                    (B,b,codeb)=(b,codeb)
+                    huffmanLIST.append((A,a,codea))
+                    huffmanLIST.append((B,b,codeb))
+                    resultLIST.remove((A,a,codea))
+                    resultLIST.remove((B,b,codeb))
                     if K != 1:
+                        ghostcode=[]
                         resultLIST.append((K,"ghost",ghostcode))
-                        if ghostcode.append("0"):
-                            codea.append("0")
-                            codeb.append("0")
-                        if ghostcode.append("1"):
-                            codea.append("1")
-                            codeb.append("1")
-                        
+                    if ghostcode.append("0"):
+                        codea.append("0")
+                        codeb.append("0")
+                    if ghostcode.append("1"):
+                        codea.append("1")
+                        codeb.append("1")     
+                    if K == 1:
+                        break
+                    
+                    
+                    return huffmanLIST
+                    
+    
                     
             
     
@@ -53,4 +63,6 @@ if __name__ == '__main__':
     outputLIST=charFreqLister(input("please enter something:"))   
     print (outputLIST)
     
+    output=order(input("please enter something:"))   
+    print (output)    
     
