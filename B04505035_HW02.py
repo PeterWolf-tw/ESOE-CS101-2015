@@ -4,9 +4,8 @@
 #Python 程式的前兩行是固定的，請牢記。
 
 
-
-x=("a binary like   ")
-cin=str(input(x))
+x="555"
+cin=int(input(x))
 j=len(cin)-1
 sum=0
 k=0
