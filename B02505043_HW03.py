@@ -16,7 +16,7 @@ def charfreqlister(str):
             result.append([1, c])
             
     for element in result:
-        element[0] /= len_str
+        element[0] = float(element[0]) / len_str
 
     return result
 
