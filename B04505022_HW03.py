@@ -9,8 +9,11 @@ def charFreqLister(inputSTR):
     resultLIST =[]
     n = len(str(inputSTR))
     for i in inputSTR:
-        if i not in LISTa:
+        if (i,str(inputSTR).count(i)/n) not in LISTa:
             LISTa.append((i,str(inputSTR).count(i)/n))
+        else:
+            pass
+          
     LISTb = sorted(LISTa, key = lambda x : x[1])
     for i in reversed(LISTb):
         resultLIST.append(i)
