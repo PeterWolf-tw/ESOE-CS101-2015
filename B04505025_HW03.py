@@ -4,9 +4,7 @@
 def huffmanTranslater(inputSTR):
 
     x = inputSTR
-    y = inputSTR
     letterLIST = []
-    freqLIST = []
     freqcharLIST = []
     codeLIST = []
     resultLIST = []
@@ -18,16 +16,13 @@ def huffmanTranslater(inputSTR):
         k = x.replace(x[0],"")
         #此迴圈會將inputSTR中的與首位字元相同的字元消除
         freq = (len(x)-len(k))*1.0/len(inputSTR)
-        #並計算長度差，推得該字元出現頻率
-        freqLIST.append(freq)        
+        #計算長度差，推得該字元出現頻率       
         freqcharLIST.append([freq,letterLIST[l]])  
         x = k
         l += 1
-        #並重複動作直到inputSTR不包含任何字元
-    
+        #做重複動作直到inputSTR不包含任何字元    
     freqcharLIST = sorted(freqcharLIST, reverse=True)
-    freqLIST = sorted(freqLIST, reverse=True)
-    #製作出letterLIST(含所有出現字元)、freqLIST(頻率按大小排)及freqcharLIST(字母及頻率按頻率大小排)
+    #製作出letterLIST(含所有出現字元)及freqcharLIST(字母及頻率按頻率大小排)
      
 #########以上為第三題，以下為我認知錯誤的Huffman Code > < 不過竟然花了蠻多時間打了就把它放上來吧！######### 
     w = len(letterLIST) - 1
