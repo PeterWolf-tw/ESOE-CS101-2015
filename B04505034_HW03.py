@@ -19,9 +19,9 @@ def charFreqLister(inputSTR):
 
 
     for i in inputSTR:
-        c = inputSTR.count(i)
-        if (i,c/len(inputSTR)) not in resultLIST:
-            resultLIST.append((i,c/len(inputSTR)))
+        I = inputSTR.count(i)
+        if (i,I/len(inputSTR)) not in resultLIST:
+            resultLIST.append((i,I/len(inputSTR)))
     resultLIST.sort( key = lambda x : x[1], reverse=True)
     
     return resultLIST
@@ -31,12 +31,50 @@ def charFreqLister(inputSTR):
 #     (https://zh.wikipedia.org/wiki/霍夫曼編碼) 為你之前設計的
 #     程式加上轉碼壓縮的功能。
 # e.g.,
-#def huffmanTranslater(inputSTR):
-#resultLIST = [(freq, char, code), (freq, char, code), (freq, char, code),...]
+def huffmanTranslater(inputSTR):
+    huffLIST = []
+    LIST = []
+    codeLISTa = []
+    codeLISTb = []
 
-#return resultLIST
+    for a in inputSTR:
+        A = inputSTR.count(a)/len(inputSTR)
+        for b in inputSTR:
+            B = inputSTR.count(b)/len(inputSTR)
+            for c in inputSTR:              
+                C = inputSTR.count(c)/len(inputSTR)
+                for (a, A, codeLISTa) in LIST:
+                    for (b, B, codeLISTb) in LIST:
+                        for (c, C, codeLISTc) in LIST:
+                            if A<=B<=C<1:
+                                K = A + B
+                                codeLISTa.append("1")
+                                codeLISTb.append("0")
+                            return LIST.append(a, A==K, codeLISTa), LIST.append(b, B==K, codeLISTb)
+                
+                    
+                
+                          
+    if (a, A, codeLISTa) not in huffLIST:
+        huffLIST.append(a, A, codeLISTa)
+    
+    if (b, B, codeLISTb) not in huffLIST:
+        huffLIST.append(b, B, codeLISTb) 
+    
+                   
+                
+                                       
+    
+    huffLIST.sort( key = lambda x : x[1], reverse=True)
+                
+            
+                
+            
+    return huffLIST
 
 
 if __name__ == "__main__":
-    result = charFreqLister(input("give me something:"))
-    print(result)
+    result1 = charFreqLister(input("give me something:"))
+    result2 = huffmanTranslater(input("give me something:"))
+    print(result1)
+    print(result2)
