@@ -10,7 +10,7 @@ def charFreqLister(inputSTR):
     almostresultLIST = list(setofresult)
     resultLIST = sorted(almostresultLIST, reverse = True)
     return resultLIST
-#############下面這個是把機率由小排到大的函數,原本想拿來當作霍夫曼編碼的機率list,雖然沒有研究出怎麼做不過還是放上來TAT############
+##############下面這個是把機率由小排到大的函數,原本想拿來當作霍夫曼編碼的機率list,雖然沒有研究出怎麼做不過還是放上來TAT#############
 
 def probabilityLISTer(inputSTR):
     numberofcharacters = len(str(inputSTR))
