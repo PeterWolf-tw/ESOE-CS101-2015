@@ -11,7 +11,7 @@ def charFreqLister(inputSTR):
 
     
     for x in inputSTR:
-        c = inputSTR.count(i)
+        c = inputSTR.count(x)
         if (x,c/len(inputSTR)) not in resultLIST:
             resultLIST.append((x,c/len(inputSTR)))
     resultLIST.sort( key = lambda x : x[1], reverse=True)
@@ -23,8 +23,8 @@ def charFreqLister(inputSTR):
               
                
 
-if __name__== "__main__":
-output = charFreqLister(input("kevin handsome boy"))    
+if __name__ == "__main__":
+    output = charFreqLister(input("give me something shit:"))    
     print(output)
 
 
