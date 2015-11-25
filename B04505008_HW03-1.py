@@ -29,17 +29,28 @@ def order(shit):
     for(A,a,codea) in resultLIST:
         for(B,b,codeb) in resultLIST:
             for(C,c,codec) in resultLIST:
-                if A <= B <= C <1:
+                if A <= B <= C <=1:
                     K=A+B
                     codea.append("0")
                     codeb.append("1")
-                    resultLIST.append((K,"ghost","ghostcode"))
+                    (A,a,codea)=(a,codea)
+                    (B,b,codeb)=(b,codeb)
+                    if K != 1:
+                        resultLIST.append((K,"ghost",ghostcode))
+                        if ghostcode.append("0"):
+                            codea.append("0")
+                            codeb.append("0")
+                        if ghostcode.append("1"):
+                            codea.append("1")
+                            codeb.append("1")
+                        
+                    
             
     
 
 if __name__ == '__main__': 
     
-    outputLIST=charFreqLister(input("please enter something:"))
-       
-    out123=order(outputLIST)    
-    print (out123)
+    outputLIST=charFreqLister(input("please enter something:"))   
+    print (outputLIST)
+    
+    
