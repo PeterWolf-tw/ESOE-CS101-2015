@@ -5,11 +5,11 @@ def charFreqLister(inputSTR):
     resultLIST = []
     
     
-    for i in inputSTR:
-        if (inputSTR.count(i)/len(inputSTR),i) in resultLIST:
+    for n in inputSTR:
+        if (inputSTR.count(n)/len(inputSTR),n) in resultLIST:
             zip
         else:
-            resultLIST.append((inputSTR.count(i)/len(inputSTR),i))
+            resultLIST.append((inputSTR.count(n)/len(inputSTR),n))
     resultLIST.sort(reverse=True)
 
     return resultLIST
