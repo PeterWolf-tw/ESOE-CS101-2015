@@ -13,7 +13,7 @@ def charFreqLister(inputSTR):
     a = []
     for i in inputSTR:
         if i not in a:
-            resultLIST.append([inputSTR.count(i)/len(inputSTR),i])
+            resultLIST.append([round(inputSTR.count(i)/len(inputSTR),4),i])
             a.append(i)    
     resultLIST.sort(reverse = True)   #True的T要大寫
 
@@ -28,11 +28,13 @@ def huffmanTranslater(inputSTR):
     
     facLIST = charFreqLister(inputSTR)
     facLEN = len(facLIST)
-    freqLIST = []
-    copycharLIST = []
+    freqLISTforcode = []
+    charLISTforcode = []
+    freqDICTforcode = {}
     for i in facLIST:
-        copycharLIST.append(i[1]) 
-    fDICT = {}
+        freqLISTforcode.append(i[0])
+        charLISTforcode.append(i[1])
+        freqDICTforcode[i[1]] = i[0]
     nDICT = {}
     i = 1
     while i < facLEN :
@@ -54,39 +56,38 @@ def huffmanTranslater(inputSTR):
         facLIST.append([f,n])
         facLIST.sort(key= lambda x : x[0] ,reverse=True)
         i += 1
-    #print("i=",i," fDICT=",fDICT)
     #print("i=",i," nDICT=",nDICT)
     #print("i=",i," facLIST=",facLIST)    
     resultDICT = {}
-    for i in copycharLIST:
+    for i in charLISTforcode:
         resultDICT[i] = ""
     for i in range(1,facLEN):
-        for k in copycharLIST:
-            a = nDICT[i]
-            if  k in str(a[0]).replace(", ",","): 
+        a = nDICT[i]
+        for k in charLISTforcode:
+            if k in str(a[0]).replace(", ",","): 
                 resultDICT[k] = "1" + resultDICT[k]
-            if  k in str(a[1]).replace(", ",","):
-                resultDICT[k] = "0" + resultDICT[k]  
-                
-    return resultDICT
-    
+            if k in str(a[1]).replace(", ",","):
+                resultDICT[k] = "0" + resultDICT[k]
+    resultLIST = []
+    for i in charLISTforcode:
+        if i in resultDICT:
+            resultLIST.append([freqDICTforcode[i],i,resultDICT[i]])
 
-    #resultLIST = [(freq, char, code)]
-    #return resultLIST
+    return resultLIST
 
 if __name__== "__main__":
     testSTR01 = "The quick brown fox jumps over the lazy dog"
     result = charFreqLister(testSTR01)
-    print(result)
+    print("CharFreqList of「",testSTR01,"」=",result)
+    result = huffmanTranslater(testSTR01)
+    print("Huffmancode of 「",testSTR01,"」=",result)        
     testSTR02 = "Jim quickly realized that the beautiful gowns are expensive"
     result = charFreqLister(testSTR02)
-    print(result)
+    print("CharFreqList of 「",testSTR02,"」=",result)
     result = huffmanTranslater(testSTR01)
-    print(result)    
-    result = huffmanTranslater(testSTR02)
-    print(result)
-    a = "abbccc"
+    print("Huffmancode of 「",testSTR02,"」=",result)  
+    a = input("Enter your sentence:")
     result = charFreqLister(a)
-    print(result)
+    print("CharFreqList of「",a,"」=",result)
     result = huffmanTranslater(a)
-    print(result)
+    print("Huffmancode of「",a,"」=",result)    
