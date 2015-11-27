@@ -59,8 +59,9 @@ if __name__== "__main__":
 
     condition01 = condNOT(condition00X)
     print(condition01)
-    
-    
+
+    #其它的題目呢？
+
        #print("Ans:")
        #Ch4P4_3a = ""
        #Ch4P4_3b = ""
@@ -85,4 +86,4 @@ if __name__== "__main__":
        #Ch4P4_16a = ""
        #Ch4P4_16b = ""
        #Ch4P4_16c = ""
-       #Ch4P4_16d = ""    
+       #Ch4P4_16d = ""

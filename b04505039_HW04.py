@@ -7,9 +7,9 @@
 def condNOT(inputSTR_X):
     outputSTR = ""
     for i in inputSTR_X:
-        if i == "0"
+        if i == "0":
             outputSTR = outputSTR + "1"
-        else :
+        else:
             outputSTR = outputSTR + "0"
     return outputSTR
 
@@ -25,15 +25,15 @@ def condAND(inputSTR_X, inputSTR_Y):
     return outputSTR
 
 
-if __name__== "__main__":
-    condition00X = "010111001010100001100011"
-    condition00Y = "010000110001011100101001"
+#if __name__== "__main__":
+    #condition00X = "010111001010100001100011"
+    #condition00Y = "010000110001011100101001"
 
-    condition02 = condAND(condition00X,condition00Y)
-    print(condition02)
-    
-    
-    
+    #condition02 = condAND(condition00X,condition00Y)
+    #print(condition02)
+
+
+
 #condition00 or condition03
 def condOR(inputSTR_X, inputSTR_Y):
     outputSTR = ""
@@ -45,30 +45,30 @@ def condOR(inputSTR_X, inputSTR_Y):
     return outputSTR
 
 
-if __name__== "__main__":
-    condition00X = "010111001010100001100011"
-    condition00Y = "010000110001011100101001"
+#if __name__== "__main__":
+    #condition00X = "010111001010100001100011"
+    #condition00Y = "010000110001011100101001"
 
-    condition03 = condOR(condition00X,condition00Y)
-    print(condition03)
+    #condition03 = condOR(condition00X,condition00Y)
+    #print(condition03)
 
 #condition00 xor condition04
-def conXOR(inputSTR_X, inputSTR_Y):
+def condXOR(inputSTR_X, inputSTR_Y):
     outputSTR = ""
     for i,k in zip(inputSTR_X, inputSTR_Y):
-        if i == k 
+        if i == k: #沒加冒號，會造成句法錯誤 (SyntaxError)
             outputSTR = outputSTR + "0"
         else :
             outputSTR = outputSTR + "1"
-if __name__== "__main__":
-     condition00X = "010111001010100001100011"
-     condition00Y = "010000110001011100101001"
-            
-     condition04 = condXOR(condition00X,condition00Y)
-     print(condition04)
-        
-        
-        
+#if __name__== "__main__":
+     #condition00X = "010111001010100001100011"
+     #condition00Y = "010000110001011100101001"
+
+     #condition04 = condXOR(condition00X,condition00Y)
+     #print(condition04)
+
+
+
 
 
 
@@ -79,28 +79,34 @@ def hex2Bin(hexSTR):
     return bin(int(hexSTR, 16))[2:]
 
 
-if __name__== "__main__":
+if __name__== "__main__": # if __name__ == "__main__": 這行是程式的進入點。一個程式只有「一個」進入點，而不是每個 function 都有自己的進入點。    condition00X = "010111001010100001100011"
     condition00X = "010111001010100001100011"
     condition00Y = "010000110001011100101001"
 
     condition01 = condNOT(condition00X)
     print(condition01)
+    condition02 = condAND(condition00X,condition00Y)
+    print(condition02)
+    condition03 = condOR(condition00X,condition00Y)
+    print(condition03)
+    condition04 = condXOR(condition00X,condition00Y)
+    print(condition04)
 
-   
-   
+
+
     #可利用 hex2Bin() 函式計算十六進位表示式 "99" 的二進位表式：(範例如下)
-    b = hex2Bin(99)
+    b = hex2Bin("99") #hex2Bin() 轉的是字串，不是數字。
     print(b)
 
 
-   print("Ans:")
+    print("Ans:") #縮排一次四個空格。不要任意更動。
     Ch4P4_3a = "10011001"
-    Ch4P4_3b = "10011001"    
-    Ch4P4_3c = "11111111"    
+    Ch4P4_3b = "10011001"
+    Ch4P4_3c = "11111111"
     Ch4P4_3d = "11111111"
     print("========")
     Ch4P4_4a = "01100110"
-    Ch4P4_4b = "11111111"  
+    Ch4P4_4b = "11111111"
     Ch4P4_4c = "00010001"
     Ch4P4_4d = "10111011"
     print("========")

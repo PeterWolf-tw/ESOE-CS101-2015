@@ -77,7 +77,7 @@ if __name__== "__main__":
     print(d)
     e = hex2Bin("33")
     print(e)
-    
+
 
 
     print("Ans:")

@@ -1,7 +1,12 @@
+#!/usr/bin/env python 3
+#-*- coding:utf-8 -*-
+
+#é€™å…©è¡Œä¸è¦æ¼äº†
+
 def condAND(inputSTR_X, inputSTR_Y):
     outputSTR = ""
-    for i,j in zip(inputSTR_X,inputSTR_Y): 
-        
+    for i,j in zip(inputSTR_X,inputSTR_Y):
+
         if set(i)&set(j)=={"1"}:
             outputSTR = outputSTR + "1"
         else:
@@ -16,8 +21,8 @@ def condAND(inputSTR_X, inputSTR_Y):
 
 def condOR(inputSTR_X, inputSTR_Y):
     outputSTR = ""
-    for i,j in zip(inputSTR_X,inputSTR_Y): 
-        
+    for i,j in zip(inputSTR_X,inputSTR_Y):
+
         if set(i)&set(j)=={"0"}:
             outputSTR = outputSTR + "0"
         else:
@@ -33,8 +38,8 @@ def condOR(inputSTR_X, inputSTR_Y):
 
 def condXOR(inputSTR_X, inputSTR_Y):
     outputSTR = ""
-    for i,j in zip(inputSTR_X,inputSTR_Y): 
-        
+    for i,j in zip(inputSTR_X,inputSTR_Y):
+
         if if a == b :
             outputSTR = outputSTR + "0"
         else:
@@ -53,7 +58,7 @@ def condXOR(inputSTR_X, inputSTR_Y):
 
 def hex2Bin(hexSTR):
     '''
-    16 ¶i¦ìªí¥Ü¦¡Âà¬° 2 ¶i¦ìªí¥Ü¦¡
+    16 ï¿½iï¿½ï¿½ï¿½Ü¦ï¿½ï¿½à¬° 2 ï¿½iï¿½ï¿½ï¿½Ü¦ï¿½
     '''
     return bin(int(hexSTR, 16))[2:]
 
@@ -65,7 +70,7 @@ if __name__ == '__main__':
     condition01 = condNOT(condition00X)
     print(condition01)
 
-    #¥i§Q¥Î hex2Bin() ¨ç¦¡­pºâ¤Q¤»¶i¦ìªí¥Ü¦¡ "99" ªº¤G¶i¦ìªí¦¡¡G(½d¨Ò¦p¤U)
+    #ï¿½iï¿½Qï¿½ï¿½ hex2Bin() ï¿½ç¦¡ï¿½pï¿½ï¿½Qï¿½ï¿½ï¿½iï¿½ï¿½ï¿½Ü¦ï¿½ "99" ï¿½ï¿½ï¿½Gï¿½iï¿½ï¿½í¦¡ï¿½G(ï¿½dï¿½Ò¦pï¿½U)
     b = hex2Bin("99")
     print(b)
 

@@ -10,17 +10,17 @@
 #░░░▐██▄░░▀▄▀▀▄▀░░▄██▀░▐▌░░                      ░            ░░░░          ░░░░░
 #░░░█▀█░▀░░░▀▀░░░▀░█▀░░▐▌░░                      ░            ░             ░
 #░░░█░░▀▐░░░░░░░░▌▀░░░░░█░░                      ░            ░░░░░         ░░░░░░
-#░░░█░░░░░░░░░░░░░░░░░░░█░░          
+#░░░█░░░░░░░░░░░░░░░░░░░█░░
 #░░░░█░░▀▄░░░░▄▀░░░░░░░░█░░
-#░░░░█░░░░░░░░░░░▄▄░░░░█░░░ 
+#░░░░█░░░░░░░░░░░▄▄░░░░█░░░
 #░░░░░█▀██▀▀▀▀██▀░░░░░░█░░░
 #░░░░░█░░▀████▀░░░░░░░█░░░░
 #░░░░░░█░░░░░░░░░░░░▄█░░░░░
 #░░░░░░░██░░░░░█▄▄▀▀░█░░░░░
 #░░░░░░░░▀▀█▀▀▀▀░░░░░░█░░░░
-#░░░░░░░░░█░░░░░░░░░░░░█░░░
+#░░░░░░░░░█░░░░░░░░░░░░█░░░ #Cute
 def condNOT(inputSTR_X):
-    outputSTR = ""  
+    outputSTR = ""
     for i in inputSTR_X:
         if i == "0":
             outputSTR = outputSTR + "1"
@@ -72,23 +72,23 @@ if __name__== "__main__":
     condition00Y = "010000110001011100101001"
 
     condition01 = condNOT(condition00X)
-    print(condition01)    
-    
+    print(condition01)
+
     condition02 = condAND(condition00X, condition00Y)
     print(condition02)
-    
+
     condition03 = condOR(condition00X, condition00Y)
     print(condition03)
-    
+
     condition04 = condXOR(condition00X, condition00Y)
     print(condition04)
-    
-    
-    
+
+
+
 ##############################
 #4-3
 #a=1001 1001
-#b=0000 0000
+#b=0000 0000 #10011001
 #c=1001 1001
 #d=1111 1111
 ############################
@@ -105,13 +105,13 @@ if __name__== "__main__":
 #d=1111 1011 0110 0000
 #############################
 #4-15
-#a=overfloat
+#a=overfloat #It's "overflow"
 #b=ok
 #c=ok
-#d=overfloat
+#d=overfloat #It's "overflow"
 #############################
 #4-16
 #a=0F51
 #b=0F2A
 #c=8012
-#d=overfloat
+#d=overfloat #It's "overflow"

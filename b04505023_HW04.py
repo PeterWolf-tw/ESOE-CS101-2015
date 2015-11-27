@@ -44,9 +44,9 @@ def conXOR(inputSTR_X, inputSTR_Y):
         else:
             outputSTR = outputSTR + "1"
         j += 1
-    return outputSTR 
+    return outputSTR
 
-    
+
 if __name__== "__main__":
     condition00X = "010111001010100001100011"
     condition00Y = "010000110001011100101001"
@@ -74,8 +74,8 @@ if __name__== "__main__":
     Ch4P4_13d = "1111101101100000 = -1184"
     print("========")
     Ch4P4_15a = "overflow"
-    Ch4P4_15b = "no overflow"
-    Ch4P4_15c = "no overflow"
+    Ch4P4_15b = "no overflow" #-73
+    Ch4P4_15c = "no overflow" #73
     Ch4P4_15d = "overflow"
     print("========")
     Ch4P4_16a = "0F51"
@@ -83,5 +83,4 @@ if __name__== "__main__":
     Ch4P4_16c = "8012"
     Ch4P4_16d = "7F51"
     """
-        
-    
+
