@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
-#無法執行底線"_",逗號","括號"()"
+#無法執行逗號跟括號
+
 
 
 
@@ -35,22 +36,13 @@ def huffmanTranslater(inputSTR):
     m = 0
     
     
-    for i in inputSTR:
-        c = inputSTR.count(i)
-        if (i,c/len(inputSTR)) not in yee:
-            yee.append((i,c/len(inputSTR)))
-    yee.sort( key = lambda x : x[1])    
+    yee = charFreqLister(inputSTR)    
     for i in yee:
         freq.append(i[1])
         freq2.append(i[1])
-        if i[0] == " ":
-            char.append("_")
-            char2.append("_")
-            ahq.append("_")
-        else :
-            char.append(i[0])
-            char2.append(i[0])
-            ahq.append(i[0])
+        char.append(i[0])
+        char2.append(i[0])
+        ahq.append(i[0])
         #tree.append(i)
         huf.append("")
         k = k+1
@@ -96,11 +88,11 @@ def huffmanTranslater(inputSTR):
             if j not in temp2:
                 a = str(j[0])
                 for ii in range(0,m):
-                    if char2[ii] in a :
+                    if char2[ii] in a.replace(", ",",") :
                         huf[ii] +="0"
                 a = str(j[1])
                 for ii in range(0,m):
-                    if char2[ii] in a :
+                    if char2[ii] in a.replace(", ",",") :
                         huf[ii] +="1"
     r = zip(freq2,char2,huf)
     for i in r:
@@ -113,7 +105,7 @@ def huffmanTranslater(inputSTR):
               
 
 if __name__== "__main__":
-    fuck = "asia god tone"
+    fuck = "asia god tone gg3be0"
     shit = charFreqLister(fuck)
     test = huffmanTranslater(fuck)
     print(shit)
