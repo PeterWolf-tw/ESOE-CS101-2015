@@ -43,7 +43,7 @@ def huffmanTranslater(inputSTR):
         char.append(i[0])
         char2.append(i[0])
         ahq.append(i[0])
-        #tree.append(i)
+        tree.append(i)
         huf.append("")
         k = k+1
         m = m+1
