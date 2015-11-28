@@ -4,7 +4,6 @@
 
 
 
-
 def charFreqLister(inputSTR):
     resultLIST = []
     
@@ -48,7 +47,7 @@ def huffmanTranslater(inputSTR):
         k = k+1
         m = m+1
     
-    while(freq[0] != 1):
+    while(freq[0] != 1):#建立樹
         yee2 = []
         j = 0
         if freq[0] == freq[1]:
@@ -76,7 +75,7 @@ def huffmanTranslater(inputSTR):
             tree.append(i)
             
     
-    for i in range(0,m-1):
+    for i in range(0,m-1):#開始編碼
         temp = []
         temp2 = []
         for j in range(k-1,k-i-2,-1):
