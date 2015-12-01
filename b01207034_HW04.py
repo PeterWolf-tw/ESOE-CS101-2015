@@ -18,7 +18,7 @@ def condNOT(inputSTR_X):
 def condAND(inputSTR_X, inputSTR_Y):
 	outputSTR=""
 	for i in inputSTR_X, j in inputSTR_Y:
-		if i == "1" and j == "1"
+		if i == "1" and j == "1": #條件式的最後，要加冒號
 		    outputSTR = outputSTR + "1"
 		else:
 			outputSTR = outputSTR + "0"
@@ -27,7 +27,7 @@ def condAND(inputSTR_X, inputSTR_Y):
 #condition00 or condition03
 def condOR(inputSTR_X, inputSTR_Y):
     for i in inputSTR_X, j in inputSTR_Y:
-		if i == "0" and j == "0"
+		if i == "0" and j == "0": #條件式的最後，要加冒號
 		    outputSTR = outputSTR + "0"
 		else:
 			outputSTR = outputSTR + "1"
@@ -36,9 +36,9 @@ def condOR(inputSTR_X, inputSTR_Y):
 #condition00 xor condition04
 def conXOR(inputSTR_X, inputSTR_Y):
     for i in inputSTR_X, j in inputSTR_Y:
-		if i == j
+		if i == j: #條件式的最後，要加冒號
 		    outputSTR = outputSTR + "0"
-		elseif:
+		else:
 			outputSTR = outputSTR + "1"
     return outputSTR
 
@@ -60,7 +60,7 @@ if __name__== "__main__":
     #可利用 hex2Bin() 函式計算十六進位表示式 "99" 的二進位表式：(範例如下)
     b = hex2Bin("99")
     print(b)
-  
+
     print("Ans:")
     Ch4P4_3a = "10011001"
     Ch4P4_3b = "11111111"

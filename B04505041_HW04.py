@@ -16,7 +16,7 @@ def condNOT(inputSTR_X):
 
 #condition00 and condition02
 def condAND(inputSTR_X, inputSTR_Y):
-    for i in inputSTR_X , y in inputSTR_Y:
+    for i in inputSTR_X , y in inputSTR_Y: #這程式不會執行。for-迴圈裡不該有兩個 index.
         if i and j == "1":
             outPUTSTR = outputSTR + "1"
         else:

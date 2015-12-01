@@ -49,6 +49,72 @@ def charFreqLister(b):
     
     Listb.reverse()
     #print(Listb)
+    
+    '''
+    Liste = []
+    print(Listb)
+    for i in Listb:
+        Liste.append((i[0],i[1],0))
+    print(Liste)
+    print(min(Liste))
+    Listf = []
+    Listg = []
+    Listp = []
+    L = 0
+    O=0
+    print("p:",Liste)
+    while len(Liste) > 1:
+        Listg = []
+        Listg.extend(Liste)
+        #print(min(Liste))
+        
+        h = min(Liste)
+        B = Liste.index(min(Liste))
+        Listf.append(min(Liste))
+        Liste.remove(min(Liste))
+        A = min(Liste)
+        Listf.append(min(Liste))
+        Liste.remove(min(Liste))
+       
+        Max = max(h[2],A[2])
+        
+        Liste.insert(B,(h[0]+A[0],'00',Max+1))
+        #print("e:",Liste)
+        #print("g:",Listg)
+        
+        
+        for i in Liste:
+            if (Max + 1 - i[2] ) > 1  and O == 0:
+                #if (i[2] - Max - 1) > 1 or (i[2] - Max - 1) < -1:
+                
+                Listp.extend(Listg)
+                L = L + 1
+                print("p:",Listp)
+                Listp = []
+                break
+        imin=100
+        imax=0
+        for i in Liste:
+            if i[2] > imax:  
+                imax = i[2]
+            elif i[2] < imin:  
+                imin = i[2]
+        if imax == imin: 
+            Listp.extend(Liste)
+            L = L + 1
+            print("p:",Listp)
+            Listp = []
+    Listp.extend(Liste)
+    L = L + 1
+    print("p:",Listp)
+    Listp = []
+    
+    
+    
+    '''
+    #想試圖做出樹狀圖
+    #放棄QQ
+    
 
 
     return Listb

@@ -3,7 +3,7 @@
 
 def charFreqLister(inputSTR):
         resultLIST = []
-        for i in inputSTR
+        for i in inputSTR:
         resultLIST.append((inputSTR.count(i)/len(inputSTR),i))
         
         return resultLIST

@@ -15,14 +15,19 @@
 def charFreqLister(inputSTR):
     resultLIST = []
     freq = []
+    a = []
+    
+    for i in inputSTR:
+        if i not in a:
+            a.append(i)
 
 
 
     for i in inputSTR:
-        c = inputSTR.count(i)
-        if (i,c/len(inputSTR)) not in resultLIST:
-            resultLIST.append((i,c/len(inputSTR)))
-    resultLIST.sort( key = lambda x : x[1], reverse=True)
+        I = inputSTR.count(i)
+        if (I/len(inputSTR), i) not in resultLIST:
+            resultLIST.append((I/len(inputSTR), i))
+    resultLIST.sort( reverse=True)
     
     return resultLIST
 
@@ -31,12 +36,66 @@ def charFreqLister(inputSTR):
 #     (https://zh.wikipedia.org/wiki/霍夫曼編碼) 為你之前設計的
 #     程式加上轉碼壓縮的功能。
 # e.g.,
-#def huffmanTranslater(inputSTR):
-#resultLIST = [(freq, char, code), (freq, char, code), (freq, char, code),...]
+def huffmanTranslater(inputSTR):
+    
+    facLIST = charFreqLister(inputSTR)
+    facLEN = len(facLIST)
+    freqLISTforcode = []
+    charLISTforcode = []
+    freqDICTforcode = {}
+    for i in facLIST:
+        freqLISTforcode.append(i[0])
+        charLISTforcode.append(i[1])
+        freqDICTforcode[i[1]] = i[0]
+    nDICT = {}
+    i = 1
+    while i < facLEN :
+        freqLIST = []
+        charLIST = []        
+        for h in facLIST:
+            freqLIST.append(h[0]) 
+            charLIST.append(h[1])  
+        n = [charLIST[-2],charLIST[-1]]
+        nDICT[i] = n
+        f = freqLIST[-2] + freqLIST[-1]
+        del freqLIST[-2]
+        del freqLIST[-1]
+        del charLIST[-2]
+        del charLIST[-1]     
+        facLIST = []
+        for j in range(len(freqLIST)):
+            facLIST.append([freqLIST[j],charLIST[j]])
+        facLIST.append([f,n])
+        facLIST.sort(key= lambda x : x[0] ,reverse=True)
+        i += 1
+    #print("i=",i," nDICT=",nDICT)
+    #print("i=",i," facLIST=",facLIST)    
+    resultDICT = {}
+    for i in charLISTforcode:
+        resultDICT[i] = ""
+    for i in range(1,facLEN):
+        a = nDICT[i]
+        for k in charLISTforcode:
+            if k in str(a[0]).replace(", ",","): 
+                resultDICT[k] = "1" + resultDICT[k]
+            if k in str(a[1]).replace(", ",","):
+                resultDICT[k] = "0" + resultDICT[k]
+    resultLIST = []
+    for i in charLISTforcode:
+        if i in resultDICT:
+            resultLIST.append([freqDICTforcode[i],i,resultDICT[i]])
 
-#return resultLIST
+    return resultLIST
 
+                
+                    
+                
+                          
+                                 
 
 if __name__ == "__main__":
-    result = charFreqLister(input("give me something:"))
-    print(result)
+    result1 = charFreqLister(input("give me something:"))
+    print(result1)
+    result2 = huffmanTranslater(input("give me something:"))
+    
+    print(result2)

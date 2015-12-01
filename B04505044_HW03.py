@@ -14,5 +14,5 @@ def charFreqLister(STR):
     return LIST
 
 if __name__== "__main__":
-    output= charFreqLister(input("give me something shit:"))
+    output= charFreqLister(input("give me something :"))
     print(output)

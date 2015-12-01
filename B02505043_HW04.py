@@ -1,7 +1,7 @@
 Python 3.5.0 (v3.5.0:374f501f4567, Sep 13 2015, 02:27:37) [MSC v.1900 64 bit (AMD64)] on win32
 Type "copyright", "credits" or "license()" for more information.
->>> 
->>> 
+>>>
+>>> #這是什麼？
 
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
@@ -128,4 +128,4 @@ if __name__== "__main__":
     print("4_16a = 0000 1111 0101 0001  (0F51)")
     print("4_16b = 0000 1111 0010 1010  (0F2A)")
     print("4_16c = 1000 0000 0001 0010  (8012)")
-    print("4_16d = 0111 1111 0101 0001  (7F51[overflow])") 
+    print("4_16d = 0111 1111 0101 0001  (7F51[overflow])")
