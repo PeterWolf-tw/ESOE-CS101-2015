@@ -7,10 +7,10 @@ def shitAND(x,y):
     k=0
     while k<h:
         if int(x[k]) ==int(y[k])  and int(y[k])== 1 :
-          outputSTR=outputSTR+"1"
+          outputSTR=outputSTR+"1" #每次縮排空四格。這行少了兩格。
         else :
-          outputSTR=outputSTR+"0"
-        k=k+1   
+          outputSTR=outputSTR+"0" #每次縮排空四格。這行少了兩格。
+        k=k+1
     return outputSTR
 def bitchOR(x,y):
     outputSTR= ""
@@ -33,19 +33,19 @@ def hex2Bin(hexSTR):
     16 進位表示式轉為 2 進位表示式
     '''
     return bin(int(hexSTR, 16))[2:]
-    
+
 if __name__== "__main__":
     x=input()
     y=input()
-   
-       
-    
-loser=shit(x,y)
-print(loser)
+    #再加點輸入提示. e.g., x = input("請輸入一字串：")，使用者才知道你要做什麼。
+
+
+    loser=shit(x,y)
+    print(loser)
 
 
 
-print("Ans:")
+    print("Ans:") #這是在 if __name__ == "__main__": 的區塊下的，需要縮排。
     print("")
     Ch4P4_3a = condOR(hex2Bin("99"), hex2Bin("99"))
     print("4-3a:")
@@ -97,4 +97,4 @@ print("Ans:")
     print("4_16a = 0000 1111 0101 0001  (0F51)")
     print("4_16b = 0000 1111 0010 1010  (0F2A)")
     print("4_16c = 1000 0000 0001 0010  (8012)")
-    print("4_16d = 0111 1111 0101 0001  (7F51[overflow])") 
+    print("4_16d = 0111 1111 0101 0001  (7F51[overflow])")

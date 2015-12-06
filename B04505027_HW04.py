@@ -32,7 +32,7 @@ def condAND(inputSTR_X, inputSTR_Y):
         else:
             outputSTR+="0"
     return outputSTR
-    
+
 #condition00 or condition03
 def condOR(inputSTR_X, inputSTR_Y):
     inputSTR_X,inputSTR_Y=chklen(inputSTR_X, inputSTR_Y)
@@ -50,9 +50,9 @@ def conXOR(inputSTR_X, inputSTR_Y):
     outputSTR=""
     for i,j in zip(inputSTR_X, inputSTR_Y):
         if i == j :
-           outputSTR +="1"
+           outputSTR +="1" #每次縮排空四格。這行少了一格。
         else :
-           outputSTR +="0"
+           outputSTR +="0" #每次縮排空四格。這行少了一格。
     return outputSTR
 
 
@@ -71,7 +71,7 @@ if __name__== "__main__":
 
         #condition02 = condAND(condition00X,condition00Y)
         #print("AND=",condition02)
-        
+
        # condition01 = condNOT(condition00X)
        # print("NOT=",condition01)
        # condition03 = condOR(condition00X,condition00Y)
@@ -91,10 +91,10 @@ if __name__== "__main__":
             num1=hex2Bin(n1)
             n2=input("Input yout second number\n")
             num2=hex2Bin(n2)
-       
-        
+
+
         print("Select a function 1.NOT 2.AND 3.OR 4.XOR \n")
-        a=input() 
+        a=input()
         if a=="1":
             condition01 = condNOT(num1)
             print("NOT=",condition01)
@@ -108,7 +108,7 @@ if __name__== "__main__":
             condition04 = conXOR(num1,num2)
             print("XOR=",condition04)
 
-      print("Ans:")
+    print("Ans:") #每次縮排空四格。這行多了兩格。
     Ch4P4_3a = "10011001"
     Ch4P4_3b = "11111111"
     Ch4P4_3c = "10011001"
@@ -132,4 +132,4 @@ if __name__== "__main__":
     Ch4P4_16a = "0F51"
     Ch4P4_16b = "0F2A"
     Ch4P4_16c = "8012"
-    Ch4P4_16d = "7F51"    
+    Ch4P4_16d = "7F51"

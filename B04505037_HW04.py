@@ -16,12 +16,12 @@ def condNOT(inputSTR_X):
 
 #condition00 and condition02
 def condAND(inputSTR_X, inputSTR_Y):
-    outputSTR = ""    
+    outputSTR = ""
     i = 0
     j = 0
-    
+
     while(i < len(inputSTR_X)):
-        if(int(inputSTR_X[i]) == int(inputSTR_Y[j])):        
+        if(int(inputSTR_X[i]) == int(inputSTR_Y[j])):
             outputSTR = outputSTR + inputSTR_X[i]
         else:
             outputSTR = outputSTR + "0"
@@ -32,12 +32,12 @@ def condAND(inputSTR_X, inputSTR_Y):
 #condition00 or condition03
 def condOR(inputSTR_X, inputSTR_Y):
     outputSTR = ""
-    
+
     i = 0
     j = 0
-    
+
     while(i < len(inputSTR_X)):
-        if(int(inputSTR_X[i]) == 1 or int(inputSTR_Y[j]) == 1):        
+        if(int(inputSTR_X[i]) == 1 or int(inputSTR_Y[j]) == 1):
             outputSTR = outputSTR + "1"
         else:
             outputSTR = outputSTR + "0"
@@ -48,12 +48,12 @@ def condOR(inputSTR_X, inputSTR_Y):
 #condition00 xor condition04
 def conXOR(inputSTR_X, inputSTR_Y):
     outputSTR = ""
-    
+
     i = 0
     j = 0
-    
+
     while(i < len(inputSTR_X)):
-        if(int(inputSTR_X[i]) == int(inputSTR_Y[j])):        
+        if(int(inputSTR_X[i]) == int(inputSTR_Y[j])):
             outputSTR = outputSTR + "0"
         else:
             outputSTR = outputSTR + "1"
@@ -68,12 +68,11 @@ def hex2Bin(hexSTR):
     '''
     return bin(int(hexSTR, 16))[2:]
 
-
-
-inputSTR_X = hex2Bin(input("Please insert something: "))
-inputSTR_Y = hex2Bin(input("Insert again: "))
-String = condOR(inputSTR_X, inputSTR_Y)
-print(String)
+if __name__== "__main__": #設立一個程式進入點
+    inputSTR_X = hex2Bin(input("Please insert something: "))
+    inputSTR_Y = hex2Bin(input("Insert again: "))
+    String = condOR(inputSTR_X, inputSTR_Y)
+    print(String)
 
 
 
@@ -102,4 +101,4 @@ print("========")
 #Ch4P4_16a = "0F51"
 #Ch4P4_16b = "0F2A"
 #Ch4P4_16c = "8012"
-#Ch4P4_16d = "7F51"    
+#Ch4P4_16d = "7F51"

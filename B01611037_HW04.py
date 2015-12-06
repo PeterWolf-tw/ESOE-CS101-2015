@@ -17,11 +17,11 @@ def condNOT(inputSTR_X):
 #condition00 and condition02
 def condAND(inputSTR_X, inputSTR_Y):
 	outputSTR = ""
-	for i in inputSTR_X and j in inputSTR_Y:
+	for i in inputSTR_X and j in inputSTR_Y: #for-迴圈裡不會有兩個 index 條件。這程式無法運作。
 		if i==j=="1":
 			outputSTR="1"
 		else:
-			outputSTR="0"	
+			outputSTR="0"
     return outputSTR
 
 #condition00 or condition03
@@ -65,7 +65,7 @@ if __name__== "__main__":
     print(b)
 
 
- print("Ans:")
+    print("Ans:")
     Ch4P4_3a = "10011001"
     Ch4P4_3b = "11111111"
     Ch4P4_3c = "10011001"

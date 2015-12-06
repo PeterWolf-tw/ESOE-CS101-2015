@@ -1,19 +1,20 @@
 # !/usr/bin/env python3
 #  -*- coding:utf-8 -*-
 
-def charFreqLister(x):
+def charFreqLister(inputLIST):
 
     
-    n = len(str(x))
+    n = len(inputLIST)
     result = []
 
-    for i in x:
-        j = float('%.3f'%(str(x).count(i)/n))
-        result.append((j,i))
+    for i in inputLIST:
+        j = float('%.3f'%(inputLIST.count(i)/n))
+        result.append((i,j))
     resultLIST = list(set(result))
-    resultLIST.sort(reverse=True)
+    resultLIST.sort(key=lambda tup: tup[1], reverse=True)
+    
     return resultLIST    
     
-x = input("Please insert something: ")   
-k = charFreqLister(x)
-print(k)
+inputLIST = input("Please insert something: ")   
+
+print(charFreqLister(inputLIST))

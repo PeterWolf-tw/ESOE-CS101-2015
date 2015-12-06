@@ -17,28 +17,30 @@ def condAND(inputSTR_X, inputSTR_Y):
     outputSTR = ""
     for a,b in zip(inputSTR_X, inputSTR_Y):
         if a and b =="1":
-             outputSTR = outputSTR + "1"
+             outputSTR = outputSTR + "1" #每次縮排是四個空格。你這裡多了一個空格。
         else:
-             outputSTR = outputSTR + "0"     
-        
+             outputSTR = outputSTR + "0" #每次縮排是四個空格。你這裡多了一個空格。
+
     return outputSTR
 
 #condition00 or condition03
 def condOR(inputSTR_X, inputSTR_Y):
+    outputSTR = "" #這裡要先實體化一個 outputSTR，之後才能用來操作。
     for a,b in zip(inputSTR_X, inputSTR_Y):
         if a and b =="0":
-             outputSTR = outputSTR + "0"
+             outputSTR = outputSTR + "0" #每次縮排是四個空格。你這裡多了一個空格。
         else:
-             outputSTR = outputSTR + "1"
+             outputSTR = outputSTR + "1" #每次縮排是四個空格。你這裡多了一個空格。
     return outputSTR
 
 #condition00 xor condition04
-def conXOR(inputSTR_X, inputSTR_Y):
+def condXOR(inputSTR_X, inputSTR_Y):
+    outputSTR = "" #這裡要先實體化一個 outputSTR，之後才能用來操作。
     for a,b in zip(inputSTR_X, inputSTR_Y):
         if a == b:
-             outputSTR = outputSTR + "0"
+             outputSTR = outputSTR + "0" #每次縮排是四個空格。你這裡多了一個空格。
         else:
-             outputSTR = outputSTR + "1"
+             outputSTR = outputSTR + "1" #每次縮排是四個空格。你這裡多了一個空格。
     return  outputSTR
 
 
@@ -56,14 +58,14 @@ if __name__== "__main__":
 
     condition01 = condNOT(condition00X)
     print(condition01)
-    condition02=conAND(condition00X,condition00Y)
+    condition02=condAND(condition00X,condition00Y)
     print(condition02)
-    condition03=conOR(condition00X,condition00Y)
+    condition03=condOR(condition00X,condition00Y)
     print(condition03)
-    condition04=conXOR(condition00X,condition00Y)
+    condition04=condXOR(condition00X,condition00Y)
     print(condition03)
 
-   
+
 
 
     print("Ans:")
@@ -83,8 +85,8 @@ if __name__== "__main__":
     Ch4P4_13d = "-1184"
     print("========")
     Ch4P4_15a = "overflow"
-    Ch4P4_15b = "not overflow"
-    Ch4P4_15c = "not overflow"
+    Ch4P4_15b = "not overflow" #-73
+    Ch4P4_15c = "not overflow" #73
     Ch4P4_15d = "overflow"
     print("========")
     Ch4P4_16a = "0F51"
