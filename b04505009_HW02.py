@@ -6,19 +6,14 @@ def bin2int(N):
     '''
     binNumberlist = list(binNumber)
     binNumberlist = [int(i) for i in binNumberlist]
-    if len(binNumberlist) < 8:
-        for i in range(8-len(binNumberlist)):
-            binNumberlist = [0]+binNumberlist
-    if len(binNumberlist) > 8:
-        print("error")
-        return 0
-    a = 8 - 1
+    print (binNumberlist)
+    a = len (binNumberlist) - 1
     b = 1
-    s = 0    
+    s = 0
     if binNumberlist[0] == 0:
         while a >= 0:
             x = binNumberlist[a]
-            s += (x * b)
+            s = s + (x * b)
             a -= 1
             b *= 2
         print("{0} 的十進位表示為 {1}.".format(binNumber, s))
@@ -26,7 +21,7 @@ def bin2int(N):
     else:
         while a >= 0:
             x = (binNumberlist[a] + 1) % 2
-            s += (x * b)
+            s = s + (x * b)
             a -= 1
             b *= 2
         print("{0} 的十進位表示為 {1}.".format(binNumber, -s-1))
@@ -34,8 +29,7 @@ def bin2int(N):
     return None
 
 if __name__ == '__main__':
-    binNumber = "100"
-    
+    binNumber = "01100100"
 
     bin2int(binNumber)
     #這個 function 處理正負數時有問題。請改進。e.g., "100" 的十進位表示應為 4 而不是 -4。
