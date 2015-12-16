@@ -30,9 +30,9 @@ def condOR(inputSTR_X):
     for i in inputSTR_X and j in inpustSTR_Y:
         if i == "0" and j == "0":
             outputSTR =  "1"
-            
+
         else:
-         outputSTR = "0"
+         outputSTR = "0" #每次縮排是四個空格。你這裡多了一個空格。
     return outputSTR
 
 #condition00 xor condition04
@@ -65,10 +65,10 @@ if __name__== "__main__":
     b = hex2Bin("99")
     print(b)
 
-
+    #你的三支程式都是無法運作的哦。
     print("Ans:")
     Ch4P4_3a = "10011001"
-    Ch4P4_3b = "11111111"
+    Ch4P4_3b = "11111111" #你的題號好像看錯了。
     Ch4P4_3c = "10011001"
     Ch4P4_3d = "11111111"
     print("========分隔線")
@@ -83,8 +83,8 @@ if __name__== "__main__":
     Ch4P4_13d = "-1184"
     print("========分隔線")
     Ch4P4_15a = "overflow"
-    Ch4P4_15b = "don't"
-    Ch4P4_15c = "don't"
+    Ch4P4_15b = "don't" #-73
+    Ch4P4_15c = "don't" #73
     Ch4P4_15d = "overflow"
     print("=======分隔線")
     Ch4P4_16a = "0F51"

@@ -7,7 +7,7 @@
 
 
 
-def condNOT(inputSTR_X):    
+def condNOT(inputSTR_X):
     outputSTR = ""
     for i in inputSTR_X:
         if i == "0":
@@ -19,7 +19,7 @@ def condNOT(inputSTR_X):
 
 #condition00 and condition02
 def condAND(inputSTR_X, inputSTR_Y):
-    
+
     outputSTR = ""
     l=len(inputSTR_X)
     #algorithm
@@ -29,12 +29,12 @@ def condAND(inputSTR_X, inputSTR_Y):
             outputSTR = outputSTR + "0"
         else:
             outputSTR = outputSTR + "1"
-               
-    print outputSTR
+
+    print(outputSTR) #Python3 的 print() 要加括號哦！
 
 #condition00 or condition03
-def condOR(inputSTR_X, inputSTR_Y):   
-    
+def condOR(inputSTR_X, inputSTR_Y):
+
     outputSTR = ""
     l=len(inputSTR_X)
     #algorithm
@@ -45,12 +45,12 @@ def condOR(inputSTR_X, inputSTR_Y):
             outputSTR = outputSTR + "1"
         else:
             outputSTR = outputSTR + "0"
-        
-    print outputSTR    
-    
+
+    print(outputSTR) #Python3 的 print() 要加括號哦！
+
 #condition00 xor condition04
 def condXOR(inputSTR_X, inputSTR_Y):
-    
+
     outputSTR = ""
     l=len(inputSTR_X)
     #algorithm
@@ -61,8 +61,8 @@ def condXOR(inputSTR_X, inputSTR_Y):
             outputSTR = outputSTR + "0"
         else:
             outputSTR = outputSTR + "1"
-        
-    print outputSTR    
+
+    print(outputSTR) #Python3 的 print() 要加括號哦！
 
 
 def hex2Bin(hexSTR):
@@ -74,13 +74,13 @@ def hex2Bin(hexSTR):
 
 if __name__== "__main__":
     condition00X = "010111001010100001100011"
-    condition00Y = "010000110001011100101001"   
+    condition00Y = "010000110001011100101001"
     condition01 = condNOT(condition00X)
     print(condition01)
-    condAND(condition00X,condition00Y)    
-    condOR(condition00X,condition00Y)    
+    condAND(condition00X,condition00Y)
+    condOR(condition00X,condition00Y)
     condXOR(condition00X,condition00Y)
-          
+
 
     #可利用 hex2Bin() 函式計算十六進位表示式 "99" 的二進位表式：(範例如下)
     b = hex2Bin("99")
@@ -91,13 +91,13 @@ if __name__== "__main__":
     print(d)
     e = hex2Bin("33")
     print(e)
-    
+
     #P4-3
-    print("4-3(a). 10011001")      
+    print("4-3(a). 10011001")
     print("4-3(b). 11111111")
     print("4-3(c). 10011001")
     print("4-3(d). 11111111")
-    print(" ")    
+    print(" ")
     #P4-4
     print("4-4(a). 01100110")
     print("4-4(b). 11111111")
@@ -112,7 +112,7 @@ if __name__== "__main__":
     print(" ")
     #P4-15
     print("4-15(a). overflow")
-    print("4-15(b). 73")
+    print("4-15(b). 73") #-73
     print("4-15(c). 73")
     print("4-15(d). overflow")
     print(" ")
