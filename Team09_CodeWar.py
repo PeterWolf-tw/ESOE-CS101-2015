@@ -47,14 +47,19 @@ print (LIST1)
 LIST2 = []
 LIST2.insert(0,1)
 LIST2.insert(1,1)
+LIST2.insert(2,2)
 
-
-print(LIST2)
 n=int(input("please enter a number: "))
-LIST2[-1] = LIST2[-2]+LIST2[-3]
-while n>2: 
+
+while True :
+    LIST2.append(LIST2[-1]+LIST2[-2])
+    if len(LIST2)==n:
+        break
+print(LIST2[-1])
+
     
-    print (LIST2[n-1])
+
+
     
     
     
