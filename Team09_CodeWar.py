@@ -77,3 +77,12 @@ for n in range (0,len(LIST3)-1):
     LIST5.insert(n , LIST4[n] * LIST4[n])
     answer = math.sqrt(sum(LIST5) / len(LIST5))
     print (answer)
+
+    
+
+
+    
+    
+    
+    
+    
