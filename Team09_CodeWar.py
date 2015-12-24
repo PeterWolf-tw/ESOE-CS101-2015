@@ -65,16 +65,15 @@ print (LIST2[n-1])
 #請輕鬆設計出一個可計算出任意個實數組之表準差的函數
 # ex: input=(40,50,60) , output=8.164965809277....
 # ex: input=(60,60,60,60) , output=0
-
-score1 = []
+LIST3 = []
 import math
-sore1 = [x for x in input("give me some numbers:").split()]
-print (sore1)
-average = sum(sore1)/len(sore1)
-for n in range (0,len(sore1)-1):
-    sore2 = []
-    sore2.insert(n,sore1[n] - average)
-    sore3 = []
-    sore3.insert(n , sore2[n] * sore2[n])
-    answer = math.sqrt(sum(sore3) / len(sore3))
+LIST3 = [x for x in input("give me some numbers:").split()]
+print (LIST3)
+average = sum(LIST3)/len(LIST3)
+for n in range (0,len(LIST3)-1):
+    LIST4 = []
+    LIST4.insert(n,LIST3[n] - average)
+    LIST5 = []
+    LIST5.insert(n , LIST4[n] * LIST4[n])
+    answer = math.sqrt(sum(LIST5) / len(LIST5))
     print (answer)
