@@ -47,17 +47,34 @@ print (LIST1)
 LIST2 = []
 LIST2.insert(0,1)
 LIST2.insert(1,1)
+LIST2.insert(2,2)
 
-
-print(LIST2)
 n=int(input("please enter a number: "))
-LIST2[-1] = LIST2[-2]+LIST2[-3]
-while n>2: 
-    
-    print (LIST2[n-1])
-    
-    
-    
-    
-    
-    
+
+while n > 3 :
+    LIST2.append(LIST2[-1]+LIST2[-2])
+    if len(LIST2)==n:
+        break
+    if n < 3 :
+        LIST2 = [1,1,2]
+print (LIST2[n-1])
+
+
+
+#Team06
+#請輕鬆設計出一個可計算出任意個實數組之表準差的函數
+# ex: input=(40,50,60) , output=8.164965809277....
+# ex: input=(60,60,60,60) , output=0
+
+score1 = []
+import math
+sore1 = [x for x in input("give me some numbers:").split()]
+print (sore1)
+average = sum(sore1)/len(sore1)
+for n in range (0,len(sore1)-1):
+    sore2 = []
+    sore2.insert(n,sore1[n] - average)
+    sore3 = []
+    sore3.insert(n , sore2[n] * sore2[n])
+    answer = math.sqrt(sum(sore3) / len(sore3))
+    print (answer)
