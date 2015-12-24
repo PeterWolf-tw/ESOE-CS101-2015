@@ -15,6 +15,14 @@ def divisorGenerator(n):
     return resultlist
 
 if __name__ == "__main__":
-    Ans=divisorGenerator(100)
-    print(Ans)
-        
+    Ans01=divisorGenerator(100)
+    print(Ans01)
+    
+    
+    
+#team02
+def piglatintranslator(n):
+    
+    letterlist=list[n]
+
+print letterlist[1:] + letterlist[0] + "ay"
