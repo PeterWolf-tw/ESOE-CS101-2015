@@ -21,7 +21,38 @@ def Pig_Latin(n):
     if (ord(list1[leng-1])<92): list1[leng-1]=chr(ord(list1[leng-1])+32)
     n=''.join(list1)+'ay.'
     return n
-    
+
+#Team03
+class Friends:
+    def __init__(self, connections):
+        self.connections=connections
+    def names(self):
+        length=len(self.connections)
+        for i in range(length-1):
+            n=self.connections[i]|self.connections[i+1]
+        n=list(n)
+        n.sort()
+        return n
+    def connected(self, connections):
+        n=set(connections)
+        n1=set()
+        for i in self.connections:
+            if(i.issuperset(n)):
+                n1.update(i.symmetric_difference(n))
+        return n1
+#Team05
+def linear_least(xdata,ydata):
+    x_ave=sum(xdata)/len(xdata)
+    y_ave=sum(ydata)/len(ydata)
+    b1=0
+    b2=0
+    for i,j in zip(xdata,ydata) :
+        b1=b1+(i-x_ave)*(j-y_ave)
+        b2=b2+(i-x_ave)*(i-x_ave)
+    b=b1/b2 
+    a=y_ave-b*x_ave
+    return b,a
+        
 if __name__ == "__main__":
     
     print("Team01:")
@@ -39,3 +70,18 @@ if __name__ == "__main__":
                 break
         if(Is): break
     print(Pig_Latin(str))
+    
+    print("Team03:")
+    friends = Friends(({"a", "b"}, {"b", "c"}, {"c", "a"}))
+    friends2 = Friends(({"1", "2"}, {"2", "4"}, {"1", "3"}))    
+    print("friends.names==%s"%friends.names())
+    print("friends.connected(\"d\")=%s"%friends.connected("d"))
+    print("friends.connected(\"a\")=%s"%friends.connected("a"))
+    print("friends2.names==%s"%friends2.names())
+    print("friends2.connected(\"1\")=%s"%friends2.connected("1"))
+    
+    print("Team05:")
+    xdata=[1,6,8,4,5,2,3,5]
+    ydata=[4,9,3,5,4,2,6,7]
+    b,a=linear_least(xdata,ydata)
+    print ("y=%.4fx+%.4f"%(b,a))
