@@ -21,8 +21,22 @@ if __name__ == "__main__":
     
     
 #team02
-def piglatintranslator(n):
-    
-    letterlist=list[n]
+#!/usr/bin/env python3
+# -*- coding:utf-8 -*-
 
-print letterlist[1:] + letterlist[0] + "ay"
+def piglatintranslator(enter_a_word):
+
+    letterlist=[]
+
+    if len(enter_a_word)>1:
+        letterlist = list(enter_a_word)
+    else:
+        print("valid word! Dumbo!")
+    print("".join(letterlist[1:]) + letterlist[0] + "ay")
+    return letterlist
+
+
+
+
+if __name__ == "__main__": 
+    piglatintranslator("test")
