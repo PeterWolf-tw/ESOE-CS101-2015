@@ -42,9 +42,53 @@ def Team04solution(input):
         temp1 = temp2
     return result
 #Assignment_Team05_HW05
-def Team05solution(input):
+def Team05solution(xdata,ydata):
+    p = 0
+    for i in range (0,len(xdata)):
+        p = p + xdata[i]*ydata[i]
+        i = i + 1 
+    print("Sum(xi*yi) =",p)
     
-    return resultLIST
+    x = 0
+    for i in range (0,len(xdata)):
+        x = x + xdata[i]
+        i = i + 1
+    Xavg = x/len(xdata)
+    print("Xavg =",Xavg)
+    
+    y = 0
+    for i in range (0,len(ydata)):
+        y = y + ydata[i]
+        i = i + 1
+    Yavg = y/len(ydata)
+    print("Yavg =",Yavg)
+    
+    
+    q = 0
+    for i in range (0,len(xdata)):
+        q = q + xdata[i]*xdata[i]
+        i = i + 1 
+    print("Sum(x^2) =",q)
+    
+    m = (p-len(xdata)*Xavg*Yavg)/(q-len(xdata)*Xavg*Xavg)
+    print("slope =",m)
+    
+    b = Yavg - m*Xavg
+    print("y-intercept =",b)
+    print("-------your equation ------")
+    print("y =",m,"x +",b)
+
+if __name__== "__main__":
+    xnum = input("Enter numbers for xdata separated by spaces in one line: ")
+    items = xnum.split() 
+    xdata1 = [eval(x) for x in items]
+    print ("Your xdata list is",xdata1)
+    ynum = input("Enter numbers for ydata separated by spaces in one line: ")
+    items = ynum.split() 
+    ydata1 = [eval(y) for y in items]
+    print ("Your ydata list is",ydata1)
+    print("------------")
+    Team05solution(xdata1,ydata1)
 #Assignment_Team06_HW05
 #Done
 def Team06solution(inputLIST):
