@@ -52,7 +52,29 @@ def linear_least(xdata,ydata):
     b=b1/b2 
     a=y_ave-b*x_ave
     return b,a
-        
+#Team06
+def sigma(inputList):
+    result=0
+    average=sum(inputList)/len(inputList)
+    for i in range(0,len(inputList)):
+        result+=(inputList[i]-average)*(inputList[i]-average)
+    result=result/len(inputList)
+    result=result ** 0.5
+    return result
+#Team14
+def team14(inputSTR):
+    import random
+    RList=[]
+    T=int(inputSTR)
+    for i in inputSTR :
+        i = 0
+        if i < T:
+            a=random.sample(range(1,49),6)
+            RList.append(a)
+            i += 1
+            return RList          
+    print(RList)
+    
 if __name__ == "__main__":
     
     print("Team01:")
@@ -85,3 +107,12 @@ if __name__ == "__main__":
     ydata=[4,9,3,5,4,2,6,7]
     b,a=linear_least(xdata,ydata)
     print ("y=%.4fx+%.4f"%(b,a))
+    
+    
+    inputList=[40,50,60]
+    print(sigma(inputList))    
+    
+    
+    
+    YO=input("please enter a number:")
+    print(team14(YO))    
