@@ -15,7 +15,8 @@ def Team01solution(inputNumber):
             resultLIST.append(i)
     return resultLIST
 #Assignment_Team02_HW05
-#C++ Solution : Done
+#Done
+#C++ Solution :
 
 #include <iostream>
 #include <ctype.h>
@@ -127,8 +128,7 @@ def Team06solution(inputLIST):
     result = result ** 0.5
     return result
 #Assignment_Team08_HW05
-def Team08solution(input):
-    return resultLIST
+#Done
 #C++ Solution :
 
 #include <iostream>
