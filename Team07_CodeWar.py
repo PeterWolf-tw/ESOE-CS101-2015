@@ -15,7 +15,34 @@ def Team01solution(inputNumber):
             resultLIST.append(i)
     return resultLIST
 #Assignment_Team02_HW05
-#字為unvalid的部分還沒處理
+#C++ Solution : Done
+
+#include <iostream>
+#include <ctype.h>
+using namespace std;
+int main()
+{
+    char a[100];
+    int temp = 0;
+    cin.getline(a,100,'\n');
+    for(int i=0;;i++){
+        if(a[i] == '\0'){
+            a[i] = a[0];
+            a[i+1] = 'a';
+            a[i+2] = 'y';
+            temp = i;
+            break;
+        }
+        if(!isalpha(a[i])){
+            cout<<"Unvalidated Input";
+            return 0;
+        }
+    }
+    for(int i=1;i<temp+3;i++)   cout<<a[i];
+    return 0;
+}
+
+#Python Solution:字為unvalid的部分還沒處理 
 def Team02solution(inputSTR):
     result = inputSTR [1:] 
     result += inputSTR [:1]
@@ -102,6 +129,181 @@ def Team06solution(inputLIST):
 #Assignment_Team08_HW05
 def Team08solution(input):
     return resultLIST
+#C++ Solution :
+
+#include <iostream>
+using namespace std;
+char out[5][5];
+bool used[10] = {false};
+bool check(){
+    for(int j=0;j<5;j+=2){
+        for(int i=0;i<5;i+=2){
+            if(out[i][j] == '\0')   return true;
+        }
+    }
+    return false;
+}
+void print(){
+     for(int j=0;j<5;j++){
+        for(int i=0;i<5;i++){
+            if(out[i][j] == '\0')   cout<<" ";
+            else cout << out[i][j];
+        }
+        cout << endl;
+    }
+    cout<< endl;
+}
+void fillin1(int pst){
+    int y = ((pst-1)/3)*2;
+    int x = ((pst-1) % 3)*2;
+    out[x][y] = 'O';
+}
+void fillin2(int pst){
+    int y = ((pst-1)/3)*2;
+    int x = ((pst-1) % 3)*2;
+    out[x][y] = 'X';
+}
+bool win(){
+    if((out[0][0] == out[0][2])&&(out[0][2] == out[0][4])){
+        if(out[0][0] == 'O'){
+            cout << "Player 1 wins !!\n";
+            return 1;
+        }
+        if(out[0][0] == 'X'){
+            cout << "Player 2 wins !!\n";
+            return 1;
+        }
+    }
+    if((out[2][0] == out[2][2])&&(out[2][2] == out[2][4])){
+        if(out[2][0] == 'O'){
+            cout << "Player 1 wins !!\n";
+            return 1;
+        }
+        if(out[0][0] == 'X'){
+            cout << "Player 2 wins !!\n";
+            return 1;
+        }
+    }
+    if((out[4][0] == out[4][2])&&(out[4][2] == out[4][4])){
+        if(out[4][0] == 'O'){
+            cout << "Player 1 wins !!\n";
+            return 1;
+        }
+        if(out[0][0] == 'X'){
+            cout << "Player 2 wins !!\n";
+            return 1;
+        }
+    }
+    if((out[0][0] == out[2][0])&&(out[2][0] == out[4][0])){
+        if(out[0][0] == 'O'){
+            cout << "Player 1 wins !!\n";
+            return 1;
+        }
+        if(out[0][0] == 'X'){
+            cout << "Player 2 wins !!\n";
+            return 1;
+        }
+    }
+    if((out[0][2] == out[2][2])&&(out[2][2] == out[4][2])){
+        if(out[0][2] == 'O'){
+            cout << "Player 1 wins !!\n";
+            return 1;
+        }
+        if(out[0][0] == 'X'){
+            cout << "Player 2 wins !!\n";
+            return 1;
+        }
+    }
+    if((out[0][4] == out[2][4])&&(out[2][4] == out[4][4])){
+        if(out[0][4] == 'O'){
+            cout << "Player 1 wins !!\n";
+            return 1;
+        }
+        if(out[0][0] == 'X'){
+            cout << "Player 2 wins !!\n";
+            return 1;
+        }
+    }
+    if((out[0][0] == out[2][2])&&(out[2][2] == out[4][4])){
+        if(out[0][0] == 'O'){
+            cout << "Player 1 wins !!\n";
+            return 1;
+        }
+        if(out[0][0] == 'X'){
+            cout << "Player 2 wins !!\n";
+            return 1;
+        }
+    }
+    if((out[0][4] == out[2][2])&&(out[2][2] == out[4][0])){
+        if(out[0][4] == 'O'){
+            cout << "Player 1 wins !!\n";
+            return 1;
+        }
+        if(out[0][0] == 'X'){
+            cout << "Player 2 wins !!\n";
+            return 1;
+        }
+    }
+    return 0;
+}
+int main()
+{
+    cout << "遊戲說明 : 九宮格內的位置編號如下" << endl;
+    cout << " ------------- "<< endl;
+    cout << " | 1 | 2 | 3 |"<< endl;
+    cout << " ------------- "<< endl;
+    cout << " | 4 | 5 | 6 |"<< endl;
+    cout << " ------------- "<< endl;
+    cout << " | 7 | 8 | 9 |"<< endl;
+    cout << " ------------- "<< endl;
+    cout << "請輸入你欲填入圈/叉的位置(1~9)， Player 1 為圈，Player 2 為叉\n";
+    int i = 1, pst = 0;
+    bool t1 = false, t2 = false;
+    while(check()){
+        if((i%2)&&(!t1)){
+           cout << "請Player 1輸入位置 : \n";
+           cin >> pst ;
+           if((pst>9)||(pst<0)){
+                cout << "無效輸入\n";
+           }
+           if(used[pst]){
+                cout << "已使用之位置，請重新輸入\n";
+           }
+           else {
+                used[pst] = true;
+                t1 = true;
+                i++;
+                fillin1(pst);
+                print();
+           }
+           if(win())    return 0;
+        }
+        else if((!(i%2))&&(!t2)){
+           cout << "請Player 2輸入位置 : \n";
+           cin >> pst ;
+           if((pst>9)||(pst<0)){
+                cout << "無效輸入\n";
+           }
+           if(used[pst]){
+                cout << "已使用之位置，請重新輸入\n";
+           }
+           else {
+                used[pst] = true;
+                t2 = true;
+                i++;
+                fillin2(pst);
+                print();
+           }
+           if(win())    return 0;
+
+        }
+        t1 = false;
+        t2 = false;
+    }
+    win();
+    return 0;
+}
+
 #Assignment_Team09_HW05
 def Team09solution(input):
     return resultLIST
