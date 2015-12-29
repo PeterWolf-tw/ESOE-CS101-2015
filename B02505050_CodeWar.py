@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 
 #team01
-def aaa(x):
+def e(x):
     a = []
     for i in range(1,x+1):
         if x%i == 0:
@@ -10,6 +10,6 @@ def aaa(x):
     return a
 if __name__ == '__main__':
     d=int(input("in put a number:") ) 
-    print(aaa(d))
+    print(e(d))
     
     
