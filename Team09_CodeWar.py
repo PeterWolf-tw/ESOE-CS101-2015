@@ -142,9 +142,23 @@ def team06():
         LIST5[:] = [float(a) for a in LIST5]
     #print (LIST5)
     answer = math.sqrt(sum(LIST5) / len(LIST5))
-    print (answer)
+    print (answer)    
 
+#Team07
+def team0701():
+    n = int (input("give me a number:"))
+    answer = 1
+    for i in range (1, n+1,1):
+        answer = answer*i
+    return answer
+    #print (answer)
 
+def team0702():
+    LIST = []
+    LIST = input("Input some numbers:").split(' ')
+    from itertools import permutations
+    for i in permutations(LIST):
+        print (i)
 
 
 #Team09
@@ -261,6 +275,10 @@ if __name__== "__main__":
     print("team06:")
     t06 = team06()
     print(t06)
+    
+    print("team07")
+    print (team0701())
+    print (team0702())
     
     print("team09")
     print(random())
