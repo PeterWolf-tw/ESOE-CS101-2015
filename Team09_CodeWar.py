@@ -36,6 +36,27 @@ def team01():
 
 
 
+#Team03
+#針對一個class Friends
+#定義names 和 connected
+#舉例如主程式後
+#特別注意:在class裡{"a", "b"}和{"b", "a"}並無不同
+# names 是舉出所有出現在Friends裡的"名字",不重複
+# connected(a) 是舉出所有在Friends裡 和a有關的名字 
+'''class Friends:
+    def __init__(self, connections):
+        
+    
+    
+    def names(self):
+
+        
+
+    def connected(self, connections):
+'''
+
+
+
 
 #Team04
 #設計一個程式
@@ -68,7 +89,7 @@ def team04():
 ''''def team06():
     LIST3 = []
     import math
-    LIST3 = [x for x in input("give me some numbers:").split()]
+    LIST3 = [input("give me some numbers:").split()]
     print (LIST3)
     average = sum(LIST3)/len(LIST3)
     for n in range (0,len(LIST3)-1):
@@ -78,11 +99,28 @@ def team04():
         LIST5.insert(n , LIST4[n] * LIST4[n])
         answer = math.sqrt(sum(LIST5) / len(LIST5))
     print (answer)
-
 '''
 
-#Team09
 
+
+#Team07
+def team0701():
+    n = int (input("give me a number:"))
+    answer = 1
+    for i in range (1, n+1,1):
+        answer = answer*i
+    return answer
+    #print (answer)
+
+def team0702():
+    LIST = []
+    LIST = input("Input some numbers:").split(' ')
+    from itertools import permutations
+    for i in permutations(LIST):
+        print (i)
+
+
+#Team09
 def inputTest():
     import random
     LIST = [0,1,2,3,4,5,6,7,8,9]
@@ -121,6 +159,9 @@ def team10():
       
     return ''
 
+
+
+#Team14
 def team14(n):
     import random
     
@@ -148,6 +189,10 @@ if __name__== "__main__":
     #print("team06:")
     #t06 = team06()
     #print(t06)
+    
+    print("team07:")
+    print (team0701())
+    print (team0702())    
     
     print("team10:")
     t10 = team10()
