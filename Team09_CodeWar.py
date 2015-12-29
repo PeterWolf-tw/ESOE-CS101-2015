@@ -300,7 +300,9 @@ def team13():
             print("You have the wrong name")            
     #print(X)
     #print(Y)
-    if X[1]==Y[2]:
+    if X[1]==Y[1]:
+        print("Stop Kidding Me! Asshole!!!")    
+    elif X[1]==Y[2]:
         print(A,end=" ")
         print("是",end=" ")
         print(B,end=" ")
@@ -315,8 +317,6 @@ def team13():
         print("與",end=" ")
         print(B,end=" ")
         print("是平輩")
-    elif X[1]==Y[1]:
-        print("Stop Kidding Me! Asshole!!!")
     elif X[3]!=Y[3]:
         print(A,end=" ")
         print("是",end=" ")
