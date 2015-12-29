@@ -61,6 +61,17 @@ def sigma(inputList):
     result=result/len(inputList)
     result=result ** 0.5
     return result
+#Team10
+
+for i in range(0,10):
+    for c in range(0,10):
+        if i*c < 10:
+            print(i*c,end='')
+            print("  ",end='')
+        else:
+            print(i*c,end='')
+            print(" ",end='')
+    print( )
 
 #Team14
 def team14(inputSTR):
@@ -125,9 +136,4 @@ if __name__ == "__main__":
     
     
     
-    
-    #!/usr/bin/env python3
-    # -*- coding:utf-8 -*-
-    for i in range(0,9):
-        for c in range(0,9):
-            print (i*c,end="\n")    
+ 
