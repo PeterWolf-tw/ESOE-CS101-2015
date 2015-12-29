@@ -91,12 +91,12 @@ def team06():
     for n in range (0,len(LIST3),1):
         LIST4.append(LIST3[n] - average)
         LIST4[:] = [float(a) for a in LIST4]
-        #print (LIST4)
-        for n in range (0,len(LIST4)-1):
-                LIST5.insert(n , LIST4[n] * LIST4[n])
-                LIST5[:] = [float(a) for a in LIST5]
-                #print (LIST5)
-                answer = math.sqrt(sum(LIST5) / len(LIST5))
+    #print (LIST4)
+    for n in range (0,len(LIST4),1):
+        LIST5.append(math.pow(LIST4[n],2))
+        LIST5[:] = [float(a) for a in LIST5]
+    #print (LIST5)
+    answer = math.sqrt(sum(LIST5) / len(LIST5))
     print (answer)
 
 
