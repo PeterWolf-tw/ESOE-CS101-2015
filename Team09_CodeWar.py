@@ -37,6 +37,7 @@ def team01():
 
 
 #Team02
+'''''
 def team02():
     lang=str(input ("give me a English word:"))
     #print (lang)
@@ -46,6 +47,24 @@ def team02():
     #print(lang2)
     lang1 = lang[1:x] + lang[0] + lang2
     print (lang1)
+'''
+def team02():
+    Englishwords = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+    lang=str(input ("give me a English word:"))
+    print (lang)
+    x = len(lang)
+    print(x)
+    lang2 = 'ay.'
+    print(lang2)
+    lang1 = lang[1:x] + lang[0] + lang2
+    #LIST.append(lang[-1])
+    #LIST.append(lang[0:x-1])
+    #LIST.append(lang2)
+    for i in lang:
+        if i not in Englishwords:
+            print ("Error")
+        else:
+            print (lang1)
 
 
 
