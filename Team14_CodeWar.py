@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
 
+import math
 
 #team01
 def divisorGenerator(n):
@@ -42,7 +43,7 @@ if __name__ == "__main__":
     piglatintranslator("test")
     
     
-#team03
+#team03(pending)
 
 
 #team04
@@ -54,3 +55,31 @@ def fib(n):
 
 if __name__ == "__main__":
     print (fib(6))
+    
+    
+#team05(pending)
+
+
+#team06
+def mean(numbers):
+    return sum(numbers)*1.0/len(numbers)
+
+def stanDev(numbers):
+    
+    length = len(numbers)
+    
+    m = mean(numbers)
+    
+    total_sum = 0
+    
+    for i in range(length):
+        total_sum += (numbers[i]-m)**2
+    
+    under_root = float(total_sum)/length
+
+    return math.sqrt(under_root)
+
+if __name__== "__main__":
+    numbers = [4,6,7,22]
+    print(stanDev(numbers))
+    
