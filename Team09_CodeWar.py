@@ -78,6 +78,21 @@ for n in range (0,len(LIST3)-1):
     answer = math.sqrt(sum(LIST5) / len(LIST5))
     print (answer)
 
+
+
+#Team09
+import random
+LIST = [0,1,2,3,4,5,6,7,8,9]
+print (random.sample (LIST , 4))
+
+x = 0
+
+def inputTest():
+    x = input(">>> Input: ")
+    print (x)
+
+while (True):
+    inputTest()
     
 
 
