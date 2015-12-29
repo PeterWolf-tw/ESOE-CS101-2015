@@ -237,7 +237,110 @@ def team10():
     return ''
 
 
-
+def team13():
+    jon = ["Jon Snow",100,200,"t1",3]
+    robert = ["Robert Stark",200,300,"t1",2]
+    eddard = ["Eddard Stark",300,300,"t1",1]
+    ser = ["Ser Rodrik",800,200,"t1",3]
+    bran = ["Bran Stark",400,300,"t1",2]
+    hodor = ["Hodor",900,400,"t1",3]
+    rhaegar = ["Rhaegar Targargen",700,000,"t2",0]
+    tywin = ["Tywin Lannister",500,500,"t3",2]
+    jamie = ["Jamie Lannister",600,500,"t3",3]
+    A=input("Who?")
+    B=input("And who?")
+    x = []
+    x.append(A)
+    y = []
+    y.append(B)
+    X =[]
+    Y =[]
+    #print(x)
+    #print(y)
+    for a,b,c,d,e,f,g,h,i in zip(jon,robert,eddard,ser,bran,hodor,rhaegar,tywin,jamie):
+        if x[0]==jon[0]:
+            X=jon
+        if x[0]==robert[0]:
+            X=robert
+        if x[0]==eddard[0]:
+            X=eddard    
+        if x[0]==ser[0]:
+            X=ser        
+        if x[0]==rhaegar[0]:
+            X=rhaegar        
+        if x[0]==bran[0]:
+            X=bran
+        if x[0]==hodor[0]:
+            X=hodor                            
+        if x[0]==tywin[0]:
+            X=tywin                            
+        if x[0]==jamie[0]:
+            X=jamie       
+        if y[0]==jon[0]:
+            Y=jon
+        if y[0]==robert[0]:
+            Y=robert
+        if y[0]==eddard[0]:
+            Y=eddard    
+        if y[0]==ser[0]:
+            Y=ser        
+        if y[0]==rhaegar[0]:
+            Y=rhaegar        
+        if y[0]==bran[0]:
+            Y=bran
+        if y[0]==hodor[0]:
+            Y=hodor                            
+        if y[0]==tywin[0]:
+            Y=tywin                            
+        if y[0]==jamie[0]:
+            Y=jamie
+        if X==[] :
+            print("You have the wrong name")
+        if Y==[] :
+            print("You have the wrong name")            
+    #print(X)
+    #print(Y)
+    if X[1]==Y[2]:
+        print(A,end=" ")
+        print("是",end=" ")
+        print(B,end=" ")
+        print("的長官") 
+    elif X[2]==Y[1]:
+        print(A,end=" ")
+        print("是",end=" ")
+        print(B,end=" ")
+        print("的屬下")       
+    elif X[2]==Y[2]:
+        print(A,end=" ")
+        print("與",end=" ")
+        print(B,end=" ")
+        print("是平輩")
+    elif X[1]==Y[1]:
+        print("Stop Kidding Me! Asshole!!!")
+    elif X[3]!=Y[3]:
+        print(A,end=" ")
+        print("是",end=" ")
+        print(B,end=" ")
+        print("的敵人")
+    elif X[3]==Y[3]:
+        if X[4]==1:
+            print(A,end=" ")
+            print("是",end=" ")
+            print(B,end=" ")
+            print("的長官")
+        elif Y[4]==1:
+            print(A,end=" ")
+            print("是",end=" ")
+            print(B,end=" ")
+            print("的屬下")             
+        elif X[1]!=Y[2]:
+            if X[2]!=Y[1]:
+                print(A,end=" ")
+                print("與",end=" ")
+                print(B,end=" ")
+                print("是平輩")         
+    else:
+        print("Stop Kidding Me! Asshole!!!")
 
 
 #Team14
@@ -286,6 +389,9 @@ if __name__== "__main__":
     print("team10:")
     t10 = team10()
     print(t10)    
+    
+    print("team13:")
+    print(team13())
     
     print("team14:")
     print(team14(int(input("please give me a number:"))))
