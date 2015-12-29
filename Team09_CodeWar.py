@@ -73,7 +73,33 @@ def team04():
     print (LIST2[n-1])
 
 
-
+def team05():
+    import math
+    xdata=input("x=").split(",")
+    xdata[:]=[int(a) for a in xdata]
+    ydata=input("y=").split(",")
+    ydata[:]=[int(b) for b in ydata]
+    print(xdata)
+    print(ydata)
+    averagex=sum(xdata)/len(xdata)
+    averagey=sum(ydata)/len(ydata)
+    A=0
+    B=0
+    for a,b in zip (xdata,ydata):
+        A+=(a-averagex)*(b-averagey)
+        B+=(a-averagex)*(a-averagex)
+    #print(A)
+    #print(B)
+    m=A/B
+    print(m)
+    k=averagey-m*averagex
+    print(k)
+    
+    print("y=",end='')
+    print(m,end='')
+    print("x+",end='')
+    print(k)
+    
 #Team06
 #請輕鬆設計出一個可計算出任意個實數組之表準差的函數
 # ex: input=(40,50,60) , output=8.164965809277....
@@ -208,6 +234,10 @@ if __name__== "__main__":
     print("team04:")
     t04 = team04()
     print(t04)
+    
+    print("team05")
+    t05 = team05()
+    print(t05)
     
     print("team06:")
     t06 = team06()
