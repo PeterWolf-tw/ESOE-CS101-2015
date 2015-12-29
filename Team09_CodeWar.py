@@ -36,27 +36,6 @@ def team01():
 
 
 
-#Team03
-#針對一個class Friends
-#定義names 和 connected
-#舉例如主程式後
-#特別注意:在class裡{"a", "b"}和{"b", "a"}並無不同
-# names 是舉出所有出現在Friends裡的"名字",不重複
-# connected(a) 是舉出所有在Friends裡 和a有關的名字 
-'''class Friends:
-    def __init__(self, connections):
-        
-    
-    
-    def names(self):
-
-        
-
-    def connected(self, connections):
-'''
-
-
-
 
 #Team04
 #設計一個程式
@@ -89,7 +68,7 @@ def team04():
 ''''def team06():
     LIST3 = []
     import math
-    LIST3 = [input("give me some numbers:").split()]
+    LIST3 = [x for x in input("give me some numbers:").split()]
     print (LIST3)
     average = sum(LIST3)/len(LIST3)
     for n in range (0,len(LIST3)-1):
@@ -99,39 +78,55 @@ def team04():
         LIST5.insert(n , LIST4[n] * LIST4[n])
         answer = math.sqrt(sum(LIST5) / len(LIST5))
     print (answer)
+
 '''
 
-
-
-#Team07
-def team0701():
-    n = int (input("give me a number:"))
-    answer = 1
-    for i in range (1, n+1,1):
-        answer = answer*i
-    return answer
-    #print (answer)
-
-def team0702():
-    LIST = []
-    LIST = input("Input some numbers:").split(' ')
-    from itertools import permutations
-    for i in permutations(LIST):
-        print (i)
-
-
 #Team09
-def inputTest():
+
+def random():
     import random
     LIST = [0,1,2,3,4,5,6,7,8,9]
-    print (random.sample (LIST , 4))
-    ans = random.sample (LIST , 4)
-    x = 0    
-    x = input(">>> Input: ")
-    print (x)
+    ans = random.sample (LIST , 4)    
+    return inputTest(ans)    
+def inputTest(ans):
+    
+    #print(ans)
+    y = []
+    x=int(input("Try to guess a four digits number: "))
+    y.append(x//1000)
+    x=x-(1000*(x//1000))
+    y.append(x//100)
+    x=x-(100*(x//100))
+    y.append(x//10)
+    x=x-(10*(x//10))
+    y.append(x//1)
+    print(y)
+    A=0
+    B=0
+    #print(ans[0])
+    for a,b in zip(ans,y):
+        if a==b:
+            A+=1
+    for a in y:
+        if a in ans:
+            B+=1
+            
+    #print(A)
+    #print(B)
 
-    while (True):
-        inputTest()
+    B=B-A
+     
+    #print(A)
+    #print(B)
+    print(A,"A",B,"B")
+    while A<4:
+        return inputTest(ans)
+    else:
+        if input("Congratulation:), type anything to continue ") ==0:
+            return random()
+        else :
+            return random()
+
     
 # 請設計一個程式能自動列出九九乘法表如下(每行要對齊):
     
@@ -159,9 +154,6 @@ def team10():
       
     return ''
 
-
-
-#Team14
 def team14(n):
     import random
     
@@ -190,9 +182,8 @@ if __name__== "__main__":
     #t06 = team06()
     #print(t06)
     
-    print("team07:")
-    print (team0701())
-    print (team0702())    
+    print("team09")
+    print(random())
     
     print("team10:")
     t10 = team10()
