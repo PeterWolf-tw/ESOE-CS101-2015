@@ -42,7 +42,7 @@ def team02():
     #print (lang)
     x = len(lang)
     #print(x)
-    lang2 = 'py.'
+    lang2 = 'ay.'
     #print(lang2)
     lang1 = lang[1:x] + lang[0] + lang2
     print (lang1)
@@ -78,24 +78,25 @@ def team04():
 #請輕鬆設計出一個可計算出任意個實數組之表準差的函數
 # ex: input=(40,50,60) , output=8.164965809277....
 # ex: input=(60,60,60,60) , output=0
-''''def team06():
-    LIST3 = []
-    import math
-    LIST3 = [x for x in input("give me some numbers:").split()]
-    print (LIST3)
-    average = sum(LIST3)/len(LIST3)
-    for n in range (0,len(LIST3)-1):
-        LIST4 = []
-        LIST4.insert(n,LIST3[n] - average)
-        LIST5 = []
-        LIST5.insert(n , LIST4[n] * LIST4[n])
-        answer = math.sqrt(sum(LIST5) / len(LIST5))
-    print (answer)
+#def team06():
+    #LIST3 = []
+    #import math
+    #LIST3 = [input("give me some numbers:").split(",")]
+    #print (LIST3)
+    #average = sum(LIST3)/len(LIST3)
+    #for n in range (0,len(LIST3)-1):
+        #LIST4 = []
+        #LIST4.insert(n,LIST3[n] - average)
+        #LIST5 = []
+        #LIST5.insert(n , LIST4[n] * LIST4[n])
+        #answer = math.sqrt(sum(LIST5) / len(LIST5))
+    #print (answer)
 
-'''
+
+
+
 
 #Team09
-
 def random():
     import random
     LIST = [0,1,2,3,4,5,6,7,8,9]
@@ -140,7 +141,10 @@ def inputTest(ans):
         else :
             return random()
 
-    
+
+
+
+#Team10    
 # 請設計一個程式能自動列出九九乘法表如下(每行要對齊):
     
 # 0  0  0  0  0  0  0  0  0  0
@@ -167,6 +171,11 @@ def team10():
       
     return ''
 
+
+
+
+
+#Team14
 def team14(n):
     import random
     
