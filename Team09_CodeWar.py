@@ -78,20 +78,26 @@ def team04():
 #請輕鬆設計出一個可計算出任意個實數組之表準差的函數
 # ex: input=(40,50,60) , output=8.164965809277....
 # ex: input=(60,60,60,60) , output=0
-#def team06():
-    #LIST3 = []
-    #import math
-    #LIST3 = [input("give me some numbers:").split(",")]
+def team06():
+    LIST3 = []
+    LIST4 = []
+    LIST5 = []
+    import math
+    LIST3 = input("give me some numbers:").split(",")
+    LIST3[:] = [float(a) for a in LIST3]
     #print (LIST3)
-    #average = sum(LIST3)/len(LIST3)
-    #for n in range (0,len(LIST3)-1):
-        #LIST4 = []
-        #LIST4.insert(n,LIST3[n] - average)
-        #LIST5 = []
-        #LIST5.insert(n , LIST4[n] * LIST4[n])
-        #answer = math.sqrt(sum(LIST5) / len(LIST5))
-    #print (answer)
-
+    average = sum(LIST3)/len(LIST3)
+    #print (average)
+    for n in range (0,len(LIST3),1):
+        LIST4.append(LIST3[n] - average)
+        LIST4[:] = [float(a) for a in LIST4]
+        #print (LIST4)
+        for n in range (0,len(LIST4)-1):
+                LIST5.insert(n , LIST4[n] * LIST4[n])
+                LIST5[:] = [float(a) for a in LIST5]
+                #print (LIST5)
+                answer = math.sqrt(sum(LIST5) / len(LIST5))
+    print (answer)
 
 
 
@@ -203,9 +209,9 @@ if __name__== "__main__":
     t04 = team04()
     print(t04)
     
-    #print("team06:")
-    #t06 = team06()
-    #print(t06)
+    print("team06:")
+    t06 = team06()
+    print(t06)
     
     print("team09")
     print(random())
