@@ -1,3 +1,25 @@
+#team01
+>>> def divisor(n):
+	resultLIST=[]
+	for i in range(1,n+1):
+		if n%i==0:
+			resultLIST.append(i)
+		    return resultLIST
+			
+>>> #team04
+>>> def feynman(n):
+	number=0
+	a=1
+	b=1
+	if n>2:
+		a=b
+		b=a+b
+		n=n-1
+		number=b
+		return number
+	else:
+		number=b
+		return number
 #Team09
 import os
 import random
@@ -47,3 +69,18 @@ def play2():
             print ("Error\n")
 
 play1()
+#team 14
+>>> def lottery(n):
+	import random
+	k=0
+	yee=[]
+	times=int(n)
+        if k<times:
+               number=random.int(1,49)
+               yee.append(number)
+               k+=1
+               return yee
+	else:
+                print(yee)
+
+	
