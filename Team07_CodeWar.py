@@ -305,8 +305,75 @@ int main()
 }
 
 #Assignment_Team09_HW05
-def Team09solution(input):
-    return resultLIST
+#Done
+
+#include <iostream>
+#include <stdlib.h>
+#include <time.h>
+using namespace std;
+int ans[4] = {0}, inp[4] = {0};
+void setans()
+{
+    int n = 4;
+    int cnt = 0, num = 0;
+    int find;
+    srand( (unsigned)time(NULL));
+    while(cnt < n){
+        num = (int)(rand()/(RAND_MAX+1.0)*10.0 + 1);
+        find = 0;
+        for(int i=0;i<cnt;i++){
+            if(ans[i]==num) {
+                find = 1;
+                break;
+            }
+        }
+        if(find==0) {
+            ans[cnt]=num;
+            cnt++;
+        }
+    }
+}
+void input(){
+    cout<<"Please enter 4 positive integers that are not larger than 10."<<endl;
+    for(int i=0;i<4;i++){
+        cin >> inp[i];
+    }
+}
+int A(){
+    int n = 0;
+    for(int i=0;i<4;i++){
+        if(ans[i] == inp[i]){
+            n++;
+        }
+    }
+    return n;
+}
+int B(){
+    int n = 0;
+    for(int i=0;i<4;i++){
+        for(int j=0;j<4;j++){
+            if(ans[i] == inp[j] && i!=j){
+                n++;
+            }
+        }
+    }
+    return n;
+}
+int main()
+{
+    while(true){
+        setans();
+        input();
+        while(!(A()==4 && B()==0)){
+            cout<<A()<<"A"<<B()<<"B "<<"Try again."<<endl;
+            input();
+        }
+        cout<<"Congratulations. Press anything to continue."<<endl;
+    }
+    return 0;
+}
+
+
 #Assignment_Team10_HW05
 # 請設計一個程式能自動列出九九乘法表如下(每行要對齊):
 
@@ -337,8 +404,58 @@ def Team10solution():
 def Team11solution(input):
     return resultLIST
 #Assignment_Team12_HW05
-def Team12solution(input):
-    return resultLIST
+#Done
+
+#include<iostream>
+#include<string>
+#include<math.h>
+using namespace std;
+int mtd(string s, int m){
+    int l = s.length(), r = 0;
+    for(int i=0;i<l;i++){
+        if(s[i]<58){
+            r += (s[i]-48)*pow(m,l-i-1);
+            }
+        else if(s[i]<91){
+            r += (s[i]-55)*pow(m,l-i-1);
+            }
+        else if(s[i]<123){
+            r += (s[i]-61)*pow(m,l-i-1);
+            }
+            }
+    return r;
+}
+void dtn(int d, int n){
+    char c[100];
+    int i=0;
+    while(d>=n){
+        if(d%n<10){
+            c[i]=(char)((d%n)+48);
+    }
+        else if(d%n<36){
+            c[i]=(char)((d%n)+55);
+    }
+        else if(d%n<61){
+            c[i]=(char)((d%n)+61);
+    }
+        d/=n;
+        i++;
+}
+    cout<<d;
+    for(int j=i-1;j>=0;j--){
+        cout<<c[j];
+    }
+    cout<<endl;
+}
+int main(){
+    int m = 0, n = 0;
+    string s;
+    cin >> m >> n;
+    cin >> s;
+    dtn(mtd(s,m),n);
+    return 0;
+}
+
 #Assignment_Team13_HW05
 def Team13solution(input):
     return resultLIST
