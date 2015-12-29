@@ -201,8 +201,8 @@ def inputTest(ans):
     while A<4:
         return inputTest(ans)
     else:
-        if input("Congratulation:), type anything to continue ") ==0:
-            return random()
+        if input("Congratulation:), type q to quit, type anything to continue ") == "q":
+            return None
         else :
             return random()
 
