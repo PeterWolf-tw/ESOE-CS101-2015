@@ -36,6 +36,19 @@ def team01():
 
 
 
+#Team02
+def team02():
+    lang=str(input ("give me a English word:"))
+    #print (lang)
+    x = len(lang)
+    #print(x)
+    lang2 = 'py.'
+    #print(lang2)
+    lang1 = lang[1:x] + lang[0] + lang2
+    print (lang1)
+
+
+
 
 #Team04
 #設計一個程式
@@ -173,6 +186,9 @@ if __name__== "__main__":
     print("team01:")
     t01 = team01()
     print(t01)
+    
+    print("team02:")
+    print(team02())
     
     print("team04:")
     t04 = team04()
