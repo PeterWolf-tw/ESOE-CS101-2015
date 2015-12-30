@@ -572,31 +572,36 @@ while a <= 3:
         answerLIST.append (number)
         a += 1
 print(answerLIST)
-    
+############################################################################################################################
 guessLIST = []
 ABLIST = []
 ALIST = []
 ACOUNT = str(ABLIST). count("A")
-b = 1
-    
-while b <= 4:
-    guess = int(input("Enter the number right here: "))
-    if guess not in guessLIST and 0 <= guess <= 9:
-        guessLIST.append (guess)
-        b += 1
-    else:
-        print("INVALID")
-print("The numbers you guessed are {}". format(guessLIST))
-ABLIST = []
-c = 0
-for number in guessLIST:
-    if number == answerLIST[c]:
-        ABLIST.append("A")
-    elif number != answerLIST[c] and number in answerLIST:
-        ABLIST.append("B")
-    c += 1
-print(ABLIST)
-print("{}A{}B". format((str(ABLIST). count("A")),str(ABLIST). count("B")))
+while str(ABLIST). count("A") < 4:
+    guessLIST = []
+    ABLIST = []
+    ALIST = []
+    ACOUNT = str(ABLIST). count("A")
+    b = 1
+    while b <= 4:
+        guess = int(input("Enter the number right here: "))
+        if guess not in guessLIST and 0 <= guess <= 9:
+            guessLIST.append (guess)
+            b += 1
+        else:
+            print("INVALID")
+    print("The numbers you guessed are {}". format(guessLIST))
+    ############################################################################################################################
+    ABLIST = []
+    c = 0
+    for number in guessLIST:
+        if number == answerLIST[c]:
+            ABLIST.append("A")
+        elif number != answerLIST[c] and number in answerLIST:
+            ABLIST.append("B")
+        c += 1
+    print("{}A{}B". format((str(ABLIST). count("A")),str(ABLIST). count("B")))
+print("YEEEEEEEAH")
 
 
 #   請設計一個程式能自動列出九九乘法表如下(每行要對齊): 
