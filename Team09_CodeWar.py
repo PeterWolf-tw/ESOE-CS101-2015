@@ -228,7 +228,131 @@ def team10():
     return ''
 
 
+#team11
 
+
+def rrandom():
+    import random
+    ans = random.randint(1,36) 
+    #print(ans)
+    return team11(ans)    
+
+def team11(ans):
+    number=0
+    g=1
+    while g==1:
+        n=input("快說，總共幾個人玩(Enter 2 ~ 5 ):")
+        if n == "1":
+            print("孩子，把自己關在自己的世界是不能解決問題的...")
+        if n == "2":
+            player1=input("player1:")
+            player2=input("player2:")
+            players=[player1,player2]
+            g=2
+            return loop(players,ans,number)
+            
+        if n == "3":
+            player1=input("player1:")
+            player2=input("player2:")
+            player3=input("player3:")
+            players=[player1,player2,player3]
+            g=2
+            return loop(players,ans,number)
+                
+        if n == "4":
+            player1=input("player1:")
+            player2=input("player2:")
+            player3=input("player3:")    
+            player4=input("player4:")
+            players=[player1,player2,player3,player4]
+            g=2
+            return loop(players,ans,number)
+
+        if n == "5":
+            player1=input("player1:")
+            player2=input("player2:")
+            player3=input("player3:")    
+            player4=input("player4:") 
+            player5=input("player5:")
+            players=[player1,player2,player3,player4,player5]
+            g=2
+            return loop(players,ans,number)
+            
+        else:
+            print("來亂的喔...")
+  
+        
+def loop(players,ans,number):
+    import random
+    special = players[random.randint(0,len(players)-1)]
+    print("恭喜",end=" ")
+    print(special,end=" ")
+    print("你被挑中囉～等等會告訴你答案喔，不過你不能用pass ㄎㄎ")
+    print("---------------------------遊戲開始--------------------------------")
+    while number < ans:
+        for i in players:
+            print("----------------------------------------------------------------")
+            if i == special:
+                print("The answer is:",end=" ")
+                print(ans)
+                print("It's your turn,",end=" ")
+                print(i)
+                k=1
+                while k == 1:
+                    N=input("enter 1~3:")
+                    if N =="1" or N=="2" or N=="3":
+                        k = 2
+                        if N=="1":
+                            number+=1
+                        if N=="2":
+                            number+=2
+                        if N=="3":
+                            number+=3
+                    else:
+                        print("Stop kidding me!! Asshole!!!")
+                print("Total:",end=" ")
+                print(number)
+                if number >= ans:
+                    if input("哈哈哈哈哈，你輸了～哭哭喔：），再玩一次吧(type q to quit)") =="q":
+                        return None
+                    else:
+                        return rrandom()         
+            else:
+                print("It's your turn,",end=" ")
+                print(i)
+                j=1
+                while j ==1:
+                    n=input("enter 1~3,or you can use pass/return for once:")
+                    if n =="1" or n=="2" or n=="3":
+                        j=2
+                        if n=="1":
+                            number+=1
+                        if n=="2":
+                            number+=2
+                        if n=="3":
+                            number+=3
+                        
+                    else:
+                        if n=="pass":
+                            n = 0
+                            number += n
+                            j=2
+                        elif n=="return":
+                            print("I'm just joking!hahaha!!!")
+                        else:
+                            print("Stop kidding me!! Asshole!!!")
+                print("Total:",end=" ")
+                print(number)
+                if number >= ans:
+                    if input("哈哈哈哈哈，你輸了～哭哭喔：），再玩一次吧(type q to quit)") =="q":
+                        return None
+                    else:
+                        return rrandom()                 
+    else:
+        print("哈哈哈哈哈，你輸了～哭哭喔：）")
+        return rrandom()
+            
+        
 
 #Team12
 
@@ -449,7 +573,7 @@ if __name__== "__main__":
     print(t05)
     
     print("team06:"
-          "請輕鬆設計出一個可計算出任意個實數組之表準差的函數")
+          "請輕鬆設計出一個可計算出任意個實數組之標準差的函數")
     t06 = team06()
     print(t06)
     
@@ -474,7 +598,7 @@ if __name__== "__main__":
            "參賽者2~5人,先各自輸入名字,電腦隨機擇一範圍在1~36內的數字,並隨機擇一玩家可知曉該數字,開始遊戲."
            "各玩家按順序喊+1~+3,除知曉數字的人以外各玩家可使用功能牌:pass or return一次,持續到有一玩家喊到或經過設定的數字者為輸.可重複遊戲."
            "需該回合玩家知道她可輸入得指令 e.x: 玩家___,你可輸入數字1~3 or pass or return")
-    
+    print(rrandom())
     
     
     print("team12:"
