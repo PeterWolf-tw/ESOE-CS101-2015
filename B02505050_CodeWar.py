@@ -26,3 +26,19 @@ def Pig(word):
  
 word = input('Please enter an English word: ')
 print(Pig(word))
+
+
+
+
+
+
+#team04
+def term():
+    n = int(input("what is the number of term?"))
+    if n < 1:
+        t = [0,1,1]
+    for i in range(n+1):
+        if i > 2:
+            t.append(t[i-2]+t[i-1])
+    if n >= 0:
+        print(t[n])
