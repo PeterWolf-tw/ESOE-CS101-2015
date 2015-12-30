@@ -16,6 +16,18 @@ def asiagodtone(yee):
             continue
     return result
 
+#Team02#######################
+def team02(a):
+    result = ''
+    b = list(a)
+    b.append(b[0])
+    b.append('ay')
+    b.remove(b[0])
+    for i in b :
+        result = result + i
+    
+    return result
+
 #Team04#####################
 def fibonacci(yee):
     fibo = []
@@ -26,6 +38,52 @@ def fibonacci(yee):
             fibo.append(fibo[i-1]+fibo[i-2])
     
     return fibo
+
+#Team06########################
+def team06():
+    import math
+    fuck = []
+    a=0
+    th=0
+    while (a==0):
+        fuck.append(float(input("輸入數字>>>")))
+        a = int(input("owari? (hai=1 , iie=0):"))
+    mu = sum(fuck)/len(fuck)
+    for i in fuck:
+        th = th+ (i-mu)**2
+    result = th/len(fuck)
+    result = math.sqrt(result)
+    return result
+
+#Team09#######################
+def team09():
+    a = 0
+    import random
+    yee = []
+    while(len(yee)<4):
+        rand = random.randint(0, 9)
+        rand = str(rand)
+        if rand not in yee :
+            yee.append(rand)    
+    while(a < 4):
+        inputSTR = input(">>>")
+        fuck = list(inputSTR)
+        a=0
+        b=0
+        import random
+        
+        #print(yee)
+        for i in range(0,4):
+            if fuck[i] == yee[i] :
+                a += 1
+            else :
+                if fuck[i] in yee :
+                    b += 1
+        print(a, end ='')
+        print("A", end ='')
+        print(b, end ='')
+        print("B")
+    return ''
 
 #Team10#######################
 def team10():
@@ -42,7 +100,30 @@ def team10():
         print('')
       
     return ''
-
+#Team11##################################
+def team11(a):
+    import random
+    fuck = [(1, 'p1'), (2, 'p2'), (3, 'p3'), (4, 'p4'), (5, 'p5')]
+    for i in range(5,0,-1):
+        if i>a:
+            fuck.remove(fuck[i-1])
+    yee = 0
+    key = random.randint(1, 36)
+    king = random.randint(1, a)
+   
+    while(yee < key ):
+        for i in fuck:
+            print(i[1], end=',')
+            if i == fuck[king-1]:
+                print(key, end=',')
+                print(yee, end=',')
+            yee = yee + int(input())
+            if yee >= key :
+                b= i[1]
+                break
+    print(b, end = '')
+    print(" lose")
+    return ''
 #Team12##################################
 def index():
     fuck = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
@@ -90,32 +171,47 @@ def ntom(inputSTR,a,b):
     return result
 
 #Team14########################
-def lottery():
+def lottery(n):
     import random
-    fuck = []
-    result = []
-    for i in range(0,49):
-        fuck.append(i)
-    
-    for i in range(0,6):
-        srand = random.randint(0,48-i)
-        result.append(fuck[srand])
-        del fuck[srand]
-    result.sort()
-    return result
+    for i in range(0,n) :
+        j=0
+        result = []
+        while(j != 6):
+            srand = random.randint(1, 49)
+            if srand not in result:
+                result.append(srand)
+                j += 1
+        result.sort()                    
+        print(result)   
+    return ""
         
 if __name__== "__main__":
     print("team01:")
     t01 = int(input('>>>'))
     print(asiagodtone(t01))
     
+    print("team02:")
+    t02 = input('>>>')
+    print(team02(t02))    
+    
     print("team04:")
     t04 = int(input('>>>'))
     print(fibonacci(t04))
     
+    print("team06:")
+    t06 = (team06())
+    print(t06)    
+    
+    print('team09:')
+    print(team09())
+    
     print("team10:")
     t10 = team10()
     print(t10)
+    
+    print("Team11:")
+    t11 = int(input("玩家人數:"))
+    print(team11(t11))    
     
     print("Team12:")
     t12 = input("輸入數字>>>")
@@ -125,5 +221,6 @@ if __name__== "__main__":
     print(ntom(t12,t12a,t12b))    
     
     print("team14:")
-    t14 = lottery()
+    t14 = lottery(int(input("輸入:")))
     print(t14)
+    
