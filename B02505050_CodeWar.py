@@ -176,3 +176,19 @@ def jable():
     return "Table of Js"
 if __name__ == '__main__':
     print(jable())
+
+#team14
+import random 
+
+def gamble(x):
+    gg=list(range(1,50)) 
+    n = []
+    y = int(x)
+    while y>0:
+        n.append(random.sample(gg,6))
+        y -= 1
+    return n  
+  
+
+x = input('please insert a number: ')
+print(gamble(x))
