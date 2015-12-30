@@ -27,11 +27,6 @@ def Pig(word):
 word = input('Please enter an English word: ')
 print(Pig(word))
 
-
-
-
-
-
 #team04
 def term():
     n = int(input("what is the number of term?"))
@@ -42,3 +37,22 @@ def term():
             t.append(t[i-2]+t[i-1])
     if n >= 0:
         print(t[n])
+        
+#team05
+def faq(xdata,ydata):
+    xa=sum(xdata)/len(xdata)
+    ya=sum(ydata)/len(ydata)
+    s1=0
+
+    for i in xdata:
+        s1=s1+(i-xa)**2
+    s2= 0
+    for j in ydata:
+        s2 =s2+(j-ya)**2
+    a0 = 0
+    for k in range(len(xdata)):
+        a0 = a0 + (xdata[k]-xa)*(ydata[k]-ya)
+    a = a0/(s1)
+    b = (-(xa)*a+ya)
+    print("y = ",round(a,4),"x + ",round(b,4))
+
