@@ -2,11 +2,6 @@
 # -*- coding:utf-8 -*-
 
 #Team01
-#設計一個程式
-#若使用者輸入一個數值
-#可算出該數值所具有的所有公因數
-#例如輸入633
-#可得1 3 211 633
 
 def team01():
     x=int(input("please enter a number: "))
@@ -37,17 +32,7 @@ def team01():
 
 
 #Team02
-'''''
-def team02():
-    lang=str(input ("give me a English word:"))
-    #print (lang)
-    x = len(lang)
-    #print(x)
-    lang2 = 'ay.'
-    #print(lang2)
-    lang1 = lang[1:x] + lang[0] + lang2
-    print (lang1)
-'''
+
 def team02():
     Englishwords = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
     lang=str(input ("give me a English word:"))
@@ -67,14 +52,31 @@ def team02():
         print (lang1)
         break
 
+#Team03
+
+class Friends:
+    def __init__(self, connections):
+        self.connections = connections
+    
+    
+    def names(self):
+        set1 = set()
+        for i in self.connections:
+            set1 = set1 | i
+        return set1
+
+    def connected(self, connections):
+        set2 = set()
+        for i in self.connections:
+            if connections in i:
+                set2 = set2 | i
+        set2 = set2 - set(connections)
+        return set2
+
 
 
 #Team04
-#設計一個程式
-#若input=n
-#可算出費式數列第n項的值
-#費式數列第n項的值等於第(n-1)項與第(n-2)項的和
-#且a1=a2=1
+
 def team04():
     LIST2 = []
     LIST2.insert(0,1)
@@ -91,6 +93,7 @@ def team04():
             LIST2 = [1,1,2]
     print (LIST2[n-1])
 
+#Team05
 
 def team05():
     import math
@@ -120,9 +123,7 @@ def team05():
     print(k)
     
 #Team06
-#請輕鬆設計出一個可計算出任意個實數組之表準差的函數
-# ex: input=(40,50,60) , output=8.164965809277....
-# ex: input=(60,60,60,60) , output=0
+
 def team06():
     LIST3 = []
     LIST4 = []
@@ -145,6 +146,7 @@ def team06():
     print (answer)    
 
 #Team07
+
 def team0701():
     n = int (input("give me a number:"))
     answer = 1
@@ -162,6 +164,7 @@ def team0702():
 
 
 #Team09
+
 def random():
     import random
     LIST = [0,1,2,3,4,5,6,7,8,9]
@@ -210,18 +213,6 @@ def inputTest(ans):
 
 
 #Team10    
-# 請設計一個程式能自動列出九九乘法表如下(每行要對齊):
-    
-# 0  0  0  0  0  0  0  0  0  0
-# 0  1  2  3  4  5  6  7  8  9
-# 0  2  4  6  8 10 12 14 16 18
-# 0  3  6  9 12 15 18 21 24 27
-# 0  4  8 12 16 20 24 28 32 36
-# 0  5 10 15 20 25 30 35 40 45
-# 0  6 12 18 24 30 36 42 48 54
-# 0  7 14 21 28 35 42 49 56 63
-# 0  8 16 24 32 40 48 56 64 72
-# 0  9 18 27 36 45 54 63 72 81
 
 def team10():
     for i in range(0,10):
@@ -240,6 +231,7 @@ def team10():
 
 
 #Team12
+
 def m2n():
     '''
     本函式將 m 進位制表示數轉為 n 進位制
@@ -288,6 +280,7 @@ def m2n():
 
 
 #Team13
+
 def team13():
     jon = ["Jon Snow",100,200,"t1",3]
     robert = ["Robert Stark",200,300,"t1",2]
@@ -395,6 +388,7 @@ def team13():
 
 
 #Team14
+
 def team14(n):
     import random
     
@@ -411,43 +405,102 @@ def team14(n):
 
     
 if __name__== "__main__":
-    print("team01:")
+    print("team01:"
+          "設計一個程式"
+          "若使用者輸入一個數值"
+          "可算出該數值所具有的所有因數")
     t01 = team01()
     print(t01)
     
-    print("team02:")
+    print("team02:"
+          "Pig Latin is a language game"
+          "where you move the first letter of the word to the end" 
+          "and add ay. "
+          "So Python becomes ythonpay.")
     print(team02())
     
-    print("team04:")
+    print("team03:"
+          "針對一個class Friends"
+          "定義names 和 connected")
+    friends = Friends(({"a", "b"}, {"b", "c"}, {"c", "a"}))
+    friends2 = Friends(({"1", "2"}, {"2", "4"}, {"1", "3"}))
+    print(friends.names())
+    print(friends.connected("d"))
+    print(friends.connected("a"))
+    print(friends2.names())
+    print(friends2.connected("1"))    
+    
+    print("team04:"
+          "設計一個程式"
+          "若input=n"
+          "可算出費式數列第n項的值"
+          "費式數列第n項的值等於第(n-1)項與第(n-2)項的和"
+          "且第一項a1=第二項a2=1")
     t04 = team04()
     print(t04)
     
-    print("team05")
+    print("team05:"
+          "It is about the linear least squares."
+          "We will give a bunch of xdata and ydata."
+          "The only thing you have to do is to give the equation in the form of y = ax + b by using linear least squares method"
+          "AS for the number of data is determined by us, so you can use while loop or for loop with range"
+          "xdata and ydata are both lists")
     t05 = team05()
     print(t05)
     
-    print("team06:")
+    print("team06:"
+          "請輕鬆設計出一個可計算出任意個實數組之表準差的函數")
     t06 = team06()
     print(t06)
     
-    print("team07")
+    print("team07:"
+          "設計一支程式，使其在輸入一串互不相等數字之後，輸出其所有可能之排列個數及排列。"
+          "1.首先輸入一個正整數 n ( 0 < n < 11 )，代表接下來要輸入的數字個數。"
+          "2.接著輸入 n 個正整數 a1, a2, a3,....an ( ai != aj, where 1 < i, j < 11 and i != j )。")
     print (team0701())
     print (team0702())
     
-    print("team09")
+    print("team09:"
+          "試設計一個可以猜數字的程式"
+          "幾A幾B")
     print(random())
     
     print("team10:")
     t10 = team10()
     print(t10)
     
-    print ("team12")
+    print ("team11:"
+           "猜數字遊戲"
+           "參賽者2~5人,先各自輸入名字,電腦隨機擇一範圍在1~36內的數字,並隨機擇一玩家可知曉該數字,開始遊戲."
+           "各玩家按順序喊+1~+3,除知曉數字的人以外各玩家可使用功能牌:pass or return一次,持續到有一玩家喊到或經過設定的數字者為輸.可重複遊戲."
+           "需該回合玩家知道她可輸入得指令 e.x: 玩家___,你可輸入數字1~3 or pass or return")
+    
+    
+    
+    print("team12:"
+          "請參考以下空白程式，設計一支程式能將輸入的字串定義為m進位法，並且換算成n進位法(其中，m, n為介於2至61的正整數)"
+          "在此，我們定義大寫英文字母A為10、Z為35;小寫英文字母a為36、z為61，其他字母以此類推"
+          "可不考慮負數及浮點數的計算")
     print(m2n())    
     
-    print("team13:")
+    print("team13:"
+          "Jon Snow"
+          "Robert Stark"
+          "Eddard Stark"
+          "Bran Stark"
+          "Tywin Lannister"
+          "Jamie Lannister"
+          "Ser Rodrik"
+          "Hodor"
+          "Rhaegar Targaryen")
     print(team13())
     
-    print("team14:")
+    print("team14:"
+          "做一個樂透開獎程式"
+          "多組號碼49選6"
+          "輸入數字n"
+          ""
+          "便會跑出n組1~49中隨機挑選的六個數字")
     print(team14(int(input("please give me a number:"))))
     
     
