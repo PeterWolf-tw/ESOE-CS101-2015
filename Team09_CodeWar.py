@@ -237,6 +237,57 @@ def team10():
     return ''
 
 
+
+
+#Team12
+def m2n():
+    '''
+    本函式將 m 進位制表示數轉為 n 進位制
+    '''
+    import math
+    lang = input("輸入一串m進位的字串:")
+    k = len(lang)
+    element = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+    a = input("m = ")
+    elementa = element[0:int(a)]
+    for i in lang:
+        if i in elementa:
+            continue
+        else:
+            return False
+    while (True):
+        #print (elementa)
+        ten = 0
+        ten +=int(elementa.index(lang[-1]))           
+            
+        #for i in range (0, len(lang)-1):
+        for j in range(0,k-1):        
+            l = elementa.index(lang[j])
+            #print(int(l))
+            x = k-1-int(j)
+            #print (x)
+            ten += int(l)*math.pow(int(a),x)
+            #print (ten)
+                
+        print (ten)
+            
+        b = int(input("n = "))
+        elementb = element[0:int(b)]
+        c = int(ten)
+        print(c//b)
+        langans = []
+        while c>0: 
+            remider = c%b
+            print (remider)
+            langans.insert(0,elementb[remider])
+            c = c//b
+        answer = ''.join(langans)
+        
+        print(answer)
+        break
+
+
+#Team13
 def team13():
     jon = ["Jon Snow",100,200,"t1",3]
     robert = ["Robert Stark",200,300,"t1",2]
@@ -388,7 +439,10 @@ if __name__== "__main__":
     
     print("team10:")
     t10 = team10()
-    print(t10)    
+    print(t10)
+    
+    print ("team12")
+    print(m2n())    
     
     print("team13:")
     print(team13())
