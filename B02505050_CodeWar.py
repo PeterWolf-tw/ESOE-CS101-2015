@@ -133,9 +133,36 @@ def game():
                 break
         n += 1
 
-
+#team09
+def yayaya():
+    a = 0
+    import random
+    num = []
+    while(len(num)<4):
+        r = random.randint(0, 9)
+        r = str(r)
+        if r not in num :
+            num.append(r)    
+    while(a < 4):
+        inputSTR = input("--->")
+        gg = list(inputSTR)
+        a=0
+        b=0
+        import random
+        
+        for i in range(0,4):
+            if gg[i] == num[i] :
+                a += 1
+            else :
+                if gg[i] in num :
+                    b += 1
+        print(a, end ='')
+        print("A", end ='')
+        print(b, end ='')
+        print("B")
+    return ''
+    
 #Team10
-
 def jable():
     for i in range(0,10):
         for j in range(0,10):
