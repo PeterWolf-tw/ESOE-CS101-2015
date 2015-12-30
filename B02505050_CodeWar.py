@@ -12,4 +12,17 @@ if __name__ == '__main__':
     d=int(input("in put a number:") ) 
     print(e(d))
     
-    
+#team02
+def Pig(word):
+    fixword = word.isalpha()   
+    if fixword == True:
+        x = word[0]
+        y = len(word)
+        word1 = word[1:y]
+        word1 = word1 + x + 'ay'
+        return word1
+    else:
+        return ('invalid word')
+ 
+word = input('Please enter an English word: ')
+print(Pig(word))
