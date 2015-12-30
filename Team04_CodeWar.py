@@ -61,6 +61,144 @@ def sigma(inputList):
     result=result/len(inputList)
     result=result ** 0.5
     return result
+#Team7
+entry = input('輸入一個正整數 n ( 0 < n < 11 ):')
+enternum=input("請輸入n位數字: ")       
+
+def outTable(n,inSTRn): 
+
+    outSTRn=""
+    nn=1
+    for i in range(1,n+1):
+
+        nn=nn * i
+    print("input=",n)        
+    print("input=",inSTRn)
+    print("output "+str(n)+"!=",nn)
+    inListn=list(inSTRn)
+    return inListn
+
+COUNT=0
+def perm(num_list,begin,end):
+    out=""
+    global COUNT
+    if begin>=end:
+
+        for num in num_list:
+            out=out+" "+str(num)
+        COUNT +=1
+        print(out)
+    else:
+        i = begin
+        for num in range(begin,end):
+            num_list[num],num_list[i]=num_list[i],num_list[num]
+            perm(num_list,begin+1,end)
+            num_list[num],num_list[i]=num_list[i],num_list[num]
+#Team8
+def team8():
+    l=[" "," "," "," "," "," "," "," "," "]
+    print("introduction:please enter 1~9 to mark corresponding square")
+    print("1|2|3")
+    print ("-----")
+    print ("4|5|6")
+    print ("-----")
+    print ("7|8|9")
+    while True:
+        while True:
+            n = int(input("P1's turn:"))
+            if 10 > n > 0 and l[n-1]==" ":
+                l[n-1] = "O"
+                print ("%s|%s|%s"%(l[0],l[1],l[2]))
+                print ("-----")        
+                print ("%s|%s|%s"%(l[3],l[4],l[5]))
+                print ("-----")   
+                print ("%s|%s|%s"%(l[6],l[7],l[8]))
+
+                break
+            else : 
+                print("wrong instruction,try again")
+                continue
+        s1 = (l[0] == l[1] == l[2] == "O")
+        s2 = (l[3] == l[4] == l[5] == "O")
+        s3 = (l[6] == l[7] == l[8] == "O")
+        s4 = (l[0] == l[3] == l[6] == "O")
+        s5 = (l[1] == l[4] == l[7] == "O")
+        s6 = (l[2] == l[5] == l[8] == "O")
+        s7 = (l[0] == l[4] == l[7] == "O")
+        s8 = (l[2] == l[4] == l[6] == "O")        
+        if s1 or s2 or s3 or s4 or s5 or s6 or s7 or s8:
+            print("P1 win!")
+            break
+        if " " not in set(l):
+            print("平手")
+            break
+
+        while True:
+            n = int(input("P2's turn:"))
+            if 10 > n > 0 and l[n-1]==" ":
+                l[n-1] = "X"
+                print ("%s|%s|%s"%(l[0],l[1],l[2]))
+                print ("-----")        
+                print ("%s|%s|%s"%(l[3],l[4],l[5]))
+                print ("-----")   
+                print ("%s|%s|%s"%(l[6],l[7],l[8]))
+                break
+            else : 
+                print("wrong instruction,try again")
+                continue        
+        w1 = (l[0] == l[1] == l[2] == "X")
+        w2 = (l[3] == l[4] == l[5] == "X")
+        w3 = (l[6] == l[7] == l[8] == "X")
+        w4 = (l[0] == l[3] == l[6] == "X")
+        w5 = (l[1] == l[4] == l[7] == "X")
+        w6 = (l[2] == l[5] == l[8] == "X")
+        w7 = (l[0] == l[4] == l[7] == "X")
+        w8 = (l[2] == l[4] == l[6] == "X")          
+        if w1 or w2 or w3 or w4 or w5 or w6 or w7 or w8:
+            print("P2 win!")
+            break      
+        if " " not in set(l):
+            print("平手")
+            break
+#Team9
+import random
+import os
+ST=[]
+t=0
+while t<4 :
+    tem=str(random.randrange(0,9))
+    if not (tem in ST):
+        ST.append(tem)
+        t+=1
+
+time=1
+while True:
+    print u"猜第%d次。\n請輸入一個不重覆的四位數字或輸入'STOP'以退出遊戲:" %time
+    A=0
+    B=0
+    input_s=raw_input()
+    if "STOP" in input_s.upper():
+        print u"離開遊戲! 正確答案為 %s" % "".join(str(n) for n in ST)
+        break
+    else:
+        try:
+            int(input_s)   
+            if "".join(str(n) for n in ST)==input_s: 
+                print u"Congratulation☺, press anything to continue" %time
+                break
+            elif len(input_s) != 4:
+                print u"錯誤! 不正確的長度!\n"
+            else:  
+                for tem in range(4):
+                    if ST[tem] == input_s[tem]: 
+                        A+=1
+                    if input_s[tem] in ST: 
+                        B+=1
+                print "%d A\t%d B" % (A,B-A)
+                time+=1
+        except:
+            print u"錯誤! 內含非數字的字串\n"
+os.system("pause")
 #Team10
 
 for i in range(0,10):
