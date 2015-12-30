@@ -70,3 +70,82 @@ def ans():
         a += ( x[i] - xa )**2 
     sd = ( a / nu )**(1/2)
     return sd 
+    
+#team08
+def game():
+    space = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
+    print ("|1|2|3|")
+    print ("-------")
+    print ("|4|5|6|")
+    print ("-------")
+    print ("|7|8|9|")
+    n=1
+    while True:
+        
+        if n%2 == 1 :
+            a = int(input("playerX:"))
+            if space[a-1] == "O" or space[a-1] == "X":
+                continue
+            space[a-1] = "X"
+            print ("|%s|%s|%s|"%(space[0],space[1],space[2]))
+            print ("-------")        
+            print ("|%s|%s|%s|"%(space[3],space[4],space[5]))
+            print ("-------")   
+            print ("|%s|%s|%s|"%(space[6],space[7],space[8]))
+            s1 = (space[0] == space[1] == space[2] == "X")
+            s2 = (space[3] == space[4] == space[5] == "X")
+            s3 = (space[6] == space[7] == space[8] == "X")
+            s4 = (space[0] == space[3] == space[6] == "X")
+            s5 = (space[1] == space[4] == space[7] == "X")
+            s6 = (space[2] == space[5] == space[8] == "X")
+            s7 = (space[0] == space[4] == space[8] == "X")
+            s8 = (space[2] == space[4] == space[6] == "X")
+            if s1 or s2 or s3 or s4 or s5 or s6 or s7 or s8 :
+                print("playerX win")
+                break
+                print("playerO is fucked")
+            if n == 9:
+                print("DRAW")
+                break
+        if n%2 == 0 :
+            a = int(input("playerO:"))
+            if yee[a-1] == "O" or yee[a-1] == "X":
+                continue            
+            yee[a-1] = "O"
+            print ("|%s|%s|%s|"%(space[0],space[1],space[2]))
+            print ("-------")        
+            print ("|%s|%s|%s|"%(space[3],space[4],space[5]))
+            print ("-------")   
+            print ("|%s|%s|%s|"%(space[6],space[7],space[8]))
+            s1 = (space[0] == space[1] == space[2] == "O")
+            s2 = (space[3] == space[4] == space[5] == "O")
+            s3 = (space[6] == space[7] == space[8] == "O")
+            s4 = (space[0] == space[3] == space[6] == "O")
+            s5 = (space[1] == space[4] == space[7] == "O")
+            s6 = (space[2] == space[5] == space[8] == "O")
+            s7 = (space[0] == space[4] == space[8] == "O")
+            s8 = (space[2] == space[4] == space[6] == "O")
+            if s1 or s2 or s3 or s4 or s5 or s6 or s7 or s8 :
+                print("playerX is fucked")
+                break
+            if n == 9:
+                print("DRAW")
+                break
+        n += 1
+
+
+#Team10
+
+def jable():
+    for i in range(0,10):
+        for j in range(0,10):
+            if i*j < 10:
+                print(i*j,end='')
+                print("  ",end='')
+            else:
+                print(i*j,end='')
+                print(" ",end='')
+        print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
+    return "Table of Js"
+if __name__ == '__main__':
+    print(jable())
