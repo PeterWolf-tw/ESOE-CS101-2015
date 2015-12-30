@@ -55,6 +55,70 @@ def team06():
     result = math.sqrt(result)
     return result
 
+#Team08#########################
+def team08():
+    yee = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
+    print ("1|2|3")
+    print ("-----")
+    print ("4|5|6")
+    print ("-----")
+    print ("7|8|9")
+    n=1
+    while True:
+        
+        if n%2 == 1 :
+            a = int(input("X輸入:"))
+            if yee[a-1] == "O" or yee[a-1] == "X":
+                print("8787")
+                continue
+            yee[a-1] = "X"
+            print ("%s|%s|%s"%(yee[0],yee[1],yee[2]))
+            print ("-----")        
+            print ("%s|%s|%s"%(yee[3],yee[4],yee[5]))
+            print ("-----")   
+            print ("%s|%s|%s"%(yee[6],yee[7],yee[8]))
+            s1 = (yee[0] == yee[1] == yee[2] == "X")
+            s2 = (yee[3] == yee[4] == yee[5] == "X")
+            s3 = (yee[6] == yee[7] == yee[8] == "X")
+            s4 = (yee[0] == yee[3] == yee[6] == "X")
+            s5 = (yee[1] == yee[4] == yee[7] == "X")
+            s6 = (yee[2] == yee[5] == yee[8] == "X")
+            s7 = (yee[0] == yee[4] == yee[8] == "X")
+            s8 = (yee[2] == yee[4] == yee[6] == "X")
+            if s1 or s2 or s3 or s4 or s5 or s6 or s7 or s8 :
+                print("X贏了")
+                break
+            
+            if n == 9:
+                print("平手")
+                break
+        if n%2 == 0 :
+            a = int(input("O輸入:"))
+            if yee[a-1] == "O" or yee[a-1] == "X":
+                print("8787")
+                continue            
+            yee[a-1] = "O"
+            print ("%s|%s|%s"%(yee[0],yee[1],yee[2]))
+            print ("-----")        
+            print ("%s|%s|%s"%(yee[3],yee[4],yee[5]))
+            print ("-----")   
+            print ("%s|%s|%s"%(yee[6],yee[7],yee[8]))
+            s1 = (yee[0] == yee[1] == yee[2] == "O")
+            s2 = (yee[3] == yee[4] == yee[5] == "O")
+            s3 = (yee[6] == yee[7] == yee[8] == "O")
+            s4 = (yee[0] == yee[3] == yee[6] == "O")
+            s5 = (yee[1] == yee[4] == yee[7] == "O")
+            s6 = (yee[2] == yee[5] == yee[8] == "O")
+            s7 = (yee[0] == yee[4] == yee[8] == "O")
+            s8 = (yee[2] == yee[4] == yee[6] == "O")
+            if s1 or s2 or s3 or s4 or s5 or s6 or s7 or s8 :
+                print("O贏了")
+                break
+            if n == 9:
+                print("平手")
+                break
+        n += 1
+
 #Team09#######################
 def team09():
     a = 0
@@ -200,7 +264,10 @@ if __name__== "__main__":
     
     print("team06:")
     t06 = (team06())
-    print(t06)    
+    print(t06)
+    
+    print("team08:")
+    print(team08())
     
     print('team09:')
     print(team09())
