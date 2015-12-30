@@ -56,3 +56,17 @@ def faq(xdata,ydata):
     b = (-(xa)*a+ya)
     print("y = ",round(a,4),"x + ",round(b,4))
 
+#team06
+def ans():
+    sumx= 0
+    nu = len(x)
+    a = 0
+    for i in range(nu) :
+        x[i] = int(x[i])
+        sumx = sumx + x[i]
+    xa = sumx / nu
+    for i in range(nu) :
+        x[i] = int(x[i])
+        a += ( x[i] - xa )**2 
+    sd = ( a / nu )**(1/2)
+    return sd 
