@@ -307,6 +307,17 @@ def show(list1):
     print("")
         
 def checkwin(list1):
+    tide=1
+    for i in range(3):
+        for j in range(3):
+            t=list1[i][j]
+            if t==0:
+                tide=0
+                continue
+    if tide==1:
+        print("Tie!!")
+        return 0
+                
     for i in range(3):
         for j in range(3):
             temp=list1[i][j]
@@ -355,8 +366,8 @@ if __name__ == '__main__':
     while win:
         if fd == 1:        
             print("O's turn")
-            x=int(input("input your x coordinate:"))
-            y=int(input("input your y coordinate:"))
+            x=int(input("input your x coordinate(0~2):"))
+            y=int(input("input your y coordinate(0~2):"))
             if x>2 or x<0 or y>2 or y<0 or fundai(list1,x,y) == False :
                 print("Please input again!")
                 continue
@@ -365,9 +376,11 @@ if __name__ == '__main__':
             ##print(list1)
             show(list1)
             win=checkwin(list1)
+            if win==0:
+                break
         print("X's turn")
-        x=int(input("input your x coordinate:"))
-        y=int(input("input your y coordinate:"))
+        x=int(input("input your x coordinate(0~2):"))
+        y=int(input("input your y coordinate(0~2):"))
         if x>2 or x<0 or y>2 or y<0 or fundai(list1,x,y) == False:
             fd=0
             ##print(list1)
