@@ -320,7 +320,21 @@ def play2():
         except:
             print ("Error\n")
 
-play1()
+
+
+#team10
+def team10():
+    for i in range(0,10):
+        for j in range(0,10):
+            if i*j < 10:
+                print(i*j,end='')
+                print("  ",end='')
+            else:
+                print(i*j,end='')
+                print(" ",end='')
+        print('')
+
+
 
 #team 12
 S2V = {'0': 0,
@@ -386,11 +400,8 @@ S2V = {'0': 0,
        'y': 60,
        'z': 61}
 
-def m2n():
+def team12(x,m,n):
 
-    x = input("Please enter a number:")
-    m = int(input("Please enter the initial base:"))
-    n = int(input("Please enter the final base:"))
 
     integer = 0
     for character in x:
@@ -412,7 +423,7 @@ def m2n():
 
     print (ans)
 
-m2n()
+
 #team13
 def team13(a,b):
     if a == "Eddard" and (b == "Robert" or b == "Jon" or b == "Ser" or b == "Bran" or b == "Hodor"):
@@ -478,23 +489,23 @@ def lottery(n):
         print(y)
 
 
-if __name__ == '__main__':
-    
-    
+if __name__ == '__main__':    
+    n = input("input a number")
+    print(divisor(n))
     #####################################
     x = str(input("input a English word:"))
     print(team02(x))    
     #####################################
     friends = Friends(({"a", "b"}, {"b", "c"}, {"c", "a"}))
     friends2 = Friends(({"1", "2"}, {"2", "4"}, {"1", "3"}))
-    
-    
-    
     print(friends.names()) 
     print(friends.connected("d")) 
     print(friends.connected("a")) 
     print(friends2.names()) 
     print(friends2.connected("1"))    
+    #####################################
+    n = input("input a number")
+    print(feynman(n))
     #####################################
     xdata =  input("請輸入xdata的值(中間以逗號隔開):").split(",")
     ydata =  input("請輸入ydata的值(中間以逗號隔開):").split(",")
@@ -507,8 +518,19 @@ if __name__ == '__main__':
     l = input("input some numbers").split(",")
     print(team07(x,l))
     #####################################
+    print(play1())
+    #####################################
+    print(team10())
+    #####################################
+    x = input("Please enter a number:")
+    m = int(input("Please enter the initial base:"))
+    n = int(input("Please enter the final base:"))
+    print(team12(x, m, n))
+    #####################################
     a = input("input a name:'A'")
     b = input("input another name:'B'")
     print("B是A的...")
     print(team13(a,b))
-    
+    #####################################
+    n = input("input a number:")
+    print(lottery(n))
