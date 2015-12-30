@@ -61,19 +61,29 @@ def sigma(inputList):
     result=result/len(inputList)
     result=result ** 0.5
     return result
+#Team10
+
+for i in range(0,10):
+    for c in range(0,10):
+        if i*c < 10:
+            print(i*c,end='')
+            print("  ",end='')
+        else:
+            print(i*c,end='')
+            print(" ",end='')
+    print( )
+
 #Team14
 def team14(inputSTR):
     import random
     RList=[]
     T=int(inputSTR)
-    for i in inputSTR :
-        i = 0
-        if i < T:
-            a=random.sample(range(1,49),6)
-            RList.append(a)
-            i += 1
-            return RList          
-    print(RList)
+    i = 0
+    while i < T:
+        a=random.sample(range(1,49),6)
+        RList.append(a)
+        i += 1
+    return RList
     
 if __name__ == "__main__":
     
@@ -116,3 +126,14 @@ if __name__ == "__main__":
     
     YO=input("please enter a number:")
     print(team14(YO))    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+ 
