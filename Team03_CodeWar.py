@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 
 #team01
->>> def divisor(n):
+def divisor(n):
     resultLIST=[]
     for i in range(1,n+1):
         if n%i==0:
@@ -11,7 +11,9 @@
 
 #team02
 #if __name__ == '__main__':
-    x = str(input("input a English word:"))
+ 
+    
+def team02(x):
     if x.isalpha() == True:
         print(x)
         print(x[0])
@@ -51,8 +53,8 @@ class Friends:
         return neighbors
 
 
->>> #team04
->>> def feynman(n):
+#team04
+def feynman(n):
     number=0
     a=1
     b=1
@@ -127,10 +129,6 @@ def team05 (xdata,ydata) :
         ans = print("回歸直線為: y=",m,"x",c) 
 
 
-if __name__ == '__main__':
-    xdata =  input("請輸入xdata的值(中間以逗號隔開):").split(",")
-    ydata =  input("請輸入ydata的值(中間以逗號隔開):").split(",")
-    print(team05(xdata, ydata))	
 
 #team06
 
@@ -149,15 +147,11 @@ def team06(x) :
         kobe += ( x[i] - xbar )**2 
     wade = ( kobe / lenx )**(1/2)
     return wade 
-if __name__ == '__main__':
-    Lebron = input().split(",")
-    print(team06(Lebron))
 
 
 #team07
 #if __name__ == '__main__':
-    x = int(input("input a number from 1 to 10 : "))
-    l = input("input some numbers").split(",")
+def team07(x,l):
     if len(l) != x:
         print("erro!!!")
     y = 1
@@ -419,8 +413,58 @@ def m2n():
     print (ans)
 
 m2n()
+#team13
+def team13(a,b):
+    if a == "Eddard" and (b == "Robert" or b == "Jon" or b == "Ser" or b == "Bran" or b == "Hodor"):
+        print("屬下")
+    elif b == "Eddard" and( a == "Robert" or a == "Jon" or a == "Ser" or a == "Bran" or a == "Hodor"):
+        print("長官")
+    elif b == "Robert" and ( a == "Jon" or a == "Ser") :
+        print("長官")
+    elif a == "Robert" and  (b == "Jon" or b == "Ser" ):
+        print("屬下")
+    elif a == "Bran" and  b == "Hodor" :
+        print("屬下")
+    elif b == "Bran" and  a == "Hodor" :
+        print("長官")
+    elif a == "Robert" and  (b == "Hodor" or b == "Bran") :
+        print("平輩")
+    elif b == "Robert" and ( a == "Hodor" or a == "Bran" ):
+        print("平輩")
+    elif a == "Bran" and  (b == "Jon" or b == "Ser" ):
+        print("平輩")
+    elif b == "Bran" and  (a == "Jon" or a == "Ser" ):
+        print("平輩")
+    elif b == "Jon" and  (a == "Ser" or a == "Hodor" ):
+        print("平輩")
+    elif a == "Jon" and  (b == "Ser" or b == "Hodor"):
+        print("平輩")
+    elif a == "Hodor" and  b == "Ser" :
+        print("平輩")
+    elif b == "Hodor" and  a == "Ser" :
+        print("平輩")
+    elif a == "Tywin" and  b == "Jamie" :
+        print("屬下")
+    elif b == "Tywin" and  a == "Jamie" :
+        print("長官")
+    elif b == "Tywin" and (a == "Robert" or a == "Jon" or a == "Ser" or a == "Bran" or a == "Hodor" or a == "Eddard"):
+        print("敵人")
+    elif a == "Tywin" and (b == "Robert" or b == "Jon" or b == "Ser" or b == "Bran" or b == "Hodor" or b == "Eddard"):
+        print("敵人")
+    elif a == "Jamie" and (b == "Robert" or b == "Jon" or b == "Ser" or b == "Bran" or b == "Hodor" or b == "Eddard"):
+        print("敵人")
+    elif b == "Jamie" and (a == "Robert" or a == "Jon" or a == "Ser" or a == "Bran" or a == "Hodor" or a == "Eddard"):
+        print("敵人")
+    elif a == "Rhaegar" or  b == "Rhaegar" :
+        print("資料有誤無法比對")
+
+
+
+
+
+
 #team 14
->>> def lottery(n):
+def lottery(n):
     import random
     k=0
     y=[]
@@ -434,3 +478,37 @@ m2n()
         print(y)
 
 
+if __name__ == '__main__':
+    
+    
+    #####################################
+    x = str(input("input a English word:"))
+    print(team02(x))    
+    #####################################
+    friends = Friends(({"a", "b"}, {"b", "c"}, {"c", "a"}))
+    friends2 = Friends(({"1", "2"}, {"2", "4"}, {"1", "3"}))
+    
+    
+    
+    print(friends.names()) 
+    print(friends.connected("d")) 
+    print(friends.connected("a")) 
+    print(friends2.names()) 
+    print(friends2.connected("1"))    
+    #####################################
+    xdata =  input("請輸入xdata的值(中間以逗號隔開):").split(",")
+    ydata =  input("請輸入ydata的值(中間以逗號隔開):").split(",")
+    print(team05(xdata, ydata))	
+    #####################################
+    Lebron = input().split(",")
+    print(team06(Lebron))
+    #####################################
+    x = int(input("input a number from 1 to 10 : "))
+    l = input("input some numbers").split(",")
+    print(team07(x,l))
+    #####################################
+    a = input("input a name:'A'")
+    b = input("input another name:'B'")
+    print("B是A的...")
+    print(team13(a,b))
+    
