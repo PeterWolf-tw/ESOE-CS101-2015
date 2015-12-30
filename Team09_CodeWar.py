@@ -385,22 +385,22 @@ def m2n():
             ten += int(l)*math.pow(int(a),x)
             #print (ten)
                 
-        print (ten)
+        #print (ten)
             
         b = int(input("n = "))
         elementb = element[0:int(b)]
         c = int(ten)
-        print(c//b)
+        #print(c//b)
         langans = []
         while c>0: 
             remider = c%b
-            print (remider)
+            #print (remider)
             langans.insert(0,elementb[remider])
             c = c//b
         answer = ''.join(langans)
-        
-        print(answer)
         break
+    print(answer)
+        
 
 
 #Team13
