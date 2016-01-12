@@ -33,7 +33,7 @@ def jjj(x):
 if __name__ == '__main__':
     a=input("請輸入一個英文單字:")
     print(jjj(a))
-          
+
 #Team06
 
 def bbb(x):
@@ -55,8 +55,34 @@ def bbb(x):
     
 if __name__ == '__main__':
     c=list(input("請輸入一串數字:").split(",") ) 
-    print(bbb(c))
+    print(bbb(c))    
+
+#Team7
+
+def factorial(x):
+    a=int(x)
+    x=a
+    while x >=2:
+        a=a*(x-1)
+        x-=1
+    return a 
+import itertools    
+def permutation(y):
+    i=list(str(y)) 
+    j=list(itertools.permutations(i,x))
+    g=""
+    for i in j:
+        g=g+" ".join(i)+"\n"
+    return g
+if __name__=="__main__":
+    x=int(input("How many number do you want to permutate?"))
+    n=factorial(x)
+    y=input("Please enter all of the number you want to permutate without seperation.")
+    o=permutation(y)
+    print(n)
+    print(o)
     
+
 #Team10
 
 def kkk():
