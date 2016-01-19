@@ -9,7 +9,6 @@ def bubble():
     x = input("give me some numbers:").split(",")
     x[:] = [int(a) for a in x]
     l = len(x)
-    print (x)
     for k in range (0 , l-1 ):
         n = 0
         for i in range (l-1, k, -1):
