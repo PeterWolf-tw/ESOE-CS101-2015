@@ -17,4 +17,5 @@ if __name__== "__main__":
     x=input()
     
     print(ilovepita(x))
+    #func() 名稱很妙，感謝。
     
