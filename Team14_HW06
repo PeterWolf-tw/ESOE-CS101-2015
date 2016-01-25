@@ -12,6 +12,10 @@ def bubble_sort(lists):
                 lists[i], lists[j] = lists[j], lists[i]
     return lists
 
+
+#以前都會記得寫程式進入點 if __name__ == '__main__': 但這次卻沒寫，何以故？
+#另，為什麼附檔名的 .py 不見了呢？
+
 alist = [5, 16, 20, 3, 8, 12, 9, 17, 20, 7]
 bubble_sort(alist)
 print(alist)
