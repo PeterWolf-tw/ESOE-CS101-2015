@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+# -*- coding:utf-8 -*-
+
+#請參考 http://interactivepython.org/runestone/static/pythonds/SortSearch/sorting.html
+#中提供的 bubble sorting 演算法，將整數列表 [5, 16, 20, 3, 8, 12, 9, 17, 20, 7] 由大排到小。
+
+def bubble_sort(lists):
+    count = len(lists)
+    for i in range(0, count):
+        for j in range(i + 1, count):
+            if lists[i] > lists[j]:
+                lists[i], lists[j] = lists[j], lists[i]
+    return lists
+
+alist = [5, 16, 20, 3, 8, 12, 9, 17, 20, 7]
+bubble_sort(alist)
+print(alist)
